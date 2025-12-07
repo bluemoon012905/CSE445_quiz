@@ -28,7 +28,8 @@ const elements = {
   summaryTableBody: document.querySelector('#summary-table tbody'),
   summaryMeta: document.getElementById('summary-meta'),
   downloadSummaryBtn: document.getElementById('download-summary'),
-  retakeButton: document.getElementById('retake-quiz')
+  retakeButton: document.getElementById('retake-quiz'),
+  moduleSummaryBody: document.querySelector('#module-summary-table tbody')
 };
 
 const state = {
@@ -79,6 +80,7 @@ async function loadQuestionBank() {
     state.questionBank = Array.isArray(data.questions) ? data.questions : [];
     updateQuestionCountPill();
     renderFilters();
+    renderModuleSummary();
   } catch (error) {
     console.error(error);
     state.questionBank = [];
@@ -132,6 +134,33 @@ function renderModuleOptions() {
     helper.textContent = 'Add questions to enable module selection.';
     container.appendChild(helper);
   }
+}
+
+function renderModuleSummary() {
+  if (!elements.moduleSummaryBody) {
+    return;
+  }
+  const body = elements.moduleSummaryBody;
+  body.innerHTML = '';
+  const availableModules = Array.from(new Set(state.questionBank.map((q) => q.module))).filter(Boolean);
+  const extras = availableModules.filter((name) => !MODULE_PLACEHOLDERS.includes(name)).sort();
+  const modules = [...MODULE_PLACEHOLDERS, ...extras];
+  modules.forEach((moduleName) => {
+    const questions = state.questionBank.filter((q) => q.module === moduleName);
+    const generatedCount = questions.filter((q) => q.generated).length;
+    const uploadedCount = questions.length - generatedCount;
+    const row = document.createElement('tr');
+    const moduleCell = document.createElement('td');
+    moduleCell.textContent = moduleName;
+    const uploadedCell = document.createElement('td');
+    uploadedCell.textContent = uploadedCount;
+    const generatedCell = document.createElement('td');
+    generatedCell.textContent = generatedCount;
+    row.appendChild(moduleCell);
+    row.appendChild(uploadedCell);
+    row.appendChild(generatedCell);
+    body.appendChild(row);
+  });
 }
 
 function renderTypeOptions() {

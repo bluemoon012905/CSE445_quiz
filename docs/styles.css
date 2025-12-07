@@ -303,6 +303,18 @@ button:disabled {
 .table-wrapper {
   overflow-x: auto;
 }
+.table-wrapper.compact {
+  max-height: 220px;
+}
+
+.table-wrapper.compact table {
+  font-size: 0.9rem;
+}
+
+#module-summary-table th,
+#module-summary-table td {
+  padding: 0.3rem 0.5rem;
+}
 
 #summary-table {
   width: 100%;
