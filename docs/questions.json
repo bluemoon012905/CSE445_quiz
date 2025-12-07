@@ -2717,6 +2717,331 @@
         }
       ],
       "answer": "a"
+    },
+    {
+      "id": "mod13-quiz-001",
+      "module": "Module 13",
+      "topic": "Dependability",
+      "type": "multiple_choice",
+      "prompt": "Reliability R(t) is a probability related to the\u2026",
+      "options": [
+        {
+          "id": "a",
+          "label": "continuity of service in time period (0, t]"
+        },
+        {
+          "id": "b",
+          "label": "non-occurrence of catastrophic consequences"
+        },
+        {
+          "id": "c",
+          "label": "readiness of service at time points"
+        },
+        {
+          "id": "d",
+          "label": "validity and consistency of data and message"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "medium",
+      "tags": [
+        "reliability",
+        "dependability"
+      ],
+      "explanation": "Reliability R(t) models the probability that service continues without failure across (0, t]."
+    },
+    {
+      "id": "mod13-quiz-002",
+      "module": "Module 13",
+      "topic": "Dependability",
+      "type": "multiple_choice",
+      "prompt": "Which dependability attribute ensures the readiness of service at time point t?",
+      "options": [
+        {
+          "id": "a",
+          "label": "availability"
+        },
+        {
+          "id": "b",
+          "label": "safety"
+        },
+        {
+          "id": "c",
+          "label": "reliability"
+        },
+        {
+          "id": "d",
+          "label": "security"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "easy",
+      "tags": [
+        "availability"
+      ],
+      "explanation": "Availability measures readiness for usage at a specific instant."
+    },
+    {
+      "id": "mod13-quiz-003",
+      "module": "Module 13",
+      "topic": "Public key cryptography",
+      "type": "multiple_choice",
+      "prompt": "In a public key cryptography system aimed at confidentiality, which key should be public?",
+      "options": [
+        {
+          "id": "a",
+          "label": "The encryption key"
+        },
+        {
+          "id": "b",
+          "label": "The decryption key"
+        },
+        {
+          "id": "c",
+          "label": "Both keys"
+        },
+        {
+          "id": "d",
+          "label": "Neither key"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "easy",
+      "tags": [
+        "security",
+        "crypto"
+      ],
+      "explanation": "Senders encrypt with the recipient's public key; only the private key can decrypt."
+    },
+    {
+      "id": "mod13-quiz-004",
+      "module": "Module 13",
+      "topic": "Public key cryptography",
+      "type": "multiple_choice",
+      "prompt": "In an open-key cryptography system, which key must be public to preserve confidentiality?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Encryption key"
+        },
+        {
+          "id": "b",
+          "label": "Decryption key"
+        },
+        {
+          "id": "c",
+          "label": "Both keys"
+        },
+        {
+          "id": "d",
+          "label": "Neither key"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "easy",
+      "tags": [
+        "security",
+        "crypto"
+      ],
+      "explanation": "The sender needs the publicly available encryption key; the private key stays secret."
+    },
+    {
+      "id": "mod13-quiz-005",
+      "module": "Module 13",
+      "topic": "Authentication options",
+      "type": "multiple_choice",
+      "prompt": "Windows security is best suited for which user group when controlling access to a Web site?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Corporate intranet applications"
+        },
+        {
+          "id": "b",
+          "label": "Online shopping sites"
+        },
+        {
+          "id": "c",
+          "label": "Online banking"
+        },
+        {
+          "id": "d",
+          "label": "Web-based email"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "medium",
+      "tags": [
+        "security",
+        "windows"
+      ],
+      "explanation": "Windows authentication integrates with domain credentials\u2014ideal for intranet scenarios."
+    },
+    {
+      "id": "mod13-quiz-006",
+      "module": "Module 13",
+      "topic": "Forms security",
+      "type": "multi_select",
+      "prompt": "Where can credentials be stored when Forms authentication is used? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "label": "In Web.config"
+        },
+        {
+          "id": "b",
+          "label": "In the OS access control list"
+        },
+        {
+          "id": "c",
+          "label": "In a user administration file"
+        },
+        {
+          "id": "d",
+          "label": "Inside a user control namespace"
+        }
+      ],
+      "answer": [
+        "b",
+        "c"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "forms auth"
+      ],
+      "explanation": "Credentials may be persisted in system ACLs or in a dedicated user store; Web.config typically references them rather than storing secrets."
+    },
+    {
+      "id": "mod13-quiz-007",
+      "module": "Module 13",
+      "topic": "Forms security",
+      "type": "multiple_choice",
+      "prompt": "What is the most secure configuration for Forms-based Web security?",
+      "options": [
+        {
+          "id": "a",
+          "label": "identity impersonation = \"false\""
+        },
+        {
+          "id": "b",
+          "label": "identity impersonation = \"true\""
+        },
+        {
+          "id": "c",
+          "label": "identity impersonation = \"username/asp.net\""
+        },
+        {
+          "id": "d",
+          "label": "No impersonation setting in Web.config"
+        }
+      ],
+      "answer": "d",
+      "difficulty": "medium",
+      "tags": [
+        "forms auth",
+        "security"
+      ],
+      "explanation": "Leaving impersonation disabled (no override) ensures ASP.NET runs under its least-privilege account."
+    },
+    {
+      "id": "mod13-quiz-008",
+      "module": "Module 13",
+      "topic": "Authorization",
+      "type": "multiple_choice",
+      "prompt": "How should <allow>/<deny> elements be ordered within the authorization section?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Order is unimportant"
+        },
+        {
+          "id": "b",
+          "label": "<deny> must precede all <allow>"
+        },
+        {
+          "id": "c",
+          "label": "All <allow> entries precede <deny> entries"
+        },
+        {
+          "id": "d",
+          "label": "The <deny> elements must be ordered to match authorization requirements"
+        }
+      ],
+      "answer": "d",
+      "difficulty": "medium",
+      "tags": [
+        "authorization"
+      ],
+      "explanation": "Authorization rules are evaluated in sequence, so the <deny> entries must be intentionally ordered."
+    },
+    {
+      "id": "mod13-quiz-009",
+      "module": "Module 13",
+      "topic": "Forms cookies",
+      "type": "multi_select",
+      "prompt": "By default, Forms-auth cookies are protected by\u2026 Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "label": "Plain text storage"
+        },
+        {
+          "id": "b",
+          "label": "Encryption to prevent reading"
+        },
+        {
+          "id": "c",
+          "label": "Digital signatures to prevent tampering"
+        },
+        {
+          "id": "d",
+          "label": "Server-side storage only"
+        }
+      ],
+      "answer": [
+        "b",
+        "c"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "cookies",
+        "security"
+      ],
+      "explanation": "ASP.NET encrypts and signs its auth cookies so they cannot be read or modified by clients."
+    },
+    {
+      "id": "mod13-quiz-010",
+      "module": "Module 13",
+      "topic": "Cookies",
+      "type": "multi_select",
+      "prompt": "Cookies can be used for\u2026 Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "label": "Communication between different sessions"
+        },
+        {
+          "id": "b",
+          "label": "Saving client-side information"
+        },
+        {
+          "id": "c",
+          "label": "Supporting Session State in heavy-traffic clients"
+        },
+        {
+          "id": "d",
+          "label": "Backing up the user data layer independently of the server"
+        }
+      ],
+      "answer": [
+        "b",
+        "c"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "cookies"
+      ],
+      "explanation": "Cookies store lightweight data on clients and can carry session identifiers that back Session State."
     }
   ]
 }
