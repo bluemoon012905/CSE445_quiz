@@ -7,11 +7,6 @@ const TYPE_LABELS = {
 };
 
 const MODULE_PLACEHOLDERS = Array.from({ length: 7 }, (_, idx) => `Module ${idx + 8}`);
-const API_BASE_KEY = 'cse445QuizApiBase';
-const API_BASE = initializeApiBase();
-if (API_BASE) {
-  console.info(`Using remote API base: ${API_BASE}`);
-}
 
 const elements = {
   setupForm: document.getElementById('quiz-setup-form'),
@@ -76,7 +71,7 @@ function attachEventListeners() {
 
 async function loadQuestionBank() {
   try {
-    const response = await apiFetch('/api/questions');
+    const response = await fetch('./questions.json', { cache: 'no-store' });
     if (!response.ok) {
       throw new Error('Failed to load questions');
     }
@@ -576,47 +571,6 @@ function formatDuration(ms) {
     return `${mins}m ${secs}s`;
   }
   return `${secs}s`;
-}
-
-function initializeApiBase() {
-  const params = new URLSearchParams(window.location.search);
-  if (params.has('apiBase')) {
-    const normalized = normalizeApiBase(params.get('apiBase'));
-    if (normalized) {
-      localStorage.setItem(API_BASE_KEY, normalized);
-      return normalized;
-    }
-    localStorage.removeItem(API_BASE_KEY);
-    return '';
-  }
-  return localStorage.getItem(API_BASE_KEY) || '';
-}
-
-function normalizeApiBase(value) {
-  if (!value || value === '.') {
-    return '';
-  }
-  const trimmed = value.trim().replace(/\/+$/, '');
-  if (!trimmed) {
-    return '';
-  }
-  if (!/^https?:\/\//i.test(trimmed)) {
-    return '';
-  }
-  return trimmed;
-}
-
-function buildApiUrl(path) {
-  if (!API_BASE) {
-    return path;
-  }
-  const relativePath = path.startsWith('/') ? path : `/${path}`;
-  return `${API_BASE}${relativePath}`;
-}
-
-function apiFetch(path, options = {}) {
-  const url = buildApiUrl(path);
-  return fetch(url, options);
 }
 
 function resetToBuilder() {

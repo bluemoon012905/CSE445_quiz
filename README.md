@@ -4,25 +4,18 @@ Browser-based quiz builder for CSE445 content. The app lets you choose the modul
 
 ## Getting started
 
-1. Ensure you have Node.js 18+ installed.
-2. Install dependencies (none beyond Node core) and launch the local server:
-   ```bash
-   npm run dev
-   ```
-3. Open `http://localhost:4173` in a browser to use the quiz builder.
-
-The `dev` script spins up the lightweight Node server in `server.js`. It serves everything in `public/` and exposes the `/api/questions` endpoint so the frontend can fetch/update the bank.
+1. Open `docs/index.html` directly in your browser **or** serve the `docs/` folder with any static file host (e.g., `python -m http.server 4173 docs`).
+2. The app loads `docs/questions.json`, so any change to that file is picked up on the next refresh—no backend required.
 
 ## Project layout
 
 ```
 .
-├── data/questions.json   # Authoritative question bank
-├── public/
+├── docs/
 │   ├── index.html        # UI shell
 │   ├── styles.css        # Tailored styling
-│   └── app.js            # Quiz orchestration, timers, PDF export
-├── server.js             # Static file server + question API
+│   ├── app.js            # Quiz orchestration, timers, PDF export
+│   └── questions.json    # Authoritative question bank (served statically)
 └── Notes/                # Provided module PDFs (reference material)
 ```
 
@@ -78,30 +71,18 @@ Optional fields:
 - `code`: String containing the code snippet for `code_dropdown` questions (displayed in a formatted block above the dropdown).
 - `generated`: Set to `true` on any prompt that was synthesized (instead of sourced directly from the provided question bank). Generated items display in the summary/PDF via the “Source” column, and the builder’s “Include generated questions” toggle uses this flag to filter them out.
 
-## API overview
+## Updating the question bank
 
-- `GET /api/questions` → returns `{ "questions": [...] }` from the JSON file.
-- `POST /api/questions` → accepts `{ "question": { ... } }`, validates the payload, assigns an `id` if one is not supplied, and appends it to `data/questions.json`.
-
-Both routes send CORS-friendly responses so you can automate uploads from scripts or REST clients.
-
-## Uploading more questions
-
-When you are ready:
-
-1. Drop your curated questions into `data/questions.json` (matching the schema above) **or** POST them to `/api/questions`.
-2. Reload the browser—filters and quiz generation logic will pick up the fresh bank instantly.
-3. If you want me to help convert raw prompts into this schema or synthesize new ones, just provide the source material and we can extend the JSON file together.
+- Edit `docs/questions.json` and add/remove entries using the schema above.
+- Reload the browser; the builder fetches that file on each load, so the new content appears immediately.
+- Generated placeholders should keep `generated: true` so the builder toggle and summary “Source” column remain accurate.
 
 ## Deploying with GitHub Pages + remote API
+The app is now 100% static, so deployment is as simple as:
 
-If you want the frontend hosted on GitHub Pages while the API runs elsewhere:
-
-1. **Host the API** – deploy `server.js` (plus `data/questions.json`) to a tiny Node host such as Render, Railway, Fly.io, or Azure App Service. Set `HOST=0.0.0.0` and use the platform-provided `PORT`. The server already serves CORS-friendly JSON responses, so no extra config is necessary.
-2. **Publish the static UI** – enable GitHub Pages for this repo and point it at the `/public` directory (or copy that folder into a `gh-pages` branch). Pages will serve the HTML/CSS/JS without the Node backend.
-3. **Tell the UI where the API lives** – open your Pages URL with `?apiBase=https://your-api-host.example.com` appended. The app stores that base URL in `localStorage` and uses it for every `/api/...` request. To revert to same-origin requests, visit the site with `?apiBase=.` once.
-
-With this setup you can update questions on the remote Node host while the static UI stays cached on GitHub Pages.
+1. In your repo settings, set GitHub Pages to “Deploy from branch → main → `/docs` folder”.
+2. Push your changes—GitHub serves whatever lives in `/docs`.
+3. Share the Pages URL; it will fetch `questions.json` from the same folder without needing any backend.
 
 ## Implementation guide
 

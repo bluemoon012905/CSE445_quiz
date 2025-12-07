@@ -5,16 +5,11 @@
 - **Status:** Frontend/Backend scaffolding complete, API endpoints stable, PDF export enabled, generated-question filtering in place.
 
 ## Architecture overview
-1. **Backend (`server.js`)**
-   - Lightweight Node HTTP server (no frameworks) that serves everything under `public/` and exposes `/api/questions`.
-   - `GET /api/questions` returns the JSON payload from `data/questions.json`.
-   - `POST /api/questions` accepts `{ "question": { ... } }`, validates the payload (required fields, supported `type`, options array), assigns an ID when needed, appends the record to the JSON file, and responds with the stored object.
-   - CORS headers are enabled so you can host the UI separately (e.g., GitHub Pages) and point it to the deployed API via the `apiBase` query string parameter.
-
-2. **Frontend (`public/`)
-   - `index.html` renders the builder, quiz view, and summary/export panels.
-   - `app.js` loads the bank via `apiFetch`, renders filters, runs quiz navigation and timers, evaluates results, and builds the PDF summary on the fly.
-   - `styles.css` handles the glassmorphism theme, pill buttons, summary tables, and responsive layout.
+- **Static frontend (`docs/`)**
+  - `index.html` renders the builder, quiz view, and summary/export panels.
+  - `app.js` loads `questions.json`, renders filters, runs quiz navigation and timers, evaluates results, builds the PDF summary, and handles generated-question filtering.
+  - `styles.css` handles the glassmorphism theme, pill buttons, summary tables, responsive layout, and code dropdown widgets.
+  - `questions.json` is fetched directly from the same folder, so GitHub Pages (or any static host) can serve the entire app without a backend.
 
 ## Question bank details
 - Stored in `data/questions.json` under a single `questions` array.
@@ -36,9 +31,9 @@
 4. Append the new objects to `data/questions.json` and restart the server (or redeploy the API host). The frontend will pick up the additions on the next refresh.
 
 ## Deployment patterns
-- **Local testing:** `npm run dev` → open `http://localhost:4173`.
-- **GitHub Pages + remote API:** Deploy `public/` via Pages, host `server.js` + `data/questions.json` on a Node-friendly service (Render, Railway, etc.), then load your Pages URL with `?apiBase=https://your-api-host.example.com` once. The value is stored in `localStorage` so reloads keep using the remote base.
-- **Single host deployment:** Push the repo to a platform that runs Node, set `npm start` as the command, and let the bundled server serve both static assets and API routes.
+- **Local testing:** Open `docs/index.html` directly in a browser or serve the folder with `python -m http.server 4173 docs`.
+- **GitHub Pages:** Configure Pages to publish the `/docs` folder and push your changes. That’s enough to host the entire app.
+- **Other static hosts:** Drop the `docs/` folder into Netlify, Vercel (static export), Azure Static Web Apps, S3/CloudFront, etc.—no server code required.
 
 ## Feature reference
 - **Module pills:** Placeholders for Modules 8–14 appear by default. Selected pills now display both the check mark and text in high-contrast colors.
