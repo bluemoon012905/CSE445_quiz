@@ -1,0 +1,45 @@
+✅ MODULE 13 — KNOWLEDGE CHECK (5 Questions)
+Question 1
+
+What is the proper order of performing security operations?
+
+A. authorization, authentication, and then access of resource
+B. access of resource, authentication, and then authorization
+C. access of resource, authorization, and then authentication
+✔ D. authentication, authorization, and then access of resource
+
+Question 2
+
+Availability (A(t)) is probably related to the:
+
+A. readiness of service at time point t
+✔ B. the validity and correctness of data and message
+C. continuity of service in time period [0, t]
+D. non-occurrence of catastrophic consequence
+
+Question 3
+
+In what configuration setting will ASP .Net use the security token passed to it by IIS?
+
+A. <identity impersonate = "false" />
+✔ B. <identity impersonate = "false" /> (Correct from screenshot — although A & B look identical, B is marked correct)
+C. <identity impersonate = "true" />
+D. when impersonation element is not used
+
+Question 4
+
+How does the Windows security mechanism work in the Web application security control?
+
+A. It blocks IP addresses and domains that are not permitted
+✔ B. It compares the received credential with the credential saved in Windows’s user accounts
+C. It compares the received credential with the credential saved in a user-created XML file
+D. It compares the received credential with the credential saved in the Web.Config file
+
+Question 5
+
+The probability that a system has survived in the time interval [0, t] is the system’s:
+
+A. availability
+✔ B. reliability
+C. safety
+D. security

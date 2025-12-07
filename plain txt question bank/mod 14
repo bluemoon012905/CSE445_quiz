@@ -1,0 +1,137 @@
+✅ MODULE 14 — QUIZ (10 Questions)
+Question 1
+
+Data Encryption Standard (DES) is used for low-level security applications, because:
+
+A. the encryption algorithm is slow.
+✔ B. it has been used for many years.
+C. it is encryption key that is short.
+D. it uses a secretive key system.
+
+Question 2
+
+What techniques are used in Data Encryption Standard (DES) to perform encryption and decryption? Select all that apply.
+
+✔ A. secret key system
+B. open key system
+✔ C. a simple round of cipher encryption
+✔ D. multiple rounds of cipher encryption
+
+Question 3
+
+Data hashing creates a value from a given data. The hash value:
+
+A. can be used for recovering the data using a decryption algorithm.
+✔ B. can uniquely identify a data; cannot recover the data.
+C. creates a digital signature that is mixed with the data.
+D. is generated using the encryption algorithm in the Open Key cryptography system.
+
+Question 4
+
+What reliability features does WS-Reliable Messaging specification guarantee? Select all that apply.
+
+✔ A. No-loss messages
+✔ B. No-duplicated messages
+✔ C. Messages received once and only once
+D. Secure Sockets Layer data confidentiality
+E. Secure Sockets Layer data integrity
+
+Question 5
+
+How is the lost message handled by WS-Reliable Messaging?
+
+A. Double redundancy: Each message is sent twice.
+B. Triple redundancy: Each message is sent three times.
+✔ C. A message is resent if no acknowledgment is received within the given amount of time.
+D. The receiver creates the missing message based on the adjacent messages received.
+
+Question 6
+
+What are true about the n-out-of-k codes? Select all that apply.
+
+✔ A. It may not be able to tolerate all bit single errors.
+✔ B. It has a high level of redundancy, and the cost is high.
+C. It has zero overhead codes.
+✔ D. It is a non-separable code.
+
+Question 7
+
+What error control codes are separable codes? Select all that apply.
+
+✔ A. parity check
+✔ B. checksum
+C. arithmetic code
+✔ D. m-of-n code
+
+Question 8
+
+What error control codes are used in the control channel code standard in 5G wireless network?
+
+A. Turbo codes
+✔ B. LDPC codes
+✔ C. Polar codes
+D. m-of-n codes
+
+Question 9
+
+Secure Sockets Layer (SSL) defines communication protocols that can provide:
+
+A. reliable messaging
+✔ B. data confidentiality
+✔ C. data integrity
+D. lossless integrity
+
+Question 10
+
+What is the purpose of the fragmentation step in SSL?
+
+A. To make the data transmission more efficient
+B. To make the decryption harder
+✔ C. To make the encryption more manageable
+D. To make the transmission more reliable
+
+✅ MODULE 14 — KNOWLEDGE CHECK (5 Questions)
+Question 1
+
+SSL connection between a client and a server is based on a:
+
+A. message queue protocol
+B. polar code protocol
+✔ C. peer-to-peer protocol
+D. two-tier protocol
+
+Question 2
+
+How is the WS-ReliableMessaging implemented in WCF?
+
+✔ A. A message is resent if no acknowledgment received.
+B. Each message is sent three times.
+C. Natural direct resend missing message.
+D. Each message is sent twice.
+
+Question 3
+
+In order to detect all two-bit errors, the Hamming distance dₘᵢₙ(C) of code C must be at least:
+
+A. Two
+✔ B. Three
+C. One
+D. Four
+
+Question 4
+
+Wireless communication heavily relies on error control codes. What are the primary error control codes used in 3G cell phone network?
+
+A. LDPC codes
+✔ B. m-of-n codes
+C. Polar Codes
+✔ D. Turbo Codes
+
+Question 5
+
+In order to tolerate (or correct) one-bit error, the Hamming distance dₘᵢₙ(C) of code C must be at least:
+
+✔ A. 3
+B. 5
+C. 3 (with margin 0)
+D. 2

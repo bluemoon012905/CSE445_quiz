@@ -7,31 +7,16 @@
       "type": "multiple_choice",
       "prompt": "Which quality allows a distributed system to keep operating even if one node crashes?",
       "options": [
-        {
-          "id": "a",
-          "label": "Fault tolerance"
-        },
-        {
-          "id": "b",
-          "label": "Loose coupling"
-        },
-        {
-          "id": "c",
-          "label": "Increased latency"
-        },
-        {
-          "id": "d",
-          "label": "Central coordination"
-        }
+        { "id": "a", "label": "Fault tolerance" },
+        { "id": "b", "label": "Loose coupling" },
+        { "id": "c", "label": "Increased latency" },
+        { "id": "d", "label": "Central coordination" }
       ],
       "answer": "a",
       "difficulty": "medium",
       "expectedDurationSec": 45,
-      "tags": [
-        "resilience",
-        "availability"
-      ],
-      "explanation": "Fault tolerance is the system\u2019s ability to survive a node failure without downtime.",
+      "tags": ["resilience", "availability"],
+      "explanation": "Fault tolerance is the system’s ability to survive a node failure without downtime.",
       "generated": true
     },
     {
@@ -43,165 +28,14 @@
       "answer": "a",
       "difficulty": "easy",
       "expectedDurationSec": 20,
-      "tags": [
-        "rbac",
-        "authorization"
-      ],
-      "explanation": "RBAC groups permissions under roles so that granting or removing a role updates a user\u2019s effective access.",
+      "tags": ["rbac", "authorization"],
+      "explanation": "RBAC groups permissions under roles so that granting or removing a role updates a user’s effective access.",
       "options": [
-        {
-          "id": "a",
-          "label": "Permissions are tied to roles, and users inherit them by joining a role."
-        },
-        {
-          "id": "b",
-          "label": "Permissions are granted directly to every individual user account."
-        },
-        {
-          "id": "c",
-          "label": "Permissions are embedded in each hardware device."
-        },
-        {
-          "id": "d",
-          "label": "Permissions are randomly rotated among logged-in users."
-        }
+        { "id": "a", "label": "Permissions are tied to roles, and users inherit them by joining a role." },
+        { "id": "b", "label": "Permissions are granted directly to every individual user account." },
+        { "id": "c", "label": "Permissions are embedded in each hardware device." },
+        { "id": "d", "label": "Permissions are randomly rotated among logged-in users." }
       ],
-      "generated": true
-    },
-    {
-      "id": "mod10-003",
-      "module": "Module 10",
-      "topic": "Service Design",
-      "type": "multiple_choice",
-      "prompt": "What is an advantage of designing services around bounded contexts?",
-      "answer": "a",
-      "difficulty": "medium",
-      "expectedDurationSec": 60,
-      "tags": [
-        "bounded context",
-        "domain-driven design"
-      ],
-      "explanation": "Bounded contexts encapsulate models so changes remain localized and do not ripple through unrelated areas.",
-      "options": [
-        {
-          "id": "a",
-          "label": "Changes stay inside a domain boundary, reducing the blast radius across other services."
-        },
-        {
-          "id": "b",
-          "label": "Every service must share a single database."
-        },
-        {
-          "id": "c",
-          "label": "Teams can ignore domain-specific language."
-        },
-        {
-          "id": "d",
-          "label": "Deployments must be synchronized for all services at once."
-        }
-      ],
-      "generated": true
-    },
-    {
-      "id": "mod11-004",
-      "module": "Module 11",
-      "topic": "Observability",
-      "type": "multiple_choice",
-      "prompt": "Which trio of metrics defines the RED (Rate, Errors, Duration) method?",
-      "options": [
-        {
-          "id": "a",
-          "label": "Request rate, error count, and request duration."
-        },
-        {
-          "id": "b",
-          "label": "Request rate, error count, and saturation."
-        },
-        {
-          "id": "c",
-          "label": "CPU usage, memory usage, and duration."
-        },
-        {
-          "id": "d",
-          "label": "Latency percentile, throughput, and packet loss."
-        }
-      ],
-      "answer": "a",
-      "difficulty": "hard",
-      "expectedDurationSec": 75,
-      "tags": [
-        "metrics",
-        "SRE"
-      ],
-      "explanation": "The RED method tracks how many requests arrive, how many fail, and how long they take.",
-      "generated": true
-    },
-    {
-      "id": "mod12-005",
-      "module": "Module 12",
-      "topic": "Automation",
-      "type": "multiple_choice",
-      "prompt": "Which automation pattern pushes code changes to production progressively with guardrails?",
-      "options": [
-        {
-          "id": "a",
-          "label": "Canary releases"
-        },
-        {
-          "id": "b",
-          "label": "Blue/green rebuild"
-        },
-        {
-          "id": "c",
-          "label": "Shadow traffic"
-        },
-        {
-          "id": "d",
-          "label": "Ring buffering"
-        }
-      ],
-      "answer": "a",
-      "difficulty": "medium",
-      "expectedDurationSec": 40,
-      "tags": [
-        "deployments",
-        "progressive delivery"
-      ],
-      "explanation": "Canarying exposes a small percentage of traffic first to reduce risk.",
-      "generated": true
-    },
-    {
-      "id": "mod13-006",
-      "module": "Module 13",
-      "topic": "Reliability",
-      "type": "multiple_choice",
-      "prompt": "Which numeric pair best captures service level objectives?",
-      "options": [
-        {
-          "id": "a",
-          "label": "Mean time to recovery and budget"
-        },
-        {
-          "id": "b",
-          "label": "Target reliability percentage and measurement window"
-        },
-        {
-          "id": "c",
-          "label": "User adoption and churn"
-        },
-        {
-          "id": "d",
-          "label": "Cost of goods sold and margin"
-        }
-      ],
-      "answer": "b",
-      "difficulty": "easy",
-      "expectedDurationSec": 30,
-      "tags": [
-        "SLO",
-        "reliability"
-      ],
-      "explanation": "An SLO pairs a reliability target with the period the target is evaluated against.",
       "generated": true
     },
     {
@@ -211,30 +45,15 @@
       "type": "multiple_choice",
       "prompt": "Which XML snippet correctly represents <t> Alan and Mairi. dreamed. using the <t> tag?",
       "options": [
-        {
-          "id": "a",
-          "label": "<t> Alan + Mairi . </t>"
-        },
-        {
-          "id": "b",
-          "label": "<t> Alan + Mairi + dreamed . </t>"
-        },
-        {
-          "id": "c",
-          "label": "<term> Alan + Mairi + dreamed . </term>"
-        },
-        {
-          "id": "d",
-          "label": "<term> Alan + Mairi + to dream . </term>"
-        }
+        { "id": "a", "label": "<t> Alan + Mairi . </t>" },
+        { "id": "b", "label": "<t> Alan + Mairi + dreamed . </t>" },
+        { "id": "c", "label": "<term> Alan + Mairi + dreamed . </term>" },
+        { "id": "d", "label": "<term> Alan + Mairi + to dream . </term>" }
       ],
       "answer": "b",
       "difficulty": "medium",
       "expectedDurationSec": 75,
-      "tags": [
-        "xml",
-        "tagging"
-      ],
+      "tags": ["xml", "tagging"],
       "explanation": "The <t> tag must wrap the entire expression and include the dreamed verb, making the second snippet the valid representation."
     },
     {
@@ -244,987 +63,226 @@
       "type": "multiple_choice",
       "prompt": "An XML document has a tree structure. It:",
       "options": [
-        {
-          "id": "a",
-          "label": "can have multiple roots and multiple leaves"
-        },
-        {
-          "id": "b",
-          "label": "can have multiple roots or records"
-        },
-        {
-          "id": "c",
-          "label": "must have a single root"
-        },
-        {
-          "id": "d",
-          "label": "must have a single leaf"
-        }
+        { "id": "a", "label": "can have multiple roots and multiple leaves" },
+        { "id": "b", "label": "can have multiple roots or records" },
+        { "id": "c", "label": "must have a single root" },
+        { "id": "d", "label": "must have a single leaf" }
       ],
       "answer": "c",
       "difficulty": "easy",
       "expectedDurationSec": 30,
-      "tags": [
-        "xml",
-        "structure"
-      ],
+      "tags": ["xml", "structure"],
       "explanation": "Every well-formed XML document has exactly one root element, while leaves are unconstrained."
     },
     {
-      "id": "mod8-quiz-003",
-      "module": "Module 8",
-      "topic": "Well-formed XML",
+      "id": "mod10-kc-001",
+      "module": "Module 10",
+      "topic": "Knowledge Check",
       "type": "multiple_choice",
-      "prompt": "Which statement captures the well-formedness requirements for XML?",
+      "prompt": "What standard do Atom and RSS conform with?",
       "options": [
-        {
-          "id": "a",
-          "label": "It must have a single root element and every tag pair must be properly nested."
-        },
-        {
-          "id": "b",
-          "label": "It cannot contain whitespace in any text node."
-        },
-        {
-          "id": "c",
-          "label": "It must only use tags defined by the W3C core schema."
-        },
-        {
-          "id": "d",
-          "label": "It may have multiple roots as long as there is one leaf."
-        }
+        { "id": "a", "label": "JSON" },
+        { "id": "b", "label": "Excel" },
+        { "id": "c", "label": "HTML" },
+        { "id": "d", "label": "XML" }
       ],
-      "answer": "a",
-      "difficulty": "medium",
-      "expectedDurationSec": 45,
-      "tags": [
-        "xml",
-        "well-formedness"
-      ],
-      "explanation": "Well-formed XML requires exactly one root element with every element opened and closed in the correct order."
+      "answer": "d"
     },
     {
-      "id": "mod8-quiz-004",
-      "module": "Module 8",
-      "topic": "XmlTextWriter",
+      "id": "mod10-kc-002",
+      "module": "Module 10",
+      "topic": "Knowledge Check",
       "type": "multiple_choice",
-      "prompt": "Before writing nodes with XmlTextWriter, which method call is required to properly format the output file?",
+      "prompt": "Given the following XQuery code:\n\nlet $x := doc(\"courses.xml\")/Courses\nfor $in in $x/Course\nwhere $in/Level > 200\norder by $in/Code\nreturn <Course> {$in/Name, $in/Level, $in/Code} </Course>\n\nWhich line of the code defines the filter function?",
       "options": [
-        {
-          "id": "a",
-          "label": "xtw.WriteStartDocument()"
-        },
-        {
-          "id": "b",
-          "label": "xtw.Close()"
-        },
-        {
-          "id": "c",
-          "label": "xtw.WriteEndDocument()"
-        },
-        {
-          "id": "d",
-          "label": "xtw.WriteAttributeString()"
-        }
+        { "id": "a", "label": "order by $in/Code" },
+        { "id": "b", "label": "return <Course> {$in/Name, $in/Level, $in/Code} </Course>" },
+        { "id": "c", "label": "for $in in $x/Course" },
+        { "id": "d", "label": "where $in/Level > 200" }
       ],
-      "answer": "a",
-      "difficulty": "medium",
-      "expectedDurationSec": 40,
-      "tags": [
-        "c#",
-        "xml"
-      ],
-      "explanation": "WriteStartDocument writes the XML declaration and prepares the writer for subsequent nodes."
+      "answer": "d"
     },
     {
-      "id": "mod8-quiz-005a",
-      "module": "Module 8",
-      "topic": "XmlTextReader",
-      "type": "code_dropdown",
-      "prompt": "In the XmlTextReader loop shown, how is the XML data processed?",
-      "answer": "a",
-      "difficulty": "medium",
-      "expectedDurationSec": 35,
-      "tags": [
-        "c#",
-        "xml",
-        "streaming"
-      ],
-      "explanation": "XmlTextReader is a streaming API, so the sample reads node-by-node rather than materializing the full DOM.",
-      "options": [
-        {
-          "id": "a",
-          "label": "It reads one node at a time without building an in-memory tree."
-        },
-        {
-          "id": "b",
-          "label": "It loads the entire XML document into a DOM before the loop starts."
-        },
-        {
-          "id": "c",
-          "label": "It buffers only attributes while skipping elements."
-        },
-        {
-          "id": "d",
-          "label": "It writes the nodes back to disk as it parses them."
-        }
-      ],
-      "code": "(1) XmlTextReader reader = new XmlTextReader(\"a.xml\");\n(2) while (reader.Read())\n(3) {\n(4)     if (reader.NodeType == XmlNodeType.Element &&\n(5)         reader.Name == \"book\")\n(6)     {\n(7)         Console.WriteLine(reader.GetAttribute(\"title\"));\n(8)     }\n(9) }"
-    },
-    {
-      "id": "mod8-quiz-005b",
-      "module": "Module 8",
-      "topic": "XmlTextReader",
-      "type": "code_dropdown",
-      "prompt": "In the same XmlTextReader snippet, which line is the only one that loads a node into memory?",
-      "options": [
-        {
-          "id": "a",
-          "label": "Line (2): while (reader.Read())"
-        },
-        {
-          "id": "b",
-          "label": "Line (4): reader.NodeType == XmlNodeType.Element"
-        },
-        {
-          "id": "c",
-          "label": "Line (5): reader.Name == \"book\""
-        },
-        {
-          "id": "d",
-          "label": "Line (7): Console.WriteLine(reader.GetAttribute(\"title\"))"
-        }
-      ],
-      "answer": "c",
-      "difficulty": "hard",
-      "expectedDurationSec": 45,
-      "tags": [
-        "c#",
-        "xml"
-      ],
-      "explanation": "According to the quiz key, the equality check at line (5) is where the desired element is realized for processing.",
-      "code": "(1) XmlTextReader reader = new XmlTextReader(\"a.xml\");\n(2) while (reader.Read())\n(3) {\n(4)     if (reader.NodeType == XmlNodeType.Element &&\n(5)         reader.Name == \"book\")\n(6)     {\n(7)         Console.WriteLine(reader.GetAttribute(\"title\"));\n(8)     }\n(9) }"
-    },
-    {
-      "id": "mod8-quiz-005c",
-      "module": "Module 8",
-      "topic": "XmlTextReader",
-      "type": "code_dropdown",
-      "prompt": "If the XmlTextReader code calls reader.MoveToAttribute(\"author\") after Read(), must the node have attributes?",
-      "answer": "b",
-      "difficulty": "medium",
-      "expectedDurationSec": 30,
-      "tags": [
-        "c#",
-        "xml"
-      ],
-      "explanation": "MoveToAttribute returns false if the attribute is missing; the call itself does not require attributes to exist.",
-      "options": [
-        {
-          "id": "a",
-          "label": "The call throws because the node must have attributes."
-        },
-        {
-          "id": "b",
-          "label": "The call simply returns false when the attribute is missing."
-        },
-        {
-          "id": "c",
-          "label": "The reader rewinds to the previous node before continuing."
-        },
-        {
-          "id": "d",
-          "label": "The reader automatically adds a blank author attribute."
-        }
-      ],
-      "code": "(1) XmlTextReader reader = new XmlTextReader(\"a.xml\");\n(2) while (reader.Read())\n(3) {\n(4)     if (reader.NodeType == XmlNodeType.Element &&\n(5)         reader.Name == \"book\")\n(6)     {\n(7)         Console.WriteLine(reader.GetAttribute(\"title\"));\n(8)     }\n(9) }"
-    },
-    {
-      "id": "mod8-quiz-006",
-      "module": "Module 8",
-      "topic": "XPath",
+      "id": "mod10-kc-003",
+      "module": "Module 10",
+      "topic": "Knowledge Check",
       "type": "multiple_choice",
-      "prompt": "How are functions used within an XPath expression?",
-      "answer": "b",
-      "difficulty": "easy",
-      "expectedDurationSec": 20,
-      "tags": [
-        "xpath"
-      ],
-      "explanation": "XPath functions are embedded within the expression to evaluate nodes or values; there is no trailing function-call syntax.",
+      "prompt": "Assume we have five (5) different Web data structures. We choose one structure as the intermediate structure and translate all other structures to and from this structure. How many converters are needed?",
       "options": [
-        {
-          "id": "a",
-          "label": "They must appear only at the end of the expression after the final node step."
-        },
-        {
-          "id": "b",
-          "label": "They are invoked within the expression, such as contains() or count(), to filter or compute values."
-        },
-        {
-          "id": "c",
-          "label": "They can only be used in attribute predicates."
-        },
-        {
-          "id": "d",
-          "label": "XPath does not support any function calls."
-        }
-      ]
+        { "id": "a", "label": "4" },
+        { "id": "b", "label": "6" },
+        { "id": "c", "label": "8" },
+        { "id": "d", "label": "10" }
+      ],
+      "answer": "d"
     },
     {
-      "id": "mod8-quiz-007",
-      "module": "Module 8",
-      "topic": "XML processing models",
+      "id": "mod10-kc-004",
+      "module": "Module 10",
+      "topic": "Knowledge Check",
       "type": "multiple_choice",
-      "prompt": "Which XML processing model reads one node into memory at a time based on a path expression?",
+      "prompt": "The data structure of Google Protocol Buffers is similar to:",
       "options": [
-        {
-          "id": "a",
-          "label": "DOM (Document Object Model)"
-        },
-        {
-          "id": "b",
-          "label": "SAX (Simple API for XML)"
-        },
-        {
-          "id": "c",
-          "label": "XmlDocument"
-        },
-        {
-          "id": "d",
-          "label": "XPath"
-        }
+        { "id": "a", "label": "XML" },
+        { "id": "b", "label": "XML Schema" },
+        { "id": "c", "label": "HTML" },
+        { "id": "d", "label": "Objects in programming languages" }
       ],
-      "answer": "b",
-      "difficulty": "easy",
-      "expectedDurationSec": 30,
-      "tags": [
-        "xml",
-        "processing"
-      ],
-      "explanation": "SAX is an event-driven, streaming API that pulls in a single node at a time."
+      "answer": "d"
     },
     {
-      "id": "mod8-kc-001",
-      "module": "Module 8",
-      "topic": "XML display",
+      "id": "mod10-kc-005",
+      "module": "Module 10",
+      "topic": "Knowledge Check",
       "type": "multiple_choice",
-      "prompt": "What is an advantage of a server-side solution for displaying an XML file in a required format?",
+      "prompt": "Google’s Protocol Buffers are similar in syntax to:",
       "options": [
-        {
-          "id": "a",
-          "label": "Reduces server computing need"
-        },
-        {
-          "id": "b",
-          "label": "No need to write an XSL style sheet"
-        },
-        {
-          "id": "c",
-          "label": "Reduces client computing load"
-        },
-        {
-          "id": "d",
-          "label": "No special requirement on the Web browser"
-        }
+        { "id": "a", "label": "CSS" },
+        { "id": "b", "label": "TeX" },
+        { "id": "c", "label": "XML" },
+        { "id": "d", "label": "Class definition of an object-oriented programming language" }
       ],
-      "answer": "d",
-      "difficulty": "easy",
-      "expectedDurationSec": 25,
-      "tags": [
-        "xml",
-        "asp.net"
-      ],
-      "explanation": "Rendering on the server removes browser requirements, so any client can consume the result."
+      "answer": "d"
     },
     {
-      "id": "mod8-kc-002",
-      "module": "Module 8",
-      "topic": "ASP.NET storage",
+      "id": "mod10-quiz-001",
+      "module": "Module 10",
+      "topic": "Quiz",
       "type": "multiple_choice",
-      "prompt": "If your ASP.NET app creates an XML file, where should it be stored within the application domain?",
+      "prompt": "What are the key features of a native XML database? Select all that apply.",
       "options": [
-        {
-          "id": "a",
-          "label": "App_Data folder"
-        },
-        {
-          "id": "b",
-          "label": "App_Code folder"
-        },
-        {
-          "id": "c",
-          "label": "App_WebReferences folder"
-        },
-        {
-          "id": "d",
-          "label": "Bin folder"
-        }
+        { "id": "a", "label": "Store XML data as is" },
+        { "id": "b", "label": "No need to load the entire XML into memory" },
+        { "id": "c", "label": "Allow queries for a subset of data in memory" },
+        { "id": "d", "label": "Use the relational database query language" }
       ],
-      "answer": "a",
-      "difficulty": "easy",
-      "expectedDurationSec": 20,
-      "tags": [
-        "asp.net",
-        "storage"
-      ],
-      "explanation": "App_Data is the designated location for data files such as XML generated by the app."
+      "answer": "a"
     },
     {
-      "id": "mod8-kc-003",
-      "module": "Module 8",
-      "topic": "XML Schema",
+      "id": "mod10-quiz-002",
+      "module": "Module 10",
+      "topic": "Quiz",
       "type": "multiple_choice",
-      "prompt": "Which of the following terms is NOT defined in the W3C namespace http://www.w3.org/2001/XMLSchema?",
+      "prompt": "Using the object-oriented concept of inheritance, what language is the base (parent) language of XQuery?",
       "options": [
-        {
-          "id": "a",
-          "label": "cc:core"
-        },
-        {
-          "id": "b",
-          "label": "all"
-        },
-        {
-          "id": "c",
-          "label": "complexType"
-        },
-        {
-          "id": "d",
-          "label": "schema"
-        },
-        {
-          "id": "e",
-          "label": "choice"
-        }
+        { "id": "a", "label": "XML Schema" },
+        { "id": "b", "label": "XPath" },
+        { "id": "c", "label": "XSL" },
+        { "id": "d", "label": "XML" }
       ],
-      "answer": "a",
-      "difficulty": "medium",
-      "expectedDurationSec": 35,
-      "tags": [
-        "xml",
-        "schema"
-      ],
-      "explanation": "Elements such as all, complexType, schema, and choice live in the XML Schema namespace; cc:core does not."
+      "answer": "b"
     },
     {
-      "id": "mod8-kc-004",
-      "module": "Module 8",
-      "topic": "DTD",
+      "id": "mod11-quiz-001",
+      "module": "Module 11",
+      "topic": "Quiz",
       "type": "multiple_choice",
-      "prompt": "A Document Type Definition (DTD) file:",
+      "prompt": "What technology best supports the thick client architecture?",
       "options": [
-        {
-          "id": "a",
-          "label": "defines the syntax of an XML file"
-        },
-        {
-          "id": "b",
-          "label": "defines the structure of an XML schema file"
-        },
-        {
-          "id": "c",
-          "label": "extends the XML schema with more data types"
-        },
-        {
-          "id": "d",
-          "label": "follows XML syntax"
-        }
+        { "id": "a", "label": "Common Gateway Interface" },
+        { "id": "b", "label": "SOAP" },
+        { "id": "c", "label": "Client-browser computing" },
+        { "id": "d", "label": "OLE DB file" }
       ],
-      "answer": "a",
-      "difficulty": "easy",
-      "expectedDurationSec": 25,
-      "tags": [
-        "xml",
-        "dtd"
-      ],
-      "explanation": "A DTD declares the legal structure and elements for an XML document."
+      "answer": "c"
     },
     {
-      "id": "mod8-kc-005",
-      "module": "Module 8",
-      "topic": "XML elements",
+      "id": "mod11-quiz-002",
+      "module": "Module 11",
+      "topic": "Quiz",
       "type": "multiple_choice",
-      "prompt": "Which description best matches an empty XML element?",
+      "prompt": "What computing model and architecture does Pure HTML Web implement? Select all that apply.",
       "options": [
-        {
-          "id": "a",
-          "label": "An element with no text content or child nodes, often written with a self-closing tag."
-        },
-        {
-          "id": "b",
-          "label": "Any element that lacks attributes but has children."
-        },
-        {
-          "id": "c",
-          "label": "An element that contains whitespace-only text nodes."
-        },
-        {
-          "id": "d",
-          "label": "An element defined outside of the namespace scope."
-        }
+        { "id": "a", "label": "Thick client architecture" },
+        { "id": "b", "label": "Thin client architecture" },
+        { "id": "c", "label": "Server-side computing" },
+        { "id": "d", "label": "Client-browser computing" }
       ],
-      "answer": "a",
-      "difficulty": "medium",
-      "expectedDurationSec": 45,
-      "tags": [
-        "xml",
-        "elements"
-      ],
-      "explanation": "Empty elements do not wrap any text or children and can be written using the self-closing syntax."
+      "answer": "a"
     },
     {
-      "id": "mod8-kc-006",
-      "module": "Module 8",
-      "topic": "XML processing models",
+      "id": "mod12-quiz-001",
+      "module": "Module 12",
+      "topic": "Quiz",
       "type": "multiple_choice",
-      "prompt": "What XML processing model reads one node into memory at a time?",
+      "prompt": "Where are the compilation and debugging options of a Web application typically stored in the Web.config file?",
       "options": [
-        {
-          "id": "a",
-          "label": "SAX (Simple API for XML)"
-        },
-        {
-          "id": "b",
-          "label": "XMLDocument"
-        },
-        {
-          "id": "c",
-          "label": "DOM (Document Object Model)"
-        },
-        {
-          "id": "d",
-          "label": "XPath"
-        }
+        { "id": "a", "label": "<appSettings>" },
+        { "id": "b", "label": "<system.web>" },
+        { "id": "c", "label": "<httpHandlers>" },
+        { "id": "d", "label": "<processModel>" }
       ],
-      "answer": "a",
-      "difficulty": "easy",
-      "expectedDurationSec": 25,
-      "tags": [
-        "xml",
-        "processing"
-      ],
-      "explanation": "SAX parsers stream XML, delivering one node at a time through events."
+      "answer": "b"
     },
     {
-      "id": "mod9-quiz-001",
-      "module": "Module 9",
-      "topic": "DTD basics",
+      "id": "mod12-quiz-002",
+      "module": "Module 12",
+      "topic": "Quiz",
       "type": "multiple_choice",
-      "prompt": "What does a Document Type Definition (DTD) file define?",
+      "prompt": "Policy-based computing suggests to decouple:",
       "options": [
-        {
-          "id": "a",
-          "label": "The syntax of another DTD file"
-        },
-        {
-          "id": "b",
-          "label": "The structure and legal elements/attributes of an XML document"
-        },
-        {
-          "id": "c",
-          "label": "Additional XML Schema syntax"
-        },
-        {
-          "id": "d",
-          "label": "Extensions to the C# base class library"
-        }
+        { "id": "a", "label": "data from program" },
+        { "id": "b", "label": "data from server" },
+        { "id": "c", "label": "data from local drive" },
+        { "id": "d", "label": "conditions (context) from policy constraints" }
       ],
-      "answer": "b",
-      "difficulty": "easy",
-      "expectedDurationSec": 35,
-      "tags": [
-        "dtd",
-        "xml"
-      ],
-      "explanation": "A DTD constrains how an XML document is structured by listing its allowed element tree."
+      "answer": "a"
     },
     {
-      "id": "mod9-quiz-002",
-      "module": "Module 9",
-      "topic": "DTD basics",
+      "id": "mod13-kc-001",
+      "module": "Module 13",
+      "topic": "Knowledge Check",
       "type": "multiple_choice",
-      "prompt": "Given the DTD declaration `<!ELEMENT instructor (name?, officeHours?, officeHour?, phone?, email?)>`, which child element is required?",
+      "prompt": "What is the proper order of performing security operations?",
       "options": [
-        {
-          "id": "a",
-          "label": "name"
-        },
-        {
-          "id": "b",
-          "label": "officeHours"
-        },
-        {
-          "id": "c",
-          "label": "phone"
-        },
-        {
-          "id": "d",
-          "label": "email"
-        }
+        { "id": "a", "label": "authorization, authentication, and then access of resource" },
+        { "id": "b", "label": "access of resource, authentication, and then authorization" },
+        { "id": "c", "label": "access of resource, authorization, and then authentication" },
+        { "id": "d", "label": "authentication, authorization, and then access of resource" }
       ],
-      "answer": "d",
-      "difficulty": "medium",
-      "expectedDurationSec": 40,
-      "tags": [
-        "dtd"
-      ],
-      "explanation": "Only `email` lacks the question mark, so it must appear exactly once."
+      "answer": "d"
     },
     {
-      "id": "mod9-quiz-003",
-      "module": "Module 9",
-      "topic": "DTD basics",
+      "id": "mod13-kc-002",
+      "module": "Module 13",
+      "topic": "Knowledge Check",
       "type": "multiple_choice",
-      "prompt": "In the declaration `<!ELEMENT instructor (name?, email?, officeHours?, phone?, email?)>`, what does the final `email` entry imply?",
+      "prompt": "Availability (A(t)) is probably related to the:",
       "options": [
-        {
-          "id": "a",
-          "label": "The element name is optional"
-        },
-        {
-          "id": "b",
-          "label": "An `email` element is required"
-        },
-        {
-          "id": "c",
-          "label": "`phone` is required"
-        },
-        {
-          "id": "d",
-          "label": "The entire instructor element is optional"
-        }
+        { "id": "a", "label": "readiness of service at time point t" },
+        { "id": "b", "label": "the validity and correctness of data and message" },
+        { "id": "c", "label": "continuity of service in time period [0, t]" },
+        { "id": "d", "label": "non-occurrence of catastrophic consequence" }
       ],
-      "answer": "b",
-      "difficulty": "medium",
-      "expectedDurationSec": 35,
-      "tags": [
-        "dtd"
-      ],
-      "explanation": "Repeating `email` without `?` forces at least one appearance of that element."
+      "answer": "b"
     },
     {
-      "id": "mod9-quiz-004",
-      "module": "Module 9",
-      "topic": "XML Schema",
-      "type": "multiple_choice",
-      "prompt": "Why was XML Schema introduced after DTDs?",
-      "options": [
-        {
-          "id": "a",
-          "label": "DTDs already supported every data type"
-        },
-        {
-          "id": "b",
-          "label": "XML Schema adds strong data typing and reuses XML syntax"
-        },
-        {
-          "id": "c",
-          "label": "DTDs were too fast to parse"
-        },
-        {
-          "id": "d",
-          "label": "XML Schema is required for JSON documents"
-        }
-      ],
-      "answer": "b",
-      "difficulty": "medium",
-      "expectedDurationSec": 45,
-      "tags": [
-        "xml schema",
-        "dtd"
-      ],
-      "explanation": "XSD addressed DTD limitations by allowing typed validation and representing the schema itself as XML."
-    },
-    {
-      "id": "mod9-quiz-005",
-      "module": "Module 9",
-      "topic": "XML Schema",
-      "type": "multiple_choice",
-      "prompt": "Which language natively supports data types such as integer?",
-      "options": [
-        {
-          "id": "a",
-          "label": "XML Schema (XSD)"
-        },
-        {
-          "id": "b",
-          "label": "DTD"
-        },
-        {
-          "id": "c",
-          "label": "Both DTD and XSD"
-        },
-        {
-          "id": "d",
-          "label": "Neither DTD nor XSD"
-        }
-      ],
-      "answer": "a",
-      "difficulty": "easy",
-      "expectedDurationSec": 25,
-      "tags": [
-        "xml schema"
-      ],
-      "explanation": "XSD supports typed elements (integer, decimal, etc.) whereas DTD sticks to text."
-    },
-    {
-      "id": "mod9-quiz-006",
-      "module": "Module 9",
-      "topic": "XML validation",
-      "type": "multiple_choice",
-      "prompt": "When working with `XmlSchemaSet` for validation, what can you load into the set?",
-      "options": [
-        {
-          "id": "a",
-          "label": "Multiple XML documents along with one or more schema files"
-        },
-        {
-          "id": "b",
-          "label": "Only a single schema file"
-        },
-        {
-          "id": "c",
-          "label": "Only XSLT stylesheets"
-        },
-        {
-          "id": "d",
-          "label": "Only JSON documents"
-        }
-      ],
-      "answer": "a",
-      "difficulty": "medium",
-      "expectedDurationSec": 40,
-      "tags": [
-        "xml",
-        "validation"
-      ],
-      "explanation": "`XmlSchemaSet` aggregates schemas and XML documents so you can validate many files in one pass."
-    },
-    {
-      "id": "mod9-quiz-007",
-      "module": "Module 9",
-      "topic": "XSLT",
-      "type": "multiple_choice",
-      "prompt": "Which statement best describes the expressive power of XSLT?",
-      "options": [
-        {
-          "id": "a",
-          "label": "It only formats text and cannot branch."
-        },
-        {
-          "id": "b",
-          "label": "It can express loops and conditionals, making it effectively Turing complete."
-        },
-        {
-          "id": "c",
-          "label": "It only filters attributes."
-        },
-        {
-          "id": "d",
-          "label": "It can only run on the server."
-        }
-      ],
-      "answer": "b",
-      "difficulty": "medium",
-      "expectedDurationSec": 35,
-      "tags": [
-        "xslt"
-      ],
-      "explanation": "XSLT templates can branch and iterate, giving the language full programming expressiveness."
-    },
-    {
-      "id": "mod9-quiz-008",
-      "module": "Module 9",
-      "topic": "XSLT",
-      "type": "multiple_choice",
-      "prompt": "What is Extensible Stylesheet Language (XSL) used for?",
-      "options": [
-        {
-          "id": "a",
-          "label": "It is an XML-based language that defines style/transform rules for converting XML into other XML/HTML."
-        },
-        {
-          "id": "b",
-          "label": "It stores binary blobs inside XML."
-        },
-        {
-          "id": "c",
-          "label": "It is a JSON templating language."
-        },
-        {
-          "id": "d",
-          "label": "It is an XSLT processor embedded in hardware."
-        }
-      ],
-      "answer": "a",
-      "difficulty": "easy",
-      "expectedDurationSec": 30,
-      "tags": [
-        "xslt"
-      ],
-      "explanation": "XSL stylesheets describe how to transform an XML document\u2014often into HTML or another XML schema."
-    },
-    {
-      "id": "mod9-quiz-009",
-      "module": "Module 9",
-      "topic": "Styling",
-      "type": "multiple_choice",
-      "prompt": "Which document types can Cascading Style Sheets (CSS) style?",
-      "options": [
-        {
-          "id": "a",
-          "label": "Only JSON documents"
-        },
-        {
-          "id": "b",
-          "label": "HTML and XML documents"
-        },
-        {
-          "id": "c",
-          "label": "PowerPoint presentations"
-        },
-        {
-          "id": "d",
-          "label": "Relational database tables"
-        }
-      ],
-      "answer": "b",
-      "difficulty": "easy",
-      "expectedDurationSec": 25,
-      "tags": [
-        "css"
-      ],
-      "explanation": "CSS is primarily applied to markup languages such as HTML and XML."
-    },
-    {
-      "id": "mod9-quiz-010",
-      "module": "Module 9",
-      "topic": "XHTML",
-      "type": "multiple_choice",
-      "prompt": "What is XHTML?",
-      "options": [
-        {
-          "id": "a",
-          "label": "Extensible HTML defined via a DTD so it can be parsed as XML."
-        },
-        {
-          "id": "b",
-          "label": "A deprecated HTML version with no DTD."
-        },
-        {
-          "id": "c",
-          "label": "A new XML format for XSLT processors."
-        },
-        {
-          "id": "d",
-          "label": "A JSON schema specification."
-        }
-      ],
-      "answer": "a",
-      "difficulty": "easy",
-      "expectedDurationSec": 25,
-      "tags": [
-        "xhtml"
-      ],
-      "explanation": "XHTML combines HTML semantics with XML rules, using a DTD to define the markup."
-    },
-    {
-      "id": "mod9-kc-001",
-      "module": "Module 9",
-      "topic": "HTML5",
-      "type": "multiple_choice",
-      "prompt": "HTML 5.0 is based on which foundational technology?",
-      "options": [
-        {
-          "id": "a",
-          "label": "Common Gateway Interface"
-        },
-        {
-          "id": "b",
-          "label": "JavaScript libraries"
-        },
-        {
-          "id": "c",
-          "label": "Proprietary APIs"
-        },
-        {
-          "id": "d",
-          "label": "Pure HTML without extensions"
-        }
-      ],
-      "answer": "a",
-      "difficulty": "medium",
-      "expectedDurationSec": 30,
-      "tags": [
-        "html5"
-      ],
-      "explanation": "Per the provided notes, HTML5 builds on the CGI-driven web stack."
-    },
-    {
-      "id": "mod9-kc-002",
-      "module": "Module 9",
-      "topic": "ASPX",
-      "type": "multiple_choice",
-      "prompt": "ASPX GUI design primarily relies on which components?",
-      "options": [
-        {
-          "id": "a",
-          "label": "HTML controls and server controls"
-        },
-        {
-          "id": "b",
-          "label": "Configuration control only"
-        },
-        {
-          "id": "c",
-          "label": "DDL scripts"
-        },
-        {
-          "id": "d",
-          "label": "Precompiled libraries only"
-        }
-      ],
-      "answer": "a",
-      "difficulty": "medium",
-      "expectedDurationSec": 30,
-      "tags": [
-        "asp.net"
-      ],
-      "explanation": "ASPX pages mix HTML controls with server-side controls for dynamic rendering."
-    },
-    {
-      "id": "mod9-kc-003",
-      "module": "Module 9",
-      "topic": "XML to HTML",
-      "type": "multiple_choice",
-      "prompt": "What is a drawback of transforming XML to HTML in the browser?",
-      "options": [
-        {
-          "id": "a",
-          "label": "The client must install the .NET Framework"
-        },
-        {
-          "id": "b",
-          "label": "You must rely on the browser shipping an XSLT processor and author the XSL stylesheet"
-        },
-        {
-          "id": "c",
-          "label": "Browsers automatically remove whitespace"
-        },
-        {
-          "id": "d",
-          "label": "The XML file must be rewritten"
-        }
-      ],
-      "answer": "b",
-      "difficulty": "medium",
-      "expectedDurationSec": 40,
-      "tags": [
-        "xslt",
-        "frontend"
-      ],
-      "explanation": "Client-side transforms require browsers with XSLT support plus custom XSL stylesheets."
-    },
-    {
-      "id": "mod9-kc-004",
-      "module": "Module 9",
-      "topic": "HTML5",
-      "type": "multiple_choice",
-      "prompt": "What language is used to extend new elements in HTML5?",
-      "options": [
-        {
-          "id": "a",
-          "label": "XML Schema"
-        },
-        {
-          "id": "b",
-          "label": "JSON Schema"
-        },
-        {
-          "id": "c",
-          "label": "No extension language is allowed"
-        },
-        {
-          "id": "d",
-          "label": "DTD"
-        }
-      ],
-      "answer": "d",
-      "difficulty": "easy",
-      "expectedDurationSec": 30,
-      "tags": [
-        "html5",
-        "dtd"
-      ],
-      "explanation": "HTML5 leverages DTDs to define and extend permissible tags."
-    },
-    {
-      "id": "mod9-kc-005",
-      "module": "Module 9",
-      "topic": "XHTML",
-      "type": "multiple_choice",
-      "prompt": "XHTML (Extensible HTML) is defined by which specification?",
-      "options": [
-        {
-          "id": "a",
-          "label": "DTD"
-        },
-        {
-          "id": "b",
-          "label": "XML Schema"
-        },
-        {
-          "id": "c",
-          "label": "HTML5"
-        },
-        {
-          "id": "d",
-          "label": "JSON"
-        }
-      ],
-      "answer": "a",
-      "difficulty": "easy",
-      "expectedDurationSec": 20,
-      "tags": [
-        "xhtml",
-        "dtd"
-      ],
-      "explanation": "XHTML documents are governed by a DTD so they remain valid XML."
-    },
-    {
-      "id": "mod14-generated-001",
+      "id": "mod14-quiz-001",
       "module": "Module 14",
-      "topic": "Service Governance",
+      "topic": "Quiz",
       "type": "multiple_choice",
-      "prompt": "Which practice best ensures that cross-team service contracts stay reliable as systems evolve?",
+      "prompt": "Data Encryption Standard (DES) is used for low-level security applications, because:",
       "options": [
-        {
-          "id": "a",
-          "label": "Let each team change APIs without notifying consumers."
-        },
-        {
-          "id": "b",
-          "label": "Adopt versioned contracts with automated contract tests shared across producers and consumers."
-        },
-        {
-          "id": "c",
-          "label": "Freeze API designs forever once released."
-        },
-        {
-          "id": "d",
-          "label": "Rely on manual email approvals before every deployment."
-        }
+        { "id": "a", "label": "the encryption algorithm is slow." },
+        { "id": "b", "label": "it has been used for many years." },
+        { "id": "c", "label": "it is encryption key that is short." },
+        { "id": "d", "label": "it uses a secretive key system." }
       ],
-      "answer": "b",
-      "difficulty": "medium",
-      "expectedDurationSec": 35,
-      "tags": [
-        "contracts",
-        "governance"
+      "answer": "b"
+    },
+    {
+      "id": "mod14-quiz-002",
+      "module": "Module 14",
+      "topic": "Quiz",
+      "type": "multiple_choice",
+      "prompt": "What techniques are used in Data Encryption Standard (DES) to perform encryption and decryption? Select all that apply.",
+      "options": [
+        { "id": "a", "label": "secret key system" },
+        { "id": "b", "label": "open key system" },
+        { "id": "c", "label": "a simple round of cipher encryption" },
+        { "id": "d", "label": "multiple rounds of cipher encryption" }
       ],
-      "explanation": "Versioned contracts plus automated contract testing keep teams aligned while still allowing services to evolve safely.",
-      "generated": true
+      "answer": "a"
     }
   ]
 }

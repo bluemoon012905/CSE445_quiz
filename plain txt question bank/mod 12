@@ -1,0 +1,128 @@
+✅ MODULE 12 — QUIZ (8 Questions)
+Question 1
+
+Where are the compilation and debugging options of a Web application typically stored in the Web.config file?
+
+A. <appSettings>
+✔ B. <system.web>
+C. <httpHandlers>
+D. <processModel>
+
+Question 2
+
+Policy-based computing suggests to decouple:
+
+✔ A. data from program
+B. data from server
+C. data from local drive
+D. conditions (context) from policy constraints
+
+Question 3
+
+A DLL component that you create:
+
+A. must be under the same namespace and you are not required to include it explicitly
+✔ B. forms a namespace and you are required to explicitly include it in the application
+C. forms a service server and you need to use “Add Service Reference” to include it
+D. forms a service server and you need to use “Add Web Reference” to include it
+
+Question 4 (30-point question)
+
+Consider the following code:
+
+void Session_Start(object sender, EventArgs e) {
+    Application["counter"] = Convert.ToInt32(Application["counter"]) + 1;
+}
+
+Answer the following:
+
+What type of file in an ASPX application does this piece of code most likely belong to?
+✔ Answer: Global file
+
+What is a potential issue (problem) that this page has?
+✔ Answer: Incorrect counting
+
+To resolve the problem, if you change Session_Start() to Application_Start(), how does this change address the problem?
+✔ Answer: The problem becomes worse
+
+Question 5
+
+Where are the cookies typically stored?
+
+A. On the top folder of the application domain on the server
+B. In the ASP.Net folder of your application domain on the server
+✔ C. In the client’s hard drive, in a folder under the browser application
+D. In the client’s hard drive, with the machine config file
+
+Question 6
+
+Session state variables can be accessed by:
+
+A. all sessions of an application
+✔ B. all pages within one session
+C. the page only in which the session state is defined
+D. the method only in which the session state is initialized
+
+Question 7
+
+Why do you need to create your own machine key if your ASP .Net application is hosted in a server farm environment?
+
+A. A server farm does not have a machine key
+✔ B. A server farm does not have a unique machine key
+C. A server farm does not need a machine key to generate the hashing ID
+D. ASP .Net applications automatically generate a machine key when hosted in a server farm
+
+Question 8
+
+If one selects the cookieless attribute = UseUri to support Session State variables, the restrictions are:
+
+A. Browser must support cookies
+✔ B. Browser must remain open to retain session states
+C. Browser must enable cookies
+✔ D. Developers must use relative paths
+
+✅ MODULE 12 — KNOWLEDGE CHECK (5 Questions)
+Question 1
+
+The <appSettings> element in Web.config file are typically used for storing:
+
+A. URLs of remote services
+B. security settings
+✔ C. policies and application parameter values
+D. URLs to remote servers
+
+Question 2
+
+What are the challenges for defining a global variable in Global.asax file? Select all that apply:
+
+✔ A. Create global files that can coordinate with each other
+✔ B. Allow class instances to read the global file
+✔ C. Address the problem of simultaneous write on the variable
+✔ D. Address the performance problem if lock mechanism is used
+
+Question 3
+
+When session states are used, a Web server identifies a revisiting browser through an ID:
+
+A. issued by the client machine
+B. associated with the client browser
+✔ C. issued by the server
+D. associated with the client TCP session
+
+Question 4
+
+Where do you store the secure machine key generated for your ASP .Net application?
+
+A. In the Web.config file, in the element AppSettings
+B. In ApplicationStart()
+✔ C. In the Web.config file, in the element system.web
+D. In SessionStart()
+
+Question 5
+
+How can you prevent Web application deadlock in the case of copying data from one disk file to another disk file?
+
+A. Open the two files in two different threads
+✔ B. Close one file before opening the other
+C. Open the two files in random order
+D. Open one for read and the other for write

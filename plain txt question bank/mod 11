@@ -1,0 +1,136 @@
+✅ MODULE 11 — QUIZ (10 Questions)
+Question 1
+
+What technology best supports the thick client architecture?
+
+A. Common Gateway Interface
+B. SOAP
+✔ C. Client-browser computing
+D. OLE DB file
+
+Question 2
+
+What computing model and architecture does Pure HTML Web implement? Select all that apply.
+
+✔ A. Thick client architecture
+✔ B. Thin client architecture
+C. Server-side computing
+D. Client-browser computing
+
+Question 3
+
+What does the Out-of-browser computing model mean?
+
+A. Computing is done on server-side
+✔ B. Computing is done on client’s machine
+C. Program written as JavaScript script
+D. Program is embedded in HTML file
+
+Question 4
+
+How are AJAX features implemented in ASP .Net applications?
+
+A. Using Web control
+B. Using user control
+✔ C. Writing JavaScript code
+D. Writing HTML code
+
+Question 5
+
+What are the potential problems of using client-side scripting? Select all that apply.
+
+A. Overhead of sending code back and forth
+✔ B. Interpretation is slower than executing compiled code
+✔ C. Source code is not invisible
+✔ D. Security and proprietary issues
+
+Question 6
+
+AJAX control is implemented in the ASP .Net environment as:
+
+A. an HTML control
+B. a user control
+C. a DLL library function
+✔ D. a Web control
+
+Question 7
+
+What programming model best supports the thick client in the client-server architecture?
+
+A. Pure HTML-based Web Application
+B. Client-Side Scripting
+✔ C. Out-of-browser Computing
+D. Server-Side Scripting
+
+Question 8
+
+When an ASPX page is accessed from a browser, what is sent to the browser?
+
+A. The source code of the ASPX page
+✔ B. An HTML page generated from the ASPX page
+C. The HTML portion of the ASPX page
+D. An XML page generated from the ASPX page
+
+Question 9
+
+A user control:
+
+A. is always more powerful than a server control
+✔ B. is a component sharable among multiple pages
+C. keeps all application settings together
+D. creates a separate page that can run upon each call
+
+Question 10
+
+How do we create an AJAX component in ASP .Net Web applications?
+
+A. Create a user control and use parameters to implement the user controls
+✔ B. Use Web controls
+C. Use HTML controls
+D. Use Global.asax
+
+✅ MODULE 11 — KNOWLEDGE CHECK (5 Questions)
+Question 1
+
+What web computing models support thin-client architecture? Select all that apply.
+
+✔ A. Client-browser computing
+✔ B. Pure HTML Web with CGI
+✔ C. Server-side Computing
+D. Silverlight
+
+Question 2
+
+AJAX control is implemented in the ASP .Net environment as:
+
+A. an HTML control
+B. a user control
+C. a DLL library function
+✔ D. a Web control
+
+Question 3
+
+A server control in ASP .Net application (Select all that apply):
+
+✔ A. is an object that forms a component in an ASPX page
+B. must have an extension name .aspx
+C. is executed at the client side
+✔ D. can take input and emit an event upon an input
+
+Question 4
+
+A user control:
+
+A. is faster in execution than a DLL function
+✔ B. is re-usable in an ASPX page
+C. is a patch on an ASPX page
+D. keeps user-related settings together
+
+Question 5
+
+Which of the following computing models can be considered to be in thick client architecture? Select all that apply.
+
+A. Pure HTML
+✔ B. HTML 5
+✔ C. Adobe Flash
+D. Silverlight
