@@ -487,7 +487,7 @@
       "id": "mod8-quiz-008",
       "module": "Module 8",
       "topic": "JAXB",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "Regarding JAXB processing, which statement is correct?",
       "options": [
         {
@@ -507,7 +507,10 @@
           "label": "Neither SAXReader nor DocumentBuilder use an event-driven model"
         }
       ],
-      "answer": "c",
+      "answer": [
+        "c",
+        "d"
+      ],
       "difficulty": "medium",
       "tags": [
         "jaxb"
@@ -550,62 +553,62 @@
       "module": "Module 9",
       "topic": "DTD",
       "type": "multiple_choice",
-      "prompt": "Given `<!ELEMENT instructor (name?, officeHours?, officeHour?, phone?, email?)>`, which element must appear?",
+      "prompt": "Given `<!ELEMENT instructor (name, course+, officeHours*, phone | email)>`, which element must appear at least once?",
       "options": [
         {
           "id": "a",
-          "label": "name"
+          "label": "<course>"
         },
         {
           "id": "b",
-          "label": "officeHours"
+          "label": "<officeHours>"
         },
         {
           "id": "c",
-          "label": "officeHour"
+          "label": "<phone>"
         },
         {
           "id": "d",
-          "label": "email"
+          "label": "<!ELEMENT>"
         }
       ],
-      "answer": "d",
+      "answer": "a",
       "difficulty": "medium",
       "tags": [
         "dtd"
       ],
-      "explanation": "Only email lacks the optional (?) marker."
+      "explanation": "The + quantifier makes <course> mandatory at least once."
     },
     {
       "id": "mod9-quiz-003",
       "module": "Module 9",
       "topic": "DTD",
       "type": "multiple_choice",
-      "prompt": "What does `<!ELEMENT instructor (name?, email?, officeHours?, phone?, email?)>` imply?",
+      "prompt": "What does `<!ELEMENT instructor (name+, course?, officeHours*, phone | email)>` imply?",
       "options": [
         {
           "id": "a",
-          "label": "The element name is optional."
+          "label": "The element <name> is optional."
         },
         {
           "id": "b",
-          "label": "The element officeHours is optional."
+          "label": "The element <course> is optional."
         },
         {
           "id": "c",
-          "label": "An email element is required."
+          "label": "The element <course> is required."
         },
         {
           "id": "d",
-          "label": "The phone element is required."
+          "label": "The element <phone> is required."
         }
       ],
-      "answer": "c",
+      "answer": "b",
       "difficulty": "medium",
       "tags": [
         "dtd"
       ],
-      "explanation": "Email appears twice, once without ?, making it mandatory."
+      "explanation": "The ? quantifier marks <course> as optional, whereas name+ requires at least one <name>."
     },
     {
       "id": "mod9-quiz-004",
