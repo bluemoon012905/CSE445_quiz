@@ -1,3 +1,4 @@
+
 {
   "questions": [
     {
@@ -75,214 +76,887 @@
       "explanation": "Every well-formed XML document has exactly one root element, while leaves are unconstrained."
     },
     {
-      "id": "mod10-kc-001",
-      "module": "Module 10",
-      "topic": "Knowledge Check",
-      "type": "multiple_choice",
-      "prompt": "What standard do Atom and RSS conform with?",
-      "options": [
-        { "id": "a", "label": "JSON" },
-        { "id": "b", "label": "Excel" },
-        { "id": "c", "label": "HTML" },
-        { "id": "d", "label": "XML" }
-      ],
-      "answer": "d"
+        "id": "mod10-kc-001",
+        "module": "Module 10",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "What standard do Atom and RSS conform with?",
+        "options": [
+            { "id": "a", "label": "JSON" },
+            { "id": "b", "label": "Excel" },
+            { "id": "c", "label": "HTML" },
+            { "id": "d", "label": "XML" }
+        ],
+        "answer": "d"
     },
     {
-      "id": "mod10-kc-002",
-      "module": "Module 10",
-      "topic": "Knowledge Check",
-      "type": "multiple_choice",
-      "prompt": "Given the following XQuery code:\n\nlet $x := doc(\"courses.xml\")/Courses\nfor $in in $x/Course\nwhere $in/Level > 200\norder by $in/Code\nreturn <Course> {$in/Name, $in/Level, $in/Code} </Course>\n\nWhich line of the code defines the filter function?",
-      "options": [
-        { "id": "a", "label": "order by $in/Code" },
-        { "id": "b", "label": "return <Course> {$in/Name, $in/Level, $in/Code} </Course>" },
-        { "id": "c", "label": "for $in in $x/Course" },
-        { "id": "d", "label": "where $in/Level > 200" }
-      ],
-      "answer": "d"
+        "id": "mod10-kc-002",
+        "module": "Module 10",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "Given the following XQuery code:\n\nlet $x := doc(\"courses.xml\")/Courses\nfor $in in $x/Course\nwhere $in/Level > 200\norder by $in/Code\nreturn <Course> {$in/Name, $in/Level, $in/Code} </Course>\n\nWhich line of the code defines the filter function?",
+        "options": [
+            { "id": "a", "label": "order by $in/Code" },
+            { "id": "b", "label": "return <Course> {$in/Name, $in/Level, $in/Code} </Course>" },
+            { "id": "c", "label": "for $in in $x/Course" },
+            { "id": "d", "label": "where $in/Level > 200" }
+        ],
+        "answer": "d"
     },
     {
-      "id": "mod10-kc-003",
-      "module": "Module 10",
-      "topic": "Knowledge Check",
-      "type": "multiple_choice",
-      "prompt": "Assume we have five (5) different Web data structures. We choose one structure as the intermediate structure and translate all other structures to and from this structure. How many converters are needed?",
-      "options": [
-        { "id": "a", "label": "4" },
-        { "id": "b", "label": "6" },
-        { "id": "c", "label": "8" },
-        { "id": "d", "label": "10" }
-      ],
-      "answer": "d"
+        "id": "mod10-kc-003",
+        "module": "Module 10",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "Assume we have five (5) different Web data structures. We choose one structure as the intermediate structure and translate all other structures to and from this structure. How many converters are needed?",
+        "options": [
+            { "id": "a", "label": "4" },
+            { "id": "b", "label": "6" },
+            { "id": "c", "label": "8" },
+            { "id": "d", "label": "10" }
+        ],
+        "answer": "d"
     },
     {
-      "id": "mod10-kc-004",
-      "module": "Module 10",
-      "topic": "Knowledge Check",
-      "type": "multiple_choice",
-      "prompt": "The data structure of Google Protocol Buffers is similar to:",
-      "options": [
-        { "id": "a", "label": "XML" },
-        { "id": "b", "label": "XML Schema" },
-        { "id": "c", "label": "HTML" },
-        { "id": "d", "label": "Objects in programming languages" }
-      ],
-      "answer": "d"
+        "id": "mod10-kc-004",
+        "module": "Module 10",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "The data structure of Google Protocol Buffers is similar to:",
+        "options": [
+            { "id": "a", "label": "XML" },
+            { "id": "b", "label": "XML Schema" },
+            { "id": "c", "label": "HTML" },
+            { "id": "d", "label": "Objects in programming languages" }
+        ],
+        "answer": "d"
     },
     {
-      "id": "mod10-kc-005",
-      "module": "Module 10",
-      "topic": "Knowledge Check",
-      "type": "multiple_choice",
-      "prompt": "Google’s Protocol Buffers are similar in syntax to:",
-      "options": [
-        { "id": "a", "label": "CSS" },
-        { "id": "b", "label": "TeX" },
-        { "id": "c", "label": "XML" },
-        { "id": "d", "label": "Class definition of an object-oriented programming language" }
-      ],
-      "answer": "d"
+        "id": "mod10-kc-005",
+        "module": "Module 10",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "Google’s Protocol Buffers are similar in syntax to:",
+        "options": [
+            { "id": "a", "label": "CSS" },
+            { "id": "b", "label": "TeX" },
+            { "id": "c", "label": "XML" },
+            { "id": "d", "label": "Class definition of an object-oriented programming language" }
+        ],
+        "answer": "d"
     },
     {
-      "id": "mod10-quiz-001",
+        "id": "mod10-quiz-001",
+        "module": "Module 10",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What are the key features of a native XML database? Select all that apply.",
+        "options": [
+            { "id": "a", "label": "Store XML data as is" },
+            { "id": "b", "label": "No need to load the entire XML into memory" },
+            { "id": "c", "label": "Allow queries for a subset of data in memory" },
+            { "id": "d", "label": "Use the relational database query language" }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod10-quiz-002",
+        "module": "Module 10",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Using the object-oriented concept of inheritance, what language is the base (parent) language of XQuery?",
+        "options": [
+            { "id": "a", "label": "XML Schema" },
+            { "id": "b", "label": "XPath" },
+            { "id": "c", "label": "XSL" },
+            { "id": "d", "label": "XML" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod10-quiz-003",
+        "module": "Module 10",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What are the main problems of using relational databases for XML databases where the XML has an irregular structure? Select all that apply.",
+        "options": [
+            { "id": "a", "label": "The database cannot be indexed" },
+            { "id": "b", "label": "XSL transformations cannot be performed" },
+            { "id": "c", "label": "It may create many null columns in a table for representing the data" },
+            { "id": "d", "label": "It may create many tables for representing the data" }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod10-quiz-004",
+        "module": "Module 10",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Google’s BigTable is used to store:",
+        "options": [
+            { "id": "a", "label": "key-value pairs" },
+            { "id": "b", "label": "JSON dictionaries" },
+            { "id": "c", "label": "relational database tables" },
+            { "id": "d", "label": "XML files" }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod10-quiz-005",
+        "module": "Module 10",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "The idea behind Google’s BigTable is similar to that of:",
+        "options": [
+            { "id": "a", "label": "XML Tree" },
+            { "id": "b", "label": "A File Tree" },
+            { "id": "c", "label": "A Trie" },
+            { "id": "d", "label": "A Binary Tree" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod10-quiz-006",
+        "module": "Module 10",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Which data structures do NOT conform with XML standards? Select all that apply.",
+        "options": [
+            { "id": "a", "label": "Atom" },
+            { "id": "b", "label": "PGX" },
+            { "id": "c", "label": "Protocol Buffers" },
+            { "id": "d", "label": "MSG 3.0" },
+            { "id": "e", "label": "RSS 2.0" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod10-quiz-007",
+        "module": "Module 10",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Assume we have five (5) different Web data structures, and we want to be able to translate each structure directly to other four (4) structures. How many converters do we need?",
+        "options": [
+            { "id": "a", "label": "2" },
+            { "id": "b", "label": "4" },
+            { "id": "c", "label": "8" },
+            { "id": "d", "label": "20" }
+        ],
+        "answer": "d"
+    },
+    {
+        "id": "mod10-quiz-008",
+        "module": "Module 10",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "A JSON object consists of:",
+        "options": [
+            { "id": "a", "label": "a list of name/value pairs" },
+            { "id": "b", "label": "a list of value/value pairs" },
+            { "id": "c", "label": "an array of strings" },
+            { "id": "d", "label": "an array of string–string pairs" }
+        ],
+        "answer": "a"
+    },
+  {
+      "id": "mod10-quiz-009",
       "module": "Module 10",
       "topic": "Quiz",
       "type": "multiple_choice",
-      "prompt": "What are the key features of a native XML database? Select all that apply.",
+      "prompt": "Which of the following are valid JSON values? Select all that apply.",
       "options": [
-        { "id": "a", "label": "Store XML data as is" },
-        { "id": "b", "label": "No need to load the entire XML into memory" },
-        { "id": "c", "label": "Allow queries for a subset of data in memory" },
-        { "id": "d", "label": "Use the relational database query language" }
+          { "id": "a", "label": "25" },
+          { "id": "b", "label": 25 },
+          { "id": "c", "label": -25 },
+          { "id": "d", "label": 0.5 },
+          { "id": "e", "label": "25%" }
       ],
       "answer": "a"
+  },
+
+    {
+        "id": "mod10-quiz-010",
+        "module": "Module 10",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Why do we need JSON instead of using general XML for all applications?",
+        "options": [
+            { "id": "a", "label": "General XML is too simple to represent fixed data" },
+            { "id": "b", "label": "General XML is a meta-language and can be used to define languages only" },
+            { "id": "c", "label": "General XML represents a collection of data, unlike XML content" },
+            { "id": "d", "label": "JSON is easier and faster for being processed by programming languages" }
+        ],
+        "answer": "d"
     },
     {
-      "id": "mod10-quiz-002",
-      "module": "Module 10",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "Using the object-oriented concept of inheritance, what language is the base (parent) language of XQuery?",
-      "options": [
-        { "id": "a", "label": "XML Schema" },
-        { "id": "b", "label": "XPath" },
-        { "id": "c", "label": "XSL" },
-        { "id": "d", "label": "XML" }
-      ],
-      "answer": "b"
+        "id": "mod11-quiz-001",
+        "module": "Module 11",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What technology best supports the thick client architecture?",
+        "options": [
+            { "id": "a", "label": "Common Gateway Interface" },
+            { "id": "b", "label": "SOAP" },
+            { "id": "c", "label": "Client-browser computing" },
+            { "id": "d", "label": "OLE DB file" }
+        ],
+        "answer": "c"
     },
     {
-      "id": "mod11-quiz-001",
-      "module": "Module 11",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "What technology best supports the thick client architecture?",
-      "options": [
-        { "id": "a", "label": "Common Gateway Interface" },
-        { "id": "b", "label": "SOAP" },
-        { "id": "c", "label": "Client-browser computing" },
-        { "id": "d", "label": "OLE DB file" }
-      ],
-      "answer": "c"
+        "id": "mod11-quiz-002",
+        "module": "Module 11",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What computing model and architecture does Pure HTML Web implement? Select all that apply.",
+        "options": [
+            { "id": "a", "label": "Thick client architecture" },
+            { "id": "b", "label": "Thin client architecture" },
+            { "id": "c", "label": "Server-side computing" },
+            { "id": "d", "label": "Client-browser computing" }
+        ],
+        "answer": "a"
     },
     {
-      "id": "mod11-quiz-002",
-      "module": "Module 11",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "What computing model and architecture does Pure HTML Web implement? Select all that apply.",
-      "options": [
-        { "id": "a", "label": "Thick client architecture" },
-        { "id": "b", "label": "Thin client architecture" },
-        { "id": "c", "label": "Server-side computing" },
-        { "id": "d", "label": "Client-browser computing" }
-      ],
-      "answer": "a"
+        "id": "mod11-quiz-003",
+        "module": "Module 11",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What does the Out-of-browser computing model mean?",
+        "options": [
+            { "id": "a", "label": "Computing is done on server-side" },
+            { "id": "b", "label": "Computing is done on client’s machine" },
+            { "id": "c", "label": "Program written as JavaScript script" },
+            { "id": "d", "label": "Program is embedded in HTML file" }
+        ],
+        "answer": "b"
     },
     {
-      "id": "mod12-quiz-001",
-      "module": "Module 12",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "Where are the compilation and debugging options of a Web application typically stored in the Web.config file?",
-      "options": [
-        { "id": "a", "label": "<appSettings>" },
-        { "id": "b", "label": "<system.web>" },
-        { "id": "c", "label": "<httpHandlers>" },
-        { "id": "d", "label": "<processModel>" }
-      ],
-      "answer": "b"
+        "id": "mod11-quiz-004",
+        "module": "Module 11",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "How are AJAX features implemented in ASP .Net applications?",
+        "options": [
+            { "id": "a", "label": "Using Web control" },
+            { "id": "b", "label": "Using user control" },
+            { "id": "c", "label": "Writing JavaScript code" },
+            { "id": "d", "label": "Writing HTML code" }
+        ],
+        "answer": "c"
     },
     {
-      "id": "mod12-quiz-002",
-      "module": "Module 12",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "Policy-based computing suggests to decouple:",
-      "options": [
-        { "id": "a", "label": "data from program" },
-        { "id": "b", "label": "data from server" },
-        { "id": "c", "label": "data from local drive" },
-        { "id": "d", "label": "conditions (context) from policy constraints" }
-      ],
-      "answer": "a"
+        "id": "mod11-quiz-005",
+        "module": "Module 11",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What are the potential problems of using client-side scripting? Select all that apply.",
+        "options": [
+            { "id": "a", "label": "Overhead of sending code back and forth" },
+            { "id": "b", "label": "Interpretation is slower than executing compiled code" },
+            { "id": "c", "label": "Source code is not invisible" },
+            { "id": "d", "label": "Security and proprietary issues" }
+        ],
+        "answer": "b"
     },
     {
-      "id": "mod13-kc-001",
-      "module": "Module 13",
-      "topic": "Knowledge Check",
-      "type": "multiple_choice",
-      "prompt": "What is the proper order of performing security operations?",
-      "options": [
-        { "id": "a", "label": "authorization, authentication, and then access of resource" },
-        { "id": "b", "label": "access of resource, authentication, and then authorization" },
-        { "id": "c", "label": "access of resource, authorization, and then authentication" },
-        { "id": "d", "label": "authentication, authorization, and then access of resource" }
-      ],
-      "answer": "d"
+        "id": "mod11-quiz-006",
+        "module": "Module 11",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "AJAX control is implemented in the ASP .Net environment as:",
+        "options": [
+            { "id": "a", "label": "an HTML control" },
+            { "id": "b", "label": "a user control" },
+            { "id": "c", "label": "a DLL library function" },
+            { "id": "d", "label": "a Web control" }
+        ],
+        "answer": "d"
     },
     {
-      "id": "mod13-kc-002",
-      "module": "Module 13",
-      "topic": "Knowledge Check",
-      "type": "multiple_choice",
-      "prompt": "Availability (A(t)) is probably related to the:",
-      "options": [
-        { "id": "a", "label": "readiness of service at time point t" },
-        { "id": "b", "label": "the validity and correctness of data and message" },
-        { "id": "c", "label": "continuity of service in time period [0, t]" },
-        { "id": "d", "label": "non-occurrence of catastrophic consequence" }
-      ],
-      "answer": "b"
+        "id": "mod11-quiz-007",
+        "module": "Module 11",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What programming model best supports the thick client in the client-server architecture?",
+        "options": [
+            { "id": "a", "label": "Pure HTML-based Web Application" },
+            { "id": "b", "label": "Client-Side Scripting" },
+            { "id": "c", "label": "Out-of-browser Computing" },
+            { "id": "d", "label": "Server-Side Scripting" }
+        ],
+        "answer": "c"
     },
     {
-      "id": "mod14-quiz-001",
-      "module": "Module 14",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "Data Encryption Standard (DES) is used for low-level security applications, because:",
-      "options": [
-        { "id": "a", "label": "the encryption algorithm is slow." },
-        { "id": "b", "label": "it has been used for many years." },
-        { "id": "c", "label": "it is encryption key that is short." },
-        { "id": "d", "label": "it uses a secretive key system." }
-      ],
-      "answer": "b"
+        "id": "mod11-quiz-008",
+        "module": "Module 11",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "When an ASPX page is accessed from a browser, what is sent to the browser?",
+        "options": [
+            { "id": "a", "label": "The source code of the ASPX page" },
+            { "id": "b", "label": "An HTML page generated from the ASPX page" },
+            { "id": "c", "label": "The HTML portion of the ASPX page" },
+            { "id": "d", "label": "An XML page generated from the ASPX page" }
+        ],
+        "answer": "b"
     },
     {
-      "id": "mod14-quiz-002",
-      "module": "Module 14",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "What techniques are used in Data Encryption Standard (DES) to perform encryption and decryption? Select all that apply.",
-      "options": [
-        { "id": "a", "label": "secret key system" },
-        { "id": "b", "label": "open key system" },
-        { "id": "c", "label": "a simple round of cipher encryption" },
-        { "id": "d", "label": "multiple rounds of cipher encryption" }
-      ],
-      "answer": "a"
+        "id": "mod11-quiz-009",
+        "module": "Module 11",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "A user control:",
+        "options": [
+            { "id": "a", "label": "is always more powerful than a server control" },
+            { "id": "b", "label": "is a component sharable among multiple pages" },
+            { "id": "c", "label": "keeps all application settings together" },
+            { "id": "d", "label": "creates a separate page that can run upon each call" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod11-quiz-010",
+        "module": "Module 11",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "How do we create an AJAX component in ASP .Net Web applications?",
+        "options": [
+            { "id": "a", "label": "Create a user control and use parameters to implement the user controls" },
+            { "id": "b", "label": "Use Web controls" },
+            { "id": "c", "label": "Use HTML controls" },
+            { "id": "d", "label": "Use Global.asax" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod11-kc-001",
+        "module": "Module 11",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "What web computing models support thin-client architecture? Select all that apply.",
+        "options": [
+            { "id": "a", "label": "Client-browser computing" },
+            { "id": "b", "label": "Pure HTML Web with CGI" },
+            { "id": "c", "label": "Server-side Computing" },
+            { "id": "d", "label": "Silverlight" }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod11-kc-002",
+        "module": "Module 11",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "AJAX control is implemented in the ASP .Net environment as:",
+        "options": [
+            { "id": "a", "label": "an HTML control" },
+            { "id": "b", "label": "a user control" },
+            { "id": "c", "label": "a DLL library function" },
+            { "id": "d", "label": "a Web control" }
+        ],
+        "answer": "d"
+    },
+    {
+        "id": "mod11-kc-003",
+        "module": "Module 11",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "A server control in ASP .Net application (Select all that apply):",
+        "options": [
+            { "id": "a", "label": "is an object that forms a component in an ASPX page" },
+            { "id": "b", "label": "must have an extension name .aspx" },
+            { "id": "c", "label": "is executed at the client side" },
+            { "id": "d", "label": "can take input and emit an event upon an input" }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod11-kc-004",
+        "module": "Module 11",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "A user control:",
+        "options": [
+            { "id": "a", "label": "is faster in execution than a DLL function" },
+            { "id": "b", "label": "is re-usable in an ASPX page" },
+            { "id": "c", "label": "is a patch on an ASPX page" },
+            { "id": "d", "label": "keeps user-related settings together" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod11-kc-005",
+        "module": "Module 11",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "Which of the following computing models can be considered to be in thick client architecture? Select all that apply.",
+        "options": [
+            { "id": "a", "label": "Pure HTML" },
+            { "id": "b", "label": "HTML 5" },
+            { "id": "c", "label": "Adobe Flash" },
+            { "id": "d", "label": "Silverlight" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod12-quiz-001",
+        "module": "Module 12",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Where are the compilation and debugging options of a Web application typically stored in the Web.config file?",
+        "options": [
+            { "id": "a", "label": "<appSettings>" },
+            { "id": "b", "label": "<system.web>" },
+            { "id": "c", "label": "<httpHandlers>" },
+            { "id": "d", "label": "<processModel>" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod12-quiz-002",
+        "module": "Module 12",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Policy-based computing suggests to decouple:",
+        "options": [
+            { "id": "a", "label": "data from program" },
+            { "id": "b", "label": "data from server" },
+            { "id": "c", "label": "data from local drive" },
+            { "id": "d", "label": "conditions (context) from policy constraints" }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod12-quiz-003",
+        "module": "Module 12",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "A DLL component that you create:",
+        "options": [
+            { "id": "a", "label": "must be under the same namespace and you are not required to include it explicitly" },
+            { "id": "b", "label": "forms a namespace and you are required to explicitly include it in the application" },
+            { "id": "c", "label": "forms a service server and you need to use \"Add Service Reference\" to include it" },
+            { "id": "d", "label": "forms a service server and you need to use \"Add Web Reference\" to include it" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod12-quiz-004",
+        "module": "Module 12",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Consider the following code:\n\nvoid Session_Start(object sender, EventArgs e) {\n    Application[\"counter\"] = Convert.ToInt32(Application[\"counter\"]) + 1;\n}\n\nAnswer the following:\n\nWhat type of file in an ASPX application does this piece of code most likely belong to?",
+        "options": [
+            { "id": "a", "label": "Global file" }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod12-quiz-005",
+        "module": "Module 12",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Where are the cookies typically stored?",
+        "options": [
+            { "id": "a", "label": "On the top folder of the application domain on the server" },
+            { "id": "b", "label": "In the ASP.Net folder of your application domain on the server" },
+            { "id": "c", "label": "In the client’s hard drive, in a folder under the browser application" },
+            { "id": "d", "label": "In the client’s hard drive, with the machine config file" }
+        ],
+        "answer": "c"
+    },
+    {
+        "id": "mod12-quiz-006",
+        "module": "Module 12",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Session state variables can be accessed by:",
+        "options": [
+            { "id": "a", "label": "all sessions of an application" },
+            { "id": "b", "label": "all pages within one session" },
+            { "id": "c", "label": "the page only in which the session state is defined" },
+            { "id": "d", "label": "the method only in which the session state is initialized" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod12-quiz-007",
+        "module": "Module 12",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Why do you need to create your own machine key if your ASP .Net application is hosted in a server farm environment?",
+        "options": [
+            { "id": "a", "label": "A server farm does not have a machine key" },
+            { "id": "b", "label": "A server farm does not have a unique machine key" },
+            { "id": "c", "label": "A server farm does not need a machine key to generate the hashing ID" },
+            { "id": "d", "label": "ASP .Net applications automatically generate a machine key when hosted in a server farm" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod12-quiz-008",
+        "module": "Module 12",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "If one selects the cookieless attribute = UseUri to support Session State variables, the restrictions are:",
+        "options": [
+            { "id": "a", "label": "Browser must support cookies" },
+            { "id": "b", "label": "Browser must remain open to retain session states" },
+            { "id": "c", "label": "Browser must enable cookies" },
+            { "id": "d", "label": "Developers must use relative paths" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod12-kc-001",
+        "module": "Module 12",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "The <appSettings> element in Web.config file are typically used for storing:",
+        "options": [
+            { "id": "a", "label": "URLs of remote services" },
+            { "id": "b", "label": "security settings" },
+            { "id": "c", "label": "policies and application parameter values" },
+            { "id": "d", "label": "URLs to remote servers" }
+        ],
+        "answer": "c"
+    },
+    {
+        "id": "mod12-kc-002",
+        "module": "Module 12",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "What are the challenges for defining a global variable in Global.asax file? Select all that apply:",
+        "options": [
+            { "id": "a", "label": "Create global files that can coordinate with each other" },
+            { "id": "b", "label": "Allow class instances to read the global file" },
+            { "id": "c", "label": "Address the problem of simultaneous write on the variable" },
+            { "id": "d", "label": "Address the performance problem if lock mechanism is used" }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod12-kc-003",
+        "module": "Module 12",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "When session states are used, a Web server identifies a revisiting browser through an ID:",
+        "options": [
+            { "id": "a", "label": "issued by the client machine" },
+            { "id": "b", "label": "associated with the client browser" },
+            { "id": "c", "label": "issued by the server" },
+            { "id": "d", "label": "associated with the client TCP session" }
+        ],
+        "answer": "c"
+    },
+    {
+        "id": "mod12-kc-004",
+        "module": "Module 12",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "Where do you store the secure machine key generated for your ASP .Net application?",
+        "options": [
+            { "id": "a", "label": "In the Web.config file, in the element AppSettings" },
+            { "id": "b", "label": "In ApplicationStart()" },
+            { "id": "c", "label": "In the Web.config file, in the element system.web" },
+            { "id": "d", "label": "In SessionStart()" }
+        ],
+        "answer": "c"
+    },
+    {
+        "id": "mod12-kc-005",
+        "module": "Module 12",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "How can you prevent Web application deadlock in the case of copying data from one disk file to another disk file?",
+        "options": [
+            { "id": "a", "label": "Open the two files in two different threads" },
+            { "id": "b", "label": "Close one file before opening the other" },
+            { "id": "c", "label": "Open the two files in random order" },
+            { "id": "d", "label": "Open one for read and the other for write" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod13-kc-001",
+        "module": "Module 13",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "What is the proper order of performing security operations?",
+        "options": [
+            { "id": "a", "label": "authorization, authentication, and then access of resource" },
+            { "id": "b", "label": "access of resource, authentication, and then authorization" },
+            { "id": "c", "label": "access of resource, authorization, and then authentication" },
+            { "id": "d", "label": "authentication, authorization, and then access of resource" }
+        ],
+        "answer": "d"
+    },
+    {
+        "id": "mod13-kc-002",
+        "module": "Module 13",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "Availability (A(t)) is probably related to the:",
+        "options": [
+            { "id": "a", "label": "readiness of service at time point t" },
+            { "id": "b", "label": "the validity and correctness of data and message" },
+            { "id": "c", "label": "continuity of service in time period [0, t]" },
+            { "id": "d", "label": "non-occurrence of catastrophic consequence" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod13-kc-003",
+        "module": "Module 13",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "In what configuration setting will ASP .Net use the security token passed to it by IIS?",
+        "options": [
+            { "id": "a", "label": "<identity impersonate = \"false\" />" },
+            { "id": "b", "label": "<identity impersonate = \"false\" /> (Correct from screenshot — although A & B look identical, B is marked correct)" },
+            { "id": "c", "label": "<identity impersonate = \"true\" />" },
+            { "id": "d", "label": "when impersonation element is not used" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod13-kc-004",
+        "module": "Module 13",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "How does the Windows security mechanism work in the Web application security control?",
+        "options": [
+            { "id": "a", "label": "It blocks IP addresses and domains that are not permitted" },
+            { "id": "b", "label": "It compares the received credential with the credential saved in Windows’s user accounts" },
+            { "id": "c", "label": "It compares the received credential with the credential saved in a user-created XML file" },
+            { "id": "d", "label": "It compares the received credential with the credential saved in the Web.Config file" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod13-kc-005",
+        "module": "Module 13",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "The probability that a system has survived in the time interval [0, t] is the system’s:",
+        "options": [
+            { "id": "a", "label": "availability" },
+            { "id": "b", "label": "reliability" },
+            { "id": "c", "label": "safety" },
+            { "id": "d", "label": "security" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod14-quiz-001",
+        "module": "Module 14",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Data Encryption Standard (DES) is used for low-level security applications, because:",
+        "options": [
+            { "id": "a", "label": "the encryption algorithm is slow." },
+            { "id": "b", "label": "it has been used for many years." },
+            { "id": "c", "label": "it is encryption key that is short." },
+            { "id": "d", "label": "it uses a secretive key system." }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod14-quiz-002",
+        "module": "Module 14",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What techniques are used in Data Encryption Standard (DES) to perform encryption and decryption? Select all that apply.",
+        "options": [
+            { "id": "a", "label": "secret key system" },
+            { "id": "b", "label": "open key system" },
+            { "id": "c", "label": "a simple round of cipher encryption" },
+            { "id": "d", "label": "multiple rounds of cipher encryption" }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod14-quiz-003",
+        "module": "Module 14",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Data hashing creates a value from a given data. The hash value:",
+        "options": [
+            { "id": "a", "label": "can be used for recovering the data using a decryption algorithm." },
+            { "id": "b", "label": "can uniquely identify a data; cannot recover the data." },
+            { "id": "c", "label": "creates a digital signature that is mixed with the data." },
+            { "id": "d", "label": "is generated using the encryption algorithm in the Open Key cryptography system." }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod14-quiz-004",
+        "module": "Module 14",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What reliability features does WS-Reliable Messaging specification guarantee? Select all that apply.",
+        "options": [
+            { "id": "a", "label": "No-loss messages" },
+            { "id": "b", "label": "No-duplicated messages" },
+            { "id": "c", "label": "Messages received once and only once" },
+            { "id": "d", "label": "Secure Sockets Layer data confidentiality" },
+            { "id": "e", "label": "Secure Sockets Layer data integrity" }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod14-quiz-005",
+        "module": "Module 14",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "How is the lost message handled by WS-Reliable Messaging?",
+        "options": [
+            { "id": "a", "label": "Double redundancy: Each message is sent twice." },
+            { "id": "b", "label": "Triple redundancy: Each message is sent three times." },
+            { "id": "c", "label": "A message is resent if no acknowledgment is received within the given amount of time." },
+            { "id": "d", "label": "The receiver creates the missing message based on the adjacent messages received." }
+        ],
+        "answer": "c"
+    },
+    {
+        "id": "mod14-quiz-006",
+        "module": "Module 14",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What are true about the n-out-of-k codes? Select all that apply.",
+        "options": [
+            { "id": "a", "label": "It may not be able to tolerate all bit single errors." },
+            { "id": "b", "label": "It has a high level of redundancy, and the cost is high." },
+            { "id": "c", "label": "It has zero overhead codes." },
+            { "id": "d", "label": "It is a non-separable code." }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod14-quiz-007",
+        "module": "Module 14",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What error control codes are separable codes? Select all that apply.",
+        "options": [
+            { "id": "a", "label": "parity check" },
+            { "id": "b", "label": "checksum" },
+            { "id": "c", "label": "arithmetic code" },
+            { "id": "d", "label": "m-of-n code" }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod14-quiz-008",
+        "module": "Module 14",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What error control codes are used in the control channel code standard in 5G wireless network?",
+        "options": [
+            { "id": "a", "label": "Turbo codes" },
+            { "id": "b", "label": "LDPC codes" },
+            { "id": "c", "label": "Polar codes" },
+            { "id": "d", "label": "m-of-n codes" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod14-quiz-009",
+        "module": "Module 14",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "Secure Sockets Layer (SSL) defines communication protocols that can provide:",
+        "options": [
+            { "id": "a", "label": "reliable messaging" },
+            { "id": "b", "label": "data confidentiality" },
+            { "id": "c", "label": "data integrity" },
+            { "id": "d", "label": "lossless integrity" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod14-quiz-010",
+        "module": "Module 14",
+        "topic": "Quiz",
+        "type": "multiple_choice",
+        "prompt": "What is the purpose of the fragmentation step in SSL?",
+        "options": [
+            { "id": "a", "label": "To make the data transmission more efficient" },
+            { "id": "b", "label": "To make the decryption harder" },
+            { "id": "c", "label": "To make the encryption more manageable" },
+            { "id": "d", "label": "To make the transmission more reliable" }
+        ],
+        "answer": "c"
+    },
+    {
+        "id": "mod14-kc-001",
+        "module": "Module 14",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "SSL connection between a client and a server is based on a:",
+        "options": [
+            { "id": "a", "label": "message queue protocol" },
+            { "id": "b", "label": "polar code protocol" },
+            { "id": "c", "label": "peer-to-peer protocol" },
+            { "id": "d", "label": "two-tier protocol" }
+        ],
+        "answer": "c"
+    },
+    {
+        "id": "mod14-kc-002",
+        "module": "Module 14",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "How is the WS-ReliableMessaging implemented in WCF?",
+        "options": [
+            { "id": "a", "label": "A message is resent if no acknowledgment received." },
+            { "id": "b", "label": "Each message is sent three times." },
+            { "id": "c", "label": "Natural direct resend missing message." },
+            { "id": "d", "label": "Each message is sent twice." }
+        ],
+        "answer": "a"
+    },
+    {
+        "id": "mod14-kc-003",
+        "module": "Module 14",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "In order to detect all two-bit errors, the Hamming distance dₘᵢₙ(C) of code C must be at least:",
+        "options": [
+            { "id": "a", "label": "Two" },
+            { "id": "b", "label": "Three" },
+            { "id": "c", "label": "One" },
+            { "id": "d", "label": "Four" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod14-kc-004",
+        "module": "Module 14",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "Wireless communication heavily relies on error control codes. What are the primary error control codes used in 3G cell phone network?",
+        "options": [
+            { "id": "a", "label": "LDPC codes" },
+            { "id": "b", "label": "m-of-n codes" },
+            { "id": "c", "label": "Polar Codes" },
+            { "id": "d", "label": "Turbo Codes" }
+        ],
+        "answer": "b"
+    },
+    {
+        "id": "mod14-kc-005",
+        "module": "Module 14",
+        "topic": "Knowledge Check",
+        "type": "multiple_choice",
+        "prompt": "In order to tolerate (or correct) one-bit error, the Hamming distance dₘᵢₙ(C) of code C must be at least:",
+        "options": [
+            { "id": "a", "label": "3" },
+            { "id": "b", "label": "5" },
+            { "id": "c", "label": "3 (with margin 0)" },
+            { "id": "d", "label": "2" }
+        ],
+        "answer": "a"
     }
   ]
 }
