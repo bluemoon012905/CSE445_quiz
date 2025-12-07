@@ -59,7 +59,7 @@ Required fields are:
 
 - `module`: Module label shown in the filters.
 - `topic`: Topic name shown below each prompt.
-- `type`: Use `multiple_choice` for standard prompts or `code_dropdown` when the question references a code snippet and should be answered via a dropdown.
+- `type`: Use `multiple_choice` for single-answer prompts, `multi_select` for “select all that apply” questions, or `code_dropdown` when the question references a code snippet with a dropdown response.
 - `prompt`: The actual question text.
 - `answer`: The option id (string) that represents the correct choice.
 - `options`: Array of option objects—each needs a stable `id` and human-readable `label`.

@@ -3,413 +3,1017 @@
     {
       "id": "mod8-kc-001",
       "module": "Module 8",
-      "topic": "Knowledge Check",
+      "topic": "XML presentation",
       "type": "multiple_choice",
-      "prompt": "What is the advantage of a server-side solution for displaying an XML file in required format?",
+      "prompt": "What is the advantage of a server-side solution for displaying an XML file in the required format?",
       "options": [
-        { "id": "a", "label": "Reduces server computing need" },
-        { "id": "b", "label": "No need to write an XSL style sheet" },
-        { "id": "c", "label": "Reduces client computing load" },
-        { "id": "d", "label": "No special requirement on Web browser" }
+        {
+          "id": "a",
+          "label": "Reduces server computing need"
+        },
+        {
+          "id": "b",
+          "label": "No need to write an XSL style sheet"
+        },
+        {
+          "id": "c",
+          "label": "Reduces client computing load"
+        },
+        {
+          "id": "d",
+          "label": "No special requirement on the web browser"
+        }
       ],
-      "answer": "d"
+      "answer": "d",
+      "difficulty": "easy",
+      "tags": [
+        "xml",
+        "presentation"
+      ],
+      "explanation": "Rendering on the server frees clients from requiring specific XML/XSL capabilities."
     },
     {
       "id": "mod8-kc-002",
       "module": "Module 8",
-      "topic": "Knowledge Check",
+      "topic": "ASP.NET storage",
       "type": "multiple_choice",
-      "prompt": "If an XML file is created in your application, where should the file be stored in the ASP.NET application domain?",
+      "prompt": "If an XML file is created in your application, where should it be stored in the ASP.NET application domain?",
       "options": [
-        { "id": "a", "label": "In App_Data folder" },
-        { "id": "b", "label": "In App_Code folder" },
-        { "id": "c", "label": "In App_WebReferences folder" },
-        { "id": "d", "label": "In Bin folder" }
+        {
+          "id": "a",
+          "label": "App_Data folder"
+        },
+        {
+          "id": "b",
+          "label": "App_Code folder"
+        },
+        {
+          "id": "c",
+          "label": "App_WebReferences folder"
+        },
+        {
+          "id": "d",
+          "label": "Bin folder"
+        }
       ],
-      "answer": "a"
+      "answer": "a",
+      "difficulty": "easy",
+      "tags": [
+        "asp.net"
+      ],
+      "explanation": "App_Data is the designated location for application-generated data files."
     },
     {
       "id": "mod8-kc-003",
       "module": "Module 8",
-      "topic": "Knowledge Check",
+      "topic": "XML schema vocabulary",
       "type": "multiple_choice",
       "prompt": "Which of the following terms is NOT defined in the W3C namespace http://www.w3.org/2001/XMLSchema?",
       "options": [
-        { "id": "a", "label": "cc:core" },
-        { "id": "b", "label": "all" },
-        { "id": "c", "label": "complexType" },
-        { "id": "d", "label": "schema" },
-        { "id": "e", "label": "choice" }
+        {
+          "id": "a",
+          "label": "cc:core"
+        },
+        {
+          "id": "b",
+          "label": "all"
+        },
+        {
+          "id": "c",
+          "label": "complexType"
+        },
+        {
+          "id": "d",
+          "label": "schema"
+        },
+        {
+          "id": "e",
+          "label": "choice"
+        }
       ],
-      "answer": "a"
+      "answer": "a",
+      "difficulty": "medium",
+      "tags": [
+        "xml schema"
+      ],
+      "explanation": "cc:core is not part of the XML Schema namespace."
     },
     {
       "id": "mod8-kc-004",
       "module": "Module 8",
-      "topic": "Knowledge Check",
+      "topic": "DTD",
       "type": "multiple_choice",
       "prompt": "A Document Type Definition (DTD) file:",
       "options": [
-        { "id": "a", "label": "defines the syntax of an XML file." },
-        { "id": "b", "label": "defines the structure of an XML schema file." },
-        { "id": "c", "label": "extends the XML schema with more data types." },
-        { "id": "d", "label": "follows XML syntax." }
+        {
+          "id": "a",
+          "label": "Defines the syntax/structure of an XML file"
+        },
+        {
+          "id": "b",
+          "label": "Defines the structure of an XML schema file"
+        },
+        {
+          "id": "c",
+          "label": "Extends XML schema with more data types"
+        },
+        {
+          "id": "d",
+          "label": "Follows JSON syntax"
+        }
       ],
-      "answer": "a"
+      "answer": "a",
+      "difficulty": "easy",
+      "tags": [
+        "dtd"
+      ],
+      "explanation": "DTDs describe which elements/attributes are legal within an XML document."
     },
     {
       "id": "mod8-kc-005",
       "module": "Module 8",
-      "topic": "Knowledge Check",
-      "type": "multiple_choice",
+      "topic": "XML elements",
+      "type": "multi_select",
       "prompt": "What is an empty element in XML? Select all that apply.",
       "options": [
-        { "id": "a", "label": "An element without text content between the element tags" },
-        { "id": "b", "label": "An element that does not need to have an opening tag" },
-        { "id": "c", "label": "An element without a child element" },
-        { "id": "d", "label": "An element without an attribute" }
+        {
+          "id": "a",
+          "label": "An element without text content between the tags"
+        },
+        {
+          "id": "b",
+          "label": "An element that does not need a separate closing tag (self-closing)"
+        },
+        {
+          "id": "c",
+          "label": "An element without child elements"
+        },
+        {
+          "id": "d",
+          "label": "An element without attributes"
+        }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "xml"
+      ],
+      "explanation": "Empty elements have no textual content or children and can be written using self-closing syntax."
     },
     {
       "id": "mod8-kc-006",
       "module": "Module 8",
-      "topic": "Knowledge Check",
+      "topic": "Processing models",
       "type": "multiple_choice",
       "prompt": "What XML processing model reads one node into memory at a time?",
       "options": [
-        { "id": "a", "label": "SAX (Simple API for XML)" },
-        { "id": "b", "label": "XMLDocument" },
-        { "id": "c", "label": "DOM (Document Object Model)" },
-        { "id": "d", "label": "XPath" }
+        {
+          "id": "a",
+          "label": "SAX (Simple API for XML)"
+        },
+        {
+          "id": "b",
+          "label": "XmlDocument"
+        },
+        {
+          "id": "c",
+          "label": "DOM"
+        },
+        {
+          "id": "d",
+          "label": "XPath"
+        }
       ],
-      "answer": "a"
+      "answer": "a",
+      "difficulty": "easy",
+      "tags": [
+        "xml",
+        "processing"
+      ],
+      "explanation": "SAX streams nodes sequentially rather than loading the whole tree."
     },
     {
       "id": "mod8-quiz-001",
       "module": "Module 8",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "Which of the following are valid for representing the expression <t> Alan and Mairi. dreamed.? Select all that apply.",
+      "topic": "XML representations",
+      "type": "multi_select",
+      "prompt": "Which representations correctly capture the expression <t> Alan and Mairi. dreamed.? Select all that apply.",
       "options": [
-        { "id": "a", "label": "<t> Alan + Mairi . </t>" },
-        { "id": "b", "label": "<t> Alan + Mairi + dreamed . </t>" },
-        { "id": "c", "label": "<term> Alan + Mairi + dreamed . </term>" },
-        { "id": "d", "label": "<term> Alan + Mairi + to dream . </term>" },
-        { "id": "e", "label": "<t> Alan + Mairi + to dream . </t>" },
-        { "id": "f", "label": "<term> Alan + Mairi + to dream . </term>" },
-        { "id": "g", "label": "<t> Alan </t>" }
+        {
+          "id": "a",
+          "label": "<t> Alan + Mairi . </t>"
+        },
+        {
+          "id": "b",
+          "label": "<t> Alan + Mairi + dreamed . </t>"
+        },
+        {
+          "id": "c",
+          "label": "<term> Alan + Mairi + dreamed . </term>"
+        },
+        {
+          "id": "d",
+          "label": "<term> Alan + Mairi + to dream . </term>"
+        },
+        {
+          "id": "e",
+          "label": "<t> Alan + Mairi + to dream . </t>"
+        },
+        {
+          "id": "f",
+          "label": "<term> Alan + Mairi + to dream . </term>"
+        },
+        {
+          "id": "g",
+          "label": "<t> Alan </t>"
+        }
       ],
-      "answer": "b"
+      "answer": [
+        "b",
+        "c",
+        "e"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "xml",
+        "tags"
+      ],
+      "explanation": "Valid representations wrap the expression in the correct tag and include the verb."
     },
     {
       "id": "mod8-quiz-002",
       "module": "Module 8",
-      "topic": "Quiz",
+      "topic": "Tree structure",
       "type": "multiple_choice",
       "prompt": "An XML document has a tree structure. It:",
       "options": [
-        { "id": "a", "label": "can have multiple roots and multiple leaves" },
-        { "id": "b", "label": "can have multiple roots or records" },
-        { "id": "c", "label": "must have a single root." },
-        { "id": "d", "label": "must have a single leaf." }
+        {
+          "id": "a",
+          "label": "Can have multiple roots and multiple leaves"
+        },
+        {
+          "id": "b",
+          "label": "Can have multiple roots or records"
+        },
+        {
+          "id": "c",
+          "label": "Must have a single root"
+        },
+        {
+          "id": "d",
+          "label": "Must have a single leaf"
+        }
       ],
-      "answer": "c"
+      "answer": "c",
+      "difficulty": "easy",
+      "tags": [
+        "xml"
+      ],
+      "explanation": "Well-formed XML documents always have exactly one root element."
     },
     {
       "id": "mod8-quiz-003",
       "module": "Module 8",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "What is the requirement of a well-formed XML document? Select all that apply.",
+      "topic": "Well-formedness",
+      "type": "multi_select",
+      "prompt": "What are the requirements of a well-formed XML document? Select all that apply.",
       "options": [
-        { "id": "a", "label": "There is a single root element." },
-        { "id": "b", "label": "Each element is properly nested between an opening and a closing tag." },
-        { "id": "c", "label": "There are no unexpected tags" },
-        { "id": "d", "label": "The tags must come from the set pre-defined by W3C." },
-        { "id": "e", "label": "White space is not allowed in Text Content parts." }
+        {
+          "id": "a",
+          "label": "There is a single root element"
+        },
+        {
+          "id": "b",
+          "label": "Each element is properly nested between an opening and closing tag"
+        },
+        {
+          "id": "c",
+          "label": "There are no unexpected tags"
+        },
+        {
+          "id": "d",
+          "label": "Tags must come from a W3C predefined set"
+        },
+        {
+          "id": "e",
+          "label": "Whitespace is not allowed in text content"
+        }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "b"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "xml"
+      ],
+      "explanation": "Well-formed XML demands one root and correct nesting."
     },
-  {
-    "id": "mod8-quiz-004",
-    "module": "Module 8",
-    "topic": "Quiz",
-    "type": "multiple_choice",
-    "prompt": "To create an XML document using XmlTextWriter class, you need to open a FileStream and then create an XmlTextWriter object:\n\nfs = new FileStream(\"c:\\book.xml\", FileMode.CreateNew);\nXmlTextWriter xtw = new XmlTextWriter(fs);\nSystem.Text.Encoding enc = null;\n\nWhat operation must be performed in order to properly format the XML file?",
-    "options": [
-      { "id": "a", "label": "xtw.WriteStartDocument()" },
-      { "id": "b", "label": "xtw.Close()" },
-      { "id": "c", "label": "xtw.WriteEndDocument()" },
-      { "id": "d", "label": "xtw.WriteAttributeString()" }
-    ],
-    "answer": "a"
-  },
-      {
-      "id": "mod8-quiz-005",
+    {
+      "id": "mod8-quiz-004",
       "module": "Module 8",
-      "topic": "Quiz",
+      "topic": "XmlTextWriter",
       "type": "multiple_choice",
-      "prompt": "You are given the piece of code below:\n\n(1) XmlTextReader reader = new XmlTextReader(\"a.xml\");\n(2) while (reader.Read())\n(3) {\n(4)     if (reader.NodeType == XmlNodeType.Element &&\n(5)         reader.Name == \"book\")\n(6)     {\n(7)         Console.WriteLine(reader.GetAttribute(\"title\"));\n(8)     }\n(9) }\n\nAnswer the following questions:\n\n(1) Will this piece of code create an in-memory tree to store the entire content of the XML file? True or False?",
+      "prompt": "Before writing nodes with XmlTextWriter, which operation must be called to properly format the output?",
       "options": [
-        { "id": "a", "label": "No" }
+        {
+          "id": "a",
+          "label": "xtw.WriteStartDocument()"
+        },
+        {
+          "id": "b",
+          "label": "xtw.Close()"
+        },
+        {
+          "id": "c",
+          "label": "xtw.WriteEndDocument()"
+        },
+        {
+          "id": "d",
+          "label": "xtw.WriteAttributeString()"
+        }
       ],
-      "answer": "a"
+      "answer": "a",
+      "difficulty": "medium",
+      "tags": [
+        "c#",
+        "xml"
+      ],
+      "explanation": "WriteStartDocument writes the XML declaration and primes the writer."
     },
-
+    {
+      "id": "mod8-quiz-005a",
+      "module": "Module 8",
+      "topic": "XmlTextReader",
+      "type": "code_dropdown",
+      "prompt": "Considering the XmlTextReader loop, does the code build an in-memory tree containing the entire XML file?",
+      "options": [
+        {
+          "id": "true",
+          "label": "True"
+        },
+        {
+          "id": "false",
+          "label": "False"
+        }
+      ],
+      "answer": "false",
+      "difficulty": "medium",
+      "tags": [
+        "c#",
+        "streaming"
+      ],
+      "explanation": "XmlTextReader streams nodes one at a time rather than building a DOM tree.",
+      "code": "(1) XmlTextReader reader = new XmlTextReader(\"a.xml\");\n(2) while (reader.Read())\n(3) {\n(4)     if (reader.NodeType == XmlNodeType.Element &&\n(5)         reader.Name == \"book\")\n(6)     {\n(7)         Console.WriteLine(reader.GetAttribute(\"title\"));\n(8)     }\n(9) }"
+    },
+    {
+      "id": "mod8-quiz-005b",
+      "module": "Module 8",
+      "topic": "XmlTextReader",
+      "type": "code_dropdown",
+      "prompt": "Which line in the snippet is the only one that loads a node into memory?",
+      "options": [
+        {
+          "id": "2",
+          "label": "Line (2): while (reader.Read())"
+        },
+        {
+          "id": "4",
+          "label": "Line (4): reader.NodeType == XmlNodeType.Element"
+        },
+        {
+          "id": "5",
+          "label": "Line (5): reader.Name == \"book\""
+        },
+        {
+          "id": "7",
+          "label": "Line (7): Console.WriteLine(reader.GetAttribute(\"title\"))"
+        }
+      ],
+      "answer": "5",
+      "difficulty": "hard",
+      "tags": [
+        "c#",
+        "streaming"
+      ],
+      "explanation": "The equality check on line 5 identifies the target element when it is read.",
+      "code": "(1) XmlTextReader reader = new XmlTextReader(\"a.xml\");\n(2) while (reader.Read())\n(3) {\n(4)     if (reader.NodeType == XmlNodeType.Element &&\n(5)         reader.Name == \"book\")\n(6)     {\n(7)         Console.WriteLine(reader.GetAttribute(\"title\"));\n(8)     }\n(9) }"
+    },
+    {
+      "id": "mod8-quiz-005c",
+      "module": "Module 8",
+      "topic": "XmlTextReader",
+      "type": "code_dropdown",
+      "prompt": "If the code calls reader.MoveToAttribute(\"author\") after Read(), must the node already have attributes?",
+      "options": [
+        {
+          "id": "true",
+          "label": "True"
+        },
+        {
+          "id": "false",
+          "label": "False"
+        }
+      ],
+      "answer": "false",
+      "difficulty": "medium",
+      "tags": [
+        "c#",
+        "streaming"
+      ],
+      "explanation": "MoveToAttribute simply returns false if the attribute is missing; it does not require attributes to exist.",
+      "code": "(1) XmlTextReader reader = new XmlTextReader(\"a.xml\");\n(2) while (reader.Read())\n(3) {\n(4)     if (reader.NodeType == XmlNodeType.Element &&\n(5)         reader.Name == \"book\")\n(6)     {\n(7)         Console.WriteLine(reader.GetAttribute(\"title\"));\n(8)     }\n(9) }"
+    },
     {
       "id": "mod8-quiz-006",
       "module": "Module 8",
-      "topic": "Quiz",
+      "topic": "XPath",
       "type": "multiple_choice",
-      "prompt": "An XPath expression allows to have a function call at the end of the expression.",
+      "prompt": "An XPath expression allows a function call at the end of the expression.",
       "options": [
-        { "id": "a", "label": "True" },
-        { "id": "b", "label": "False" }
+        {
+          "id": "true",
+          "label": "True"
+        },
+        {
+          "id": "false",
+          "label": "False"
+        }
       ],
-      "answer": "b"
+      "answer": "false",
+      "difficulty": "easy",
+      "tags": [
+        "xpath"
+      ],
+      "explanation": "XPath functions are invoked within the expression rather than appended after it."
     },
     {
       "id": "mod8-quiz-007",
       "module": "Module 8",
-      "topic": "Quiz",
+      "topic": "Processing models",
       "type": "multiple_choice",
-      "prompt": "What is the XML processing model that reads one node into memory a time based on the given path expression?",
+      "prompt": "Which XML processing model reads one node into memory based on a path expression?",
       "options": [
-        { "id": "a", "label": "DOM (Document Object Model)" },
-        { "id": "b", "label": "SAX (Simple API for XML)" },
-        { "id": "c", "label": "XmlDocument" },
-        { "id": "d", "label": "X-path" }
+        {
+          "id": "a",
+          "label": "DOM (Document Object Model)"
+        },
+        {
+          "id": "b",
+          "label": "SAX (Simple API for XML)"
+        },
+        {
+          "id": "c",
+          "label": "XmlDocument"
+        },
+        {
+          "id": "d",
+          "label": "XPath"
+        }
       ],
-      "answer": "b"
+      "answer": "b",
+      "difficulty": "easy",
+      "tags": [
+        "xml",
+        "processing"
+      ],
+      "explanation": "SAX streams nodes one at a time."
     },
     {
       "id": "mod8-quiz-008",
       "module": "Module 8",
-      "topic": "Quiz",
+      "topic": "JAXB",
       "type": "multiple_choice",
-      "prompt": "Regarding JAXB package for processing XML documents, which statements are correct?",
+      "prompt": "Regarding JAXB processing, which statement is correct?",
       "options": [
-        { "id": "a", "label": "Only Marshaller uses event-driven model when reading an XML document." },
-        { "id": "b", "label": "Only DocumentBuilder uses event-driven model when reading an XML document." },
-        { "id": "c", "label": "Both SAXReader and DocumentBuilder use event-driven model when reading an XML document." },
-        { "id": "d", "label": "Neither SAXReader nor DocumentBuilder uses event-driven model when reading an XML document." }
+        {
+          "id": "a",
+          "label": "Only Marshaller uses an event-driven model"
+        },
+        {
+          "id": "b",
+          "label": "Only DocumentBuilder uses an event-driven model"
+        },
+        {
+          "id": "c",
+          "label": "Both SAXReader and DocumentBuilder use an event-driven model"
+        },
+        {
+          "id": "d",
+          "label": "Neither SAXReader nor DocumentBuilder use an event-driven model"
+        }
       ],
-      "answer": "c"
+      "answer": "c",
+      "difficulty": "medium",
+      "tags": [
+        "jaxb"
+      ],
+      "explanation": "Both SAXReader and DocumentBuilder rely on event-driven parsing."
     },
     {
       "id": "mod9-quiz-001",
       "module": "Module 9",
-      "topic": "Quiz",
+      "topic": "DTD",
       "type": "multiple_choice",
       "prompt": "A Document Type Definition (DTD) file:",
       "options": [
-        { "id": "a", "label": "defines the syntax of a DTD file." },
-        { "id": "b", "label": "is used for defining the structure and syntax of an XML file." },
-        { "id": "c", "label": "extends the XML syntax model so more XML schema files can be created." },
-        { "id": "d", "label": "extends the C# environment classes." }
+        {
+          "id": "a",
+          "label": "Defines the syntax of another DTD file"
+        },
+        {
+          "id": "b",
+          "label": "Is used for defining the structure and syntax of an XML file"
+        },
+        {
+          "id": "c",
+          "label": "Extends the XML syntax model to create more XML schema files"
+        },
+        {
+          "id": "d",
+          "label": "Extends the C# environment classes"
+        }
       ],
-      "answer": "b"
+      "answer": "b",
+      "difficulty": "easy",
+      "tags": [
+        "dtd"
+      ],
+      "explanation": "DTDs constrain the structure of XML documents."
     },
     {
       "id": "mod9-quiz-002",
       "module": "Module 9",
-      "topic": "Quiz",
+      "topic": "DTD",
       "type": "multiple_choice",
-      "prompt": "The following line of code in a DTD file defines that the XML structure file must have an element:\n\n<!ELEMENT instructor (name?, officeHours?, officeHour?, phone?, email?)>.",
+      "prompt": "Given `<!ELEMENT instructor (name?, officeHours?, officeHour?, phone?, email?)>`, which element must appear?",
       "options": [
-        { "id": "a", "label": "name" },
-        { "id": "b", "label": "officeHours" },
-        { "id": "c", "label": "OfficeHour" },
-        { "id": "d", "label": "email" }
+        {
+          "id": "a",
+          "label": "name"
+        },
+        {
+          "id": "b",
+          "label": "officeHours"
+        },
+        {
+          "id": "c",
+          "label": "officeHour"
+        },
+        {
+          "id": "d",
+          "label": "email"
+        }
       ],
-      "answer": "d"
+      "answer": "d",
+      "difficulty": "medium",
+      "tags": [
+        "dtd"
+      ],
+      "explanation": "Only email lacks the optional (?) marker."
     },
-
     {
       "id": "mod9-quiz-003",
       "module": "Module 9",
-      "topic": "Quiz",
+      "topic": "DTD",
       "type": "multiple_choice",
-      "prompt": "What does the following line of code in a DTD file imply?\n\n<!ELEMENT instructor (name?, email?, officeHours?, phone?, email?)>.",
+      "prompt": "What does `<!ELEMENT instructor (name?, email?, officeHours?, phone?, email?)>` imply?",
       "options": [
-        { "id": "a", "label": "The element \"name\" is optional." },
-        { "id": "b", "label": "The element \"officeHours\" is optional." },
-        { "id": "c", "label": "The element \"email\" is required." },
-        { "id": "d", "label": "The element \"phone\" is required." }
+        {
+          "id": "a",
+          "label": "The element name is optional."
+        },
+        {
+          "id": "b",
+          "label": "The element officeHours is optional."
+        },
+        {
+          "id": "c",
+          "label": "An email element is required."
+        },
+        {
+          "id": "d",
+          "label": "The phone element is required."
+        }
       ],
-      "answer": "c"
+      "answer": "c",
+      "difficulty": "medium",
+      "tags": [
+        "dtd"
+      ],
+      "explanation": "Email appears twice, once without ?, making it mandatory."
     },
     {
       "id": "mod9-quiz-004",
       "module": "Module 9",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "Why do we need to invent XML Schema after DTD has been invented? Select all that apply.",
+      "topic": "XML Schema",
+      "type": "multi_select",
+      "prompt": "Why was XML Schema introduced after DTD? Select all that apply.",
       "options": [
-        { "id": "a", "label": "DTD is limited in storing few data." },
-        { "id": "b", "label": "DTD files are not recommended in new XML file user scenarios." },
-        { "id": "c", "label": "DTD cannot validate datatypes." },
-        { "id": "d", "label": "DTD is too slow." },
-        { "id": "e", "label": "XML Schema follows XML syntax." }
+        {
+          "id": "a",
+          "label": "DTDs are limited in the amount/type of data they can describe"
+        },
+        {
+          "id": "b",
+          "label": "DTDs are not recommended in new XML scenarios"
+        },
+        {
+          "id": "c",
+          "label": "DTDs cannot validate datatypes"
+        },
+        {
+          "id": "d",
+          "label": "DTDs are too slow"
+        },
+        {
+          "id": "e",
+          "label": "XML Schema follows XML syntax"
+        }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "c",
+        "e"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "xml schema"
+      ],
+      "explanation": "XML Schema adds strong typing and uses XML syntax itself, overcoming DTD limits."
     },
     {
       "id": "mod9-quiz-005",
       "module": "Module 9",
-      "topic": "Quiz",
+      "topic": "XML Schema",
       "type": "multiple_choice",
-      "prompt": "Which language supports integer type?",
+      "prompt": "Which language supports an integer data type?",
       "options": [
-        { "id": "a", "label": "XSD only" },
-        { "id": "b", "label": "DTD only" },
-        { "id": "c", "label": "both XSD Schema only" },
-        { "id": "d", "label": "both JSON and XML Schema" },
-        { "id": "e", "label": "neither XSD nor XML Schema" }
+        {
+          "id": "a",
+          "label": "XSD (XML Schema)"
+        },
+        {
+          "id": "b",
+          "label": "DTD"
+        },
+        {
+          "id": "c",
+          "label": "Both XSD and DTD"
+        },
+        {
+          "id": "d",
+          "label": "Neither XSD nor DTD"
+        }
       ],
-      "answer": "a"
+      "answer": "a",
+      "difficulty": "easy",
+      "tags": [
+        "xml schema"
+      ],
+      "explanation": "XSD provides typed elements such as integer; DTD does not."
     },
     {
       "id": "mod9-quiz-006",
       "module": "Module 9",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "Which of the following options are allowed when using XmlSchemaSet class for validation? Select all that apply.",
+      "topic": "Validation",
+      "type": "multi_select",
+      "prompt": "Which inputs can you validate with XmlSchemaSet? Select all that apply.",
       "options": [
-        { "id": "a", "label": "One or more XML files" },
-        { "id": "b", "label": "One or more Schema files" },
-        { "id": "c", "label": "Use both XML and Schema files simultaneously" },
-        { "id": "d", "label": "Use one or more XSL files" }
+        {
+          "id": "a",
+          "label": "One or more XML files"
+        },
+        {
+          "id": "b",
+          "label": "One or more schema files"
+        },
+        {
+          "id": "c",
+          "label": "Simultaneous XML and schema files"
+        },
+        {
+          "id": "d",
+          "label": "XSL files"
+        }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "b"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "xml",
+        "validation"
+      ],
+      "explanation": "XmlSchemaSet aggregates schemas and the XML documents to check."
     },
     {
       "id": "mod9-quiz-007",
       "module": "Module 9",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "What is the capacity (expressivity) of XSL as a programming language? Select all that apply.",
+      "topic": "XSLT expressivity",
+      "type": "multi_select",
+      "prompt": "What is the capacity of XSL as a programming language? Select all that apply.",
       "options": [
-        { "id": "a", "label": "It has conditional capabilities as that of an ordinary object-oriented programming language." },
-        { "id": "b", "label": "It is able to express conditions using if-then-else constructs." },
-        { "id": "c", "label": "It is able to express loops." },
-        { "id": "d", "label": "It is Turing complete and thus is able to express general computing." }
+        {
+          "id": "a",
+          "label": "It has conditional capabilities comparable to OO languages"
+        },
+        {
+          "id": "b",
+          "label": "It can express conditions using if-then-else"
+        },
+        {
+          "id": "c",
+          "label": "It can express loops"
+        },
+        {
+          "id": "d",
+          "label": "It is Turing complete and supports general computing"
+        }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "xslt"
+      ],
+      "explanation": "XSLT can branch and iterate, making it computationally complete."
     },
     {
       "id": "mod9-quiz-008",
       "module": "Module 9",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "The Extensible Stylesheet Language XSL is used for defining the transformations of an XML file. Select all that apply.",
+      "topic": "XSL",
+      "type": "multi_select",
+      "prompt": "The Extensible Stylesheet Language (XSL) is used for defining transformations of an XML file. Select all that apply.",
       "options": [
-        { "id": "a", "label": "It is an XML file." },
-        { "id": "b", "label": "It defines style rules." },
-        { "id": "c", "label": "In another XML file, with the same or a different structure." },
-        { "id": "d", "label": "It is used for massive data storage." }
+        {
+          "id": "a",
+          "label": "It is an XML file"
+        },
+        {
+          "id": "b",
+          "label": "It defines style rules"
+        },
+        {
+          "id": "c",
+          "label": "It can transform into another XML file with the same or different structure"
+        },
+        {
+          "id": "d",
+          "label": "It is used for massive data storage"
+        }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "xslt"
+      ],
+      "explanation": "XSL stylesheets are XML documents that describe transformation/styling rules."
     },
     {
       "id": "mod9-quiz-009",
       "module": "Module 9",
-      "topic": "Quiz",
-      "type": "multiple_choice",
-      "prompt": "Cascading Style Sheets (CSS) is a can be applied for defining the format of (Select all that apply):",
+      "topic": "CSS",
+      "type": "multi_select",
+      "prompt": "CSS can be applied to define the format of which document types? Select all that apply.",
       "options": [
-        { "id": "a", "label": "JSON" },
-        { "id": "b", "label": "XML" },
-        { "id": "c", "label": "PowerPoint files" },
-        { "id": "d", "label": "HTML" }
+        {
+          "id": "a",
+          "label": "JSON"
+        },
+        {
+          "id": "b",
+          "label": "XML"
+        },
+        {
+          "id": "c",
+          "label": "PowerPoint files"
+        },
+        {
+          "id": "d",
+          "label": "HTML"
+        }
       ],
-      "answer": "b"
+      "answer": [
+        "b",
+        "d"
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "css"
+      ],
+      "explanation": "CSS targets markup languages such as HTML and XML."
     },
     {
       "id": "mod9-quiz-010",
       "module": "Module 9",
-      "topic": "Quiz",
+      "topic": "XHTML",
       "type": "multiple_choice",
       "prompt": "What is XHTML?",
       "options": [
-        { "id": "a", "label": "It is extensible HTML that allows using a DTD file to extend the features of HTML." },
-        { "id": "b", "label": "It is a deprecated version of HTML." },
-        { "id": "c", "label": "It is a new version of XML that supports XSL transformation." },
-        { "id": "d", "label": "It is a new kind of DTD that can be processed by an XML parser." }
+        {
+          "id": "a",
+          "label": "Extensible HTML that uses a DTD to extend HTML"
+        },
+        {
+          "id": "b",
+          "label": "A deprecated version of HTML"
+        },
+        {
+          "id": "c",
+          "label": "A new version of XML supporting XSL"
+        },
+        {
+          "id": "d",
+          "label": "A kind of JSON schema"
+        }
       ],
-      "answer": "a"
+      "answer": "a",
+      "difficulty": "easy",
+      "tags": [
+        "xhtml"
+      ],
+      "explanation": "XHTML marries HTML semantics with XML constraints via DTDs."
     },
     {
       "id": "mod9-kc-001",
       "module": "Module 9",
-      "topic": "Knowledge Check",
+      "topic": "HTML5",
       "type": "multiple_choice",
       "prompt": "HTML 5.0 is based on:",
       "options": [
-        { "id": "a", "label": "Common Gateway Interface" },
-        { "id": "b", "label": "JavaScript and pre-compiled library functions" },
-        { "id": "c", "label": "proprietary APIs" },
-        { "id": "d", "label": "Extensible DDL files" },
-        { "id": "e", "label": "Pure HTML" }
+        {
+          "id": "a",
+          "label": "Common Gateway Interface"
+        },
+        {
+          "id": "b",
+          "label": "JavaScript and pre-compiled libraries"
+        },
+        {
+          "id": "c",
+          "label": "Proprietary APIs"
+        },
+        {
+          "id": "d",
+          "label": "Extensible DDL files"
+        },
+        {
+          "id": "e",
+          "label": "Pure HTML"
+        }
       ],
-      "answer": "a"
+      "answer": "a",
+      "difficulty": "medium",
+      "tags": [
+        "html5"
+      ],
+      "explanation": "Per the lecture notes, HTML5 builds on the CGI-driven model."
     },
     {
       "id": "mod9-kc-002",
       "module": "Module 9",
-      "topic": "Knowledge Check",
-      "type": "multiple_choice",
+      "topic": "ASPX GUI",
+      "type": "multi_select",
       "prompt": "What are the main components of ASPX GUI design? Select all that apply.",
       "options": [
-        { "id": "a", "label": "Configuration control" },
-        { "id": "b", "label": "HTML control" },
-        { "id": "c", "label": "DDL" },
-        { "id": "d", "label": "Server control" }
+        {
+          "id": "a",
+          "label": "Configuration control"
+        },
+        {
+          "id": "b",
+          "label": "HTML control"
+        },
+        {
+          "id": "c",
+          "label": "DDL"
+        },
+        {
+          "id": "d",
+          "label": "Server control"
+        }
       ],
-      "answer": "b"
+      "answer": [
+        "b",
+        "d"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "asp.net"
+      ],
+      "explanation": "ASPX pages combine HTML controls with server-side controls."
     },
     {
       "id": "mod9-kc-003",
       "module": "Module 9",
-      "topic": "Knowledge Check",
-      "type": "multiple_choice",
-      "prompt": "What are the problems with the client-side transformation from XML to HTML? Select all that apply.",
+      "topic": "Client-side transforms",
+      "type": "multi_select",
+      "prompt": "What are the problems with client-side transformation from XML to HTML? Select all that apply.",
       "options": [
-        { "id": "a", "label": "Need to install .Net framework on client side" },
-        { "id": "b", "label": "Rely on browser to have an XSLT processor" },
-        { "id": "c", "label": "Need to write an XSL style sheet" },
-        { "id": "d", "label": "Need to modify the XML file" }
+        {
+          "id": "a",
+          "label": "Need to install .NET Framework on the client"
+        },
+        {
+          "id": "b",
+          "label": "Rely on the browser having an XSLT processor"
+        },
+        {
+          "id": "c",
+          "label": "Need to write an XSL style sheet"
+        },
+        {
+          "id": "d",
+          "label": "Need to modify the XML file"
+        }
       ],
-      "answer": "b"
+      "answer": [
+        "b",
+        "c"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "xslt",
+        "frontend"
+      ],
+      "explanation": "Client transforms require browsers with XSLT support and custom stylesheets."
     },
     {
       "id": "mod9-kc-004",
       "module": "Module 9",
-      "topic": "Knowledge Check",
+      "topic": "HTML5 extensions",
       "type": "multiple_choice",
       "prompt": "What language is used for extending new elements in HTML5?",
       "options": [
-        { "id": "a", "label": "Combination of DTD and XML schema" },
-        { "id": "b", "label": "XML schema" },
-        { "id": "c", "label": "Neither DTD nor XML schema" },
-        { "id": "d", "label": "DTD" }
+        {
+          "id": "a",
+          "label": "Combination of DTD and XML Schema"
+        },
+        {
+          "id": "b",
+          "label": "XML Schema"
+        },
+        {
+          "id": "c",
+          "label": "Neither DTD nor XML Schema"
+        },
+        {
+          "id": "d",
+          "label": "DTD"
+        }
       ],
-      "answer": "d"
+      "answer": "d",
+      "difficulty": "easy",
+      "tags": [
+        "html5",
+        "dtd"
+      ],
+      "explanation": "Lecture materials specify DTD for extending HTML5 elements."
     },
     {
       "id": "mod9-kc-005",
       "module": "Module 9",
-      "topic": "Knowledge Check",
+      "topic": "XHTML",
       "type": "multiple_choice",
       "prompt": "XHTML (Extensible HTML) is defined by:",
       "options": [
-        { "id": "a", "label": "DTD" },
-        { "id": "b", "label": "XML schema" },
-        { "id": "c", "label": "HTML 5" },
-        { "id": "d", "label": "JSON" }
+        {
+          "id": "a",
+          "label": "DTD"
+        },
+        {
+          "id": "b",
+          "label": "XML Schema"
+        },
+        {
+          "id": "c",
+          "label": "HTML5"
+        },
+        {
+          "id": "d",
+          "label": "JSON"
+        }
       ],
-      "answer": "a"
+      "answer": "a",
+      "difficulty": "easy",
+      "tags": [
+        "xhtml"
+      ],
+      "explanation": "XHTML is governed by a DTD to enforce XML rules."
     },
     {
       "id": "mod10-kc-001",
@@ -418,10 +1022,22 @@
       "type": "multiple_choice",
       "prompt": "What standard do Atom and RSS conform with?",
       "options": [
-        { "id": "a", "label": "JSON" },
-        { "id": "b", "label": "Excel" },
-        { "id": "c", "label": "HTML" },
-        { "id": "d", "label": "XML" }
+        {
+          "id": "a",
+          "label": "JSON"
+        },
+        {
+          "id": "b",
+          "label": "Excel"
+        },
+        {
+          "id": "c",
+          "label": "HTML"
+        },
+        {
+          "id": "d",
+          "label": "XML"
+        }
       ],
       "answer": "d"
     },
@@ -432,10 +1048,22 @@
       "type": "multiple_choice",
       "prompt": "Given the following XQuery code:\n\nlet $x := doc(\"courses.xml\")/Courses\nfor $in in $x/Course\nwhere $in/Level > 200\norder by $in/Code\nreturn <Course> {$in/Name, $in/Level, $in/Code} </Course>\n\nWhich line of the code defines the filter function?",
       "options": [
-        { "id": "a", "label": "order by $in/Code" },
-        { "id": "b", "label": "return <Course> {$in/Name, $in/Level, $in/Code} </Course>" },
-        { "id": "c", "label": "for $in in $x/Course" },
-        { "id": "d", "label": "where $in/Level > 200" }
+        {
+          "id": "a",
+          "label": "order by $in/Code"
+        },
+        {
+          "id": "b",
+          "label": "return <Course> {$in/Name, $in/Level, $in/Code} </Course>"
+        },
+        {
+          "id": "c",
+          "label": "for $in in $x/Course"
+        },
+        {
+          "id": "d",
+          "label": "where $in/Level > 200"
+        }
       ],
       "answer": "d"
     },
@@ -446,10 +1074,22 @@
       "type": "multiple_choice",
       "prompt": "Assume we have five (5) different Web data structures. We choose one structure as the intermediate structure and translate all other structures to and from this structure. How many converters are needed?",
       "options": [
-        { "id": "a", "label": "4" },
-        { "id": "b", "label": "6" },
-        { "id": "c", "label": "8" },
-        { "id": "d", "label": "10" }
+        {
+          "id": "a",
+          "label": "4"
+        },
+        {
+          "id": "b",
+          "label": "6"
+        },
+        {
+          "id": "c",
+          "label": "8"
+        },
+        {
+          "id": "d",
+          "label": "10"
+        }
       ],
       "answer": "d"
     },
@@ -460,10 +1100,22 @@
       "type": "multiple_choice",
       "prompt": "The data structure of Google Protocol Buffers is similar to:",
       "options": [
-        { "id": "a", "label": "XML" },
-        { "id": "b", "label": "XML Schema" },
-        { "id": "c", "label": "HTML" },
-        { "id": "d", "label": "Objects in programming languages" }
+        {
+          "id": "a",
+          "label": "XML"
+        },
+        {
+          "id": "b",
+          "label": "XML Schema"
+        },
+        {
+          "id": "c",
+          "label": "HTML"
+        },
+        {
+          "id": "d",
+          "label": "Objects in programming languages"
+        }
       ],
       "answer": "d"
     },
@@ -472,12 +1124,24 @@
       "module": "Module 10",
       "topic": "Knowledge Check",
       "type": "multiple_choice",
-      "prompt": "Google’s Protocol Buffers are similar in syntax to:",
+      "prompt": "Google\u2019s Protocol Buffers are similar in syntax to:",
       "options": [
-        { "id": "a", "label": "CSS" },
-        { "id": "b", "label": "TeX" },
-        { "id": "c", "label": "XML" },
-        { "id": "d", "label": "Class definition of an object-oriented programming language" }
+        {
+          "id": "a",
+          "label": "CSS"
+        },
+        {
+          "id": "b",
+          "label": "TeX"
+        },
+        {
+          "id": "c",
+          "label": "XML"
+        },
+        {
+          "id": "d",
+          "label": "Class definition of an object-oriented programming language"
+        }
       ],
       "answer": "d"
     },
@@ -488,10 +1152,22 @@
       "type": "multiple_choice",
       "prompt": "What are the key features of a native XML database? Select all that apply.",
       "options": [
-        { "id": "a", "label": "Store XML data as is" },
-        { "id": "b", "label": "No need to load the entire XML into memory" },
-        { "id": "c", "label": "Allow queries for a subset of data in memory" },
-        { "id": "d", "label": "Use the relational database query language" }
+        {
+          "id": "a",
+          "label": "Store XML data as is"
+        },
+        {
+          "id": "b",
+          "label": "No need to load the entire XML into memory"
+        },
+        {
+          "id": "c",
+          "label": "Allow queries for a subset of data in memory"
+        },
+        {
+          "id": "d",
+          "label": "Use the relational database query language"
+        }
       ],
       "answer": "a"
     },
@@ -502,10 +1178,22 @@
       "type": "multiple_choice",
       "prompt": "Using the object-oriented concept of inheritance, what language is the base (parent) language of XQuery?",
       "options": [
-        { "id": "a", "label": "XML Schema" },
-        { "id": "b", "label": "XPath" },
-        { "id": "c", "label": "XSL" },
-        { "id": "d", "label": "XML" }
+        {
+          "id": "a",
+          "label": "XML Schema"
+        },
+        {
+          "id": "b",
+          "label": "XPath"
+        },
+        {
+          "id": "c",
+          "label": "XSL"
+        },
+        {
+          "id": "d",
+          "label": "XML"
+        }
       ],
       "answer": "b"
     },
@@ -516,10 +1204,22 @@
       "type": "multiple_choice",
       "prompt": "What are the main problems of using relational databases for XML databases where the XML has an irregular structure? Select all that apply.",
       "options": [
-        { "id": "a", "label": "The database cannot be indexed" },
-        { "id": "b", "label": "XSL transformations cannot be performed" },
-        { "id": "c", "label": "It may create many null columns in a table for representing the data" },
-        { "id": "d", "label": "It may create many tables for representing the data" }
+        {
+          "id": "a",
+          "label": "The database cannot be indexed"
+        },
+        {
+          "id": "b",
+          "label": "XSL transformations cannot be performed"
+        },
+        {
+          "id": "c",
+          "label": "It may create many null columns in a table for representing the data"
+        },
+        {
+          "id": "d",
+          "label": "It may create many tables for representing the data"
+        }
       ],
       "answer": "a"
     },
@@ -528,12 +1228,24 @@
       "module": "Module 10",
       "topic": "Quiz",
       "type": "multiple_choice",
-      "prompt": "Google’s BigTable is used to store:",
+      "prompt": "Google\u2019s BigTable is used to store:",
       "options": [
-        { "id": "a", "label": "key-value pairs" },
-        { "id": "b", "label": "JSON dictionaries" },
-        { "id": "c", "label": "relational database tables" },
-        { "id": "d", "label": "XML files" }
+        {
+          "id": "a",
+          "label": "key-value pairs"
+        },
+        {
+          "id": "b",
+          "label": "JSON dictionaries"
+        },
+        {
+          "id": "c",
+          "label": "relational database tables"
+        },
+        {
+          "id": "d",
+          "label": "XML files"
+        }
       ],
       "answer": "a"
     },
@@ -542,12 +1254,24 @@
       "module": "Module 10",
       "topic": "Quiz",
       "type": "multiple_choice",
-      "prompt": "The idea behind Google’s BigTable is similar to that of:",
+      "prompt": "The idea behind Google\u2019s BigTable is similar to that of:",
       "options": [
-        { "id": "a", "label": "XML Tree" },
-        { "id": "b", "label": "A File Tree" },
-        { "id": "c", "label": "A Trie" },
-        { "id": "d", "label": "A Binary Tree" }
+        {
+          "id": "a",
+          "label": "XML Tree"
+        },
+        {
+          "id": "b",
+          "label": "A File Tree"
+        },
+        {
+          "id": "c",
+          "label": "A Trie"
+        },
+        {
+          "id": "d",
+          "label": "A Binary Tree"
+        }
       ],
       "answer": "b"
     },
@@ -558,11 +1282,26 @@
       "type": "multiple_choice",
       "prompt": "Which data structures do NOT conform with XML standards? Select all that apply.",
       "options": [
-        { "id": "a", "label": "Atom" },
-        { "id": "b", "label": "PGX" },
-        { "id": "c", "label": "Protocol Buffers" },
-        { "id": "d", "label": "MSG 3.0" },
-        { "id": "e", "label": "RSS 2.0" }
+        {
+          "id": "a",
+          "label": "Atom"
+        },
+        {
+          "id": "b",
+          "label": "PGX"
+        },
+        {
+          "id": "c",
+          "label": "Protocol Buffers"
+        },
+        {
+          "id": "d",
+          "label": "MSG 3.0"
+        },
+        {
+          "id": "e",
+          "label": "RSS 2.0"
+        }
       ],
       "answer": "b"
     },
@@ -573,10 +1312,22 @@
       "type": "multiple_choice",
       "prompt": "Assume we have five (5) different Web data structures, and we want to be able to translate each structure directly to other four (4) structures. How many converters do we need?",
       "options": [
-        { "id": "a", "label": "2" },
-        { "id": "b", "label": "4" },
-        { "id": "c", "label": "8" },
-        { "id": "d", "label": "20" }
+        {
+          "id": "a",
+          "label": "2"
+        },
+        {
+          "id": "b",
+          "label": "4"
+        },
+        {
+          "id": "c",
+          "label": "8"
+        },
+        {
+          "id": "d",
+          "label": "20"
+        }
       ],
       "answer": "d"
     },
@@ -587,10 +1338,22 @@
       "type": "multiple_choice",
       "prompt": "A JSON object consists of:",
       "options": [
-        { "id": "a", "label": "a list of name/value pairs" },
-        { "id": "b", "label": "a list of value/value pairs" },
-        { "id": "c", "label": "an array of strings" },
-        { "id": "d", "label": "an array of string–string pairs" }
+        {
+          "id": "a",
+          "label": "a list of name/value pairs"
+        },
+        {
+          "id": "b",
+          "label": "a list of value/value pairs"
+        },
+        {
+          "id": "c",
+          "label": "an array of strings"
+        },
+        {
+          "id": "d",
+          "label": "an array of string\u2013string pairs"
+        }
       ],
       "answer": "a"
     },
@@ -601,11 +1364,26 @@
       "type": "multiple_choice",
       "prompt": "Which of the following are valid JSON values? Select all that apply.",
       "options": [
-        { "id": "a", "label": "25" },
-        { "id": "b", "label": 25 },
-        { "id": "c", "label": -25 },
-        { "id": "d", "label": 0.5 },
-        { "id": "e", "label": "25%" }
+        {
+          "id": "a",
+          "label": "25"
+        },
+        {
+          "id": "b",
+          "label": 25
+        },
+        {
+          "id": "c",
+          "label": -25
+        },
+        {
+          "id": "d",
+          "label": 0.5
+        },
+        {
+          "id": "e",
+          "label": "25%"
+        }
       ],
       "answer": "a"
     },
@@ -616,10 +1394,22 @@
       "type": "multiple_choice",
       "prompt": "Why do we need JSON instead of using general XML for all applications?",
       "options": [
-        { "id": "a", "label": "General XML is too simple to represent fixed data" },
-        { "id": "b", "label": "General XML is a meta-language and can be used to define languages only" },
-        { "id": "c", "label": "General XML represents a collection of data, unlike XML content" },
-        { "id": "d", "label": "JSON is easier and faster for being processed by programming languages" }
+        {
+          "id": "a",
+          "label": "General XML is too simple to represent fixed data"
+        },
+        {
+          "id": "b",
+          "label": "General XML is a meta-language and can be used to define languages only"
+        },
+        {
+          "id": "c",
+          "label": "General XML represents a collection of data, unlike XML content"
+        },
+        {
+          "id": "d",
+          "label": "JSON is easier and faster for being processed by programming languages"
+        }
       ],
       "answer": "d"
     },
@@ -630,10 +1420,22 @@
       "type": "multiple_choice",
       "prompt": "What technology best supports the thick client architecture?",
       "options": [
-        { "id": "a", "label": "Common Gateway Interface" },
-        { "id": "b", "label": "SOAP" },
-        { "id": "c", "label": "Client-browser computing" },
-        { "id": "d", "label": "OLE DB file" }
+        {
+          "id": "a",
+          "label": "Common Gateway Interface"
+        },
+        {
+          "id": "b",
+          "label": "SOAP"
+        },
+        {
+          "id": "c",
+          "label": "Client-browser computing"
+        },
+        {
+          "id": "d",
+          "label": "OLE DB file"
+        }
       ],
       "answer": "c"
     },
@@ -644,10 +1446,22 @@
       "type": "multiple_choice",
       "prompt": "What computing model and architecture does Pure HTML Web implement? Select all that apply.",
       "options": [
-        { "id": "a", "label": "Thick client architecture" },
-        { "id": "b", "label": "Thin client architecture" },
-        { "id": "c", "label": "Server-side computing" },
-        { "id": "d", "label": "Client-browser computing" }
+        {
+          "id": "a",
+          "label": "Thick client architecture"
+        },
+        {
+          "id": "b",
+          "label": "Thin client architecture"
+        },
+        {
+          "id": "c",
+          "label": "Server-side computing"
+        },
+        {
+          "id": "d",
+          "label": "Client-browser computing"
+        }
       ],
       "answer": "a"
     },
@@ -658,10 +1472,22 @@
       "type": "multiple_choice",
       "prompt": "What does the Out-of-browser computing model mean?",
       "options": [
-        { "id": "a", "label": "Computing is done on server-side" },
-        { "id": "b", "label": "Computing is done on client’s machine" },
-        { "id": "c", "label": "Program written as JavaScript script" },
-        { "id": "d", "label": "Program is embedded in HTML file" }
+        {
+          "id": "a",
+          "label": "Computing is done on server-side"
+        },
+        {
+          "id": "b",
+          "label": "Computing is done on client\u2019s machine"
+        },
+        {
+          "id": "c",
+          "label": "Program written as JavaScript script"
+        },
+        {
+          "id": "d",
+          "label": "Program is embedded in HTML file"
+        }
       ],
       "answer": "b"
     },
@@ -672,10 +1498,22 @@
       "type": "multiple_choice",
       "prompt": "How are AJAX features implemented in ASP .Net applications?",
       "options": [
-        { "id": "a", "label": "Using Web control" },
-        { "id": "b", "label": "Using user control" },
-        { "id": "c", "label": "Writing JavaScript code" },
-        { "id": "d", "label": "Writing HTML code" }
+        {
+          "id": "a",
+          "label": "Using Web control"
+        },
+        {
+          "id": "b",
+          "label": "Using user control"
+        },
+        {
+          "id": "c",
+          "label": "Writing JavaScript code"
+        },
+        {
+          "id": "d",
+          "label": "Writing HTML code"
+        }
       ],
       "answer": "c"
     },
@@ -686,10 +1524,22 @@
       "type": "multiple_choice",
       "prompt": "What are the potential problems of using client-side scripting? Select all that apply.",
       "options": [
-        { "id": "a", "label": "Overhead of sending code back and forth" },
-        { "id": "b", "label": "Interpretation is slower than executing compiled code" },
-        { "id": "c", "label": "Source code is not invisible" },
-        { "id": "d", "label": "Security and proprietary issues" }
+        {
+          "id": "a",
+          "label": "Overhead of sending code back and forth"
+        },
+        {
+          "id": "b",
+          "label": "Interpretation is slower than executing compiled code"
+        },
+        {
+          "id": "c",
+          "label": "Source code is not invisible"
+        },
+        {
+          "id": "d",
+          "label": "Security and proprietary issues"
+        }
       ],
       "answer": "b"
     },
@@ -700,10 +1550,22 @@
       "type": "multiple_choice",
       "prompt": "AJAX control is implemented in the ASP .Net environment as:",
       "options": [
-        { "id": "a", "label": "an HTML control" },
-        { "id": "b", "label": "a user control" },
-        { "id": "c", "label": "a DLL library function" },
-        { "id": "d", "label": "a Web control" }
+        {
+          "id": "a",
+          "label": "an HTML control"
+        },
+        {
+          "id": "b",
+          "label": "a user control"
+        },
+        {
+          "id": "c",
+          "label": "a DLL library function"
+        },
+        {
+          "id": "d",
+          "label": "a Web control"
+        }
       ],
       "answer": "d"
     },
@@ -714,10 +1576,22 @@
       "type": "multiple_choice",
       "prompt": "What programming model best supports the thick client in the client-server architecture?",
       "options": [
-        { "id": "a", "label": "Pure HTML-based Web Application" },
-        { "id": "b", "label": "Client-Side Scripting" },
-        { "id": "c", "label": "Out-of-browser Computing" },
-        { "id": "d", "label": "Server-Side Scripting" }
+        {
+          "id": "a",
+          "label": "Pure HTML-based Web Application"
+        },
+        {
+          "id": "b",
+          "label": "Client-Side Scripting"
+        },
+        {
+          "id": "c",
+          "label": "Out-of-browser Computing"
+        },
+        {
+          "id": "d",
+          "label": "Server-Side Scripting"
+        }
       ],
       "answer": "c"
     },
@@ -728,10 +1602,22 @@
       "type": "multiple_choice",
       "prompt": "When an ASPX page is accessed from a browser, what is sent to the browser?",
       "options": [
-        { "id": "a", "label": "The source code of the ASPX page" },
-        { "id": "b", "label": "An HTML page generated from the ASPX page" },
-        { "id": "c", "label": "The HTML portion of the ASPX page" },
-        { "id": "d", "label": "An XML page generated from the ASPX page" }
+        {
+          "id": "a",
+          "label": "The source code of the ASPX page"
+        },
+        {
+          "id": "b",
+          "label": "An HTML page generated from the ASPX page"
+        },
+        {
+          "id": "c",
+          "label": "The HTML portion of the ASPX page"
+        },
+        {
+          "id": "d",
+          "label": "An XML page generated from the ASPX page"
+        }
       ],
       "answer": "b"
     },
@@ -742,10 +1628,22 @@
       "type": "multiple_choice",
       "prompt": "A user control:",
       "options": [
-        { "id": "a", "label": "is always more powerful than a server control" },
-        { "id": "b", "label": "is a component sharable among multiple pages" },
-        { "id": "c", "label": "keeps all application settings together" },
-        { "id": "d", "label": "creates a separate page that can run upon each call" }
+        {
+          "id": "a",
+          "label": "is always more powerful than a server control"
+        },
+        {
+          "id": "b",
+          "label": "is a component sharable among multiple pages"
+        },
+        {
+          "id": "c",
+          "label": "keeps all application settings together"
+        },
+        {
+          "id": "d",
+          "label": "creates a separate page that can run upon each call"
+        }
       ],
       "answer": "b"
     },
@@ -756,10 +1654,22 @@
       "type": "multiple_choice",
       "prompt": "How do we create an AJAX component in ASP .Net Web applications?",
       "options": [
-        { "id": "a", "label": "Create a user control and use parameters to implement the user controls" },
-        { "id": "b", "label": "Use Web controls" },
-        { "id": "c", "label": "Use HTML controls" },
-        { "id": "d", "label": "Use Global.asax" }
+        {
+          "id": "a",
+          "label": "Create a user control and use parameters to implement the user controls"
+        },
+        {
+          "id": "b",
+          "label": "Use Web controls"
+        },
+        {
+          "id": "c",
+          "label": "Use HTML controls"
+        },
+        {
+          "id": "d",
+          "label": "Use Global.asax"
+        }
       ],
       "answer": "b"
     },
@@ -770,10 +1680,22 @@
       "type": "multiple_choice",
       "prompt": "What web computing models support thin-client architecture? Select all that apply.",
       "options": [
-        { "id": "a", "label": "Client-browser computing" },
-        { "id": "b", "label": "Pure HTML Web with CGI" },
-        { "id": "c", "label": "Server-side Computing" },
-        { "id": "d", "label": "Silverlight" }
+        {
+          "id": "a",
+          "label": "Client-browser computing"
+        },
+        {
+          "id": "b",
+          "label": "Pure HTML Web with CGI"
+        },
+        {
+          "id": "c",
+          "label": "Server-side Computing"
+        },
+        {
+          "id": "d",
+          "label": "Silverlight"
+        }
       ],
       "answer": "a"
     },
@@ -784,10 +1706,22 @@
       "type": "multiple_choice",
       "prompt": "AJAX control is implemented in the ASP .Net environment as:",
       "options": [
-        { "id": "a", "label": "an HTML control" },
-        { "id": "b", "label": "a user control" },
-        { "id": "c", "label": "a DLL library function" },
-        { "id": "d", "label": "a Web control" }
+        {
+          "id": "a",
+          "label": "an HTML control"
+        },
+        {
+          "id": "b",
+          "label": "a user control"
+        },
+        {
+          "id": "c",
+          "label": "a DLL library function"
+        },
+        {
+          "id": "d",
+          "label": "a Web control"
+        }
       ],
       "answer": "d"
     },
@@ -798,10 +1732,22 @@
       "type": "multiple_choice",
       "prompt": "A server control in ASP .Net application (Select all that apply):",
       "options": [
-        { "id": "a", "label": "is an object that forms a component in an ASPX page" },
-        { "id": "b", "label": "must have an extension name .aspx" },
-        { "id": "c", "label": "is executed at the client side" },
-        { "id": "d", "label": "can take input and emit an event upon an input" }
+        {
+          "id": "a",
+          "label": "is an object that forms a component in an ASPX page"
+        },
+        {
+          "id": "b",
+          "label": "must have an extension name .aspx"
+        },
+        {
+          "id": "c",
+          "label": "is executed at the client side"
+        },
+        {
+          "id": "d",
+          "label": "can take input and emit an event upon an input"
+        }
       ],
       "answer": "a"
     },
@@ -812,10 +1758,22 @@
       "type": "multiple_choice",
       "prompt": "A user control:",
       "options": [
-        { "id": "a", "label": "is faster in execution than a DLL function" },
-        { "id": "b", "label": "is re-usable in an ASPX page" },
-        { "id": "c", "label": "is a patch on an ASPX page" },
-        { "id": "d", "label": "keeps user-related settings together" }
+        {
+          "id": "a",
+          "label": "is faster in execution than a DLL function"
+        },
+        {
+          "id": "b",
+          "label": "is re-usable in an ASPX page"
+        },
+        {
+          "id": "c",
+          "label": "is a patch on an ASPX page"
+        },
+        {
+          "id": "d",
+          "label": "keeps user-related settings together"
+        }
       ],
       "answer": "b"
     },
@@ -826,10 +1784,22 @@
       "type": "multiple_choice",
       "prompt": "Which of the following computing models can be considered to be in thick client architecture? Select all that apply.",
       "options": [
-        { "id": "a", "label": "Pure HTML" },
-        { "id": "b", "label": "HTML 5" },
-        { "id": "c", "label": "Adobe Flash" },
-        { "id": "d", "label": "Silverlight" }
+        {
+          "id": "a",
+          "label": "Pure HTML"
+        },
+        {
+          "id": "b",
+          "label": "HTML 5"
+        },
+        {
+          "id": "c",
+          "label": "Adobe Flash"
+        },
+        {
+          "id": "d",
+          "label": "Silverlight"
+        }
       ],
       "answer": "b"
     },
@@ -840,10 +1810,22 @@
       "type": "multiple_choice",
       "prompt": "Where are the compilation and debugging options of a Web application typically stored in the Web.config file?",
       "options": [
-        { "id": "a", "label": "<appSettings>" },
-        { "id": "b", "label": "<system.web>" },
-        { "id": "c", "label": "<httpHandlers>" },
-        { "id": "d", "label": "<processModel>" }
+        {
+          "id": "a",
+          "label": "<appSettings>"
+        },
+        {
+          "id": "b",
+          "label": "<system.web>"
+        },
+        {
+          "id": "c",
+          "label": "<httpHandlers>"
+        },
+        {
+          "id": "d",
+          "label": "<processModel>"
+        }
       ],
       "answer": "b"
     },
@@ -854,10 +1836,22 @@
       "type": "multiple_choice",
       "prompt": "Policy-based computing suggests to decouple:",
       "options": [
-        { "id": "a", "label": "data from program" },
-        { "id": "b", "label": "data from server" },
-        { "id": "c", "label": "data from local drive" },
-        { "id": "d", "label": "conditions (context) from policy constraints" }
+        {
+          "id": "a",
+          "label": "data from program"
+        },
+        {
+          "id": "b",
+          "label": "data from server"
+        },
+        {
+          "id": "c",
+          "label": "data from local drive"
+        },
+        {
+          "id": "d",
+          "label": "conditions (context) from policy constraints"
+        }
       ],
       "answer": "a"
     },
@@ -868,10 +1862,22 @@
       "type": "multiple_choice",
       "prompt": "A DLL component that you create:",
       "options": [
-        { "id": "a", "label": "must be under the same namespace and you are not required to include it explicitly" },
-        { "id": "b", "label": "forms a namespace and you are required to explicitly include it in the application" },
-        { "id": "c", "label": "forms a service server and you need to use \"Add Service Reference\" to include it" },
-        { "id": "d", "label": "forms a service server and you need to use \"Add Web Reference\" to include it" }
+        {
+          "id": "a",
+          "label": "must be under the same namespace and you are not required to include it explicitly"
+        },
+        {
+          "id": "b",
+          "label": "forms a namespace and you are required to explicitly include it in the application"
+        },
+        {
+          "id": "c",
+          "label": "forms a service server and you need to use \"Add Service Reference\" to include it"
+        },
+        {
+          "id": "d",
+          "label": "forms a service server and you need to use \"Add Web Reference\" to include it"
+        }
       ],
       "answer": "b"
     },
@@ -882,9 +1888,25 @@
       "type": "multiple_choice",
       "prompt": "Consider the following code:\n\nvoid Session_Start(object sender, EventArgs e) {\n    Application[\"counter\"] = Convert.ToInt32(Application[\"counter\"]) + 1;\n}\n\nAnswer the following:\n\nWhat type of file in an ASPX application does this piece of code most likely belong to?",
       "options": [
-        { "id": "a", "label": "Global file" }
+        {
+          "id": "a",
+          "label": "Global.asax (application-level file)"
+        },
+        {
+          "id": "b",
+          "label": "Web.config configuration file"
+        },
+        {
+          "id": "c",
+          "label": "Default.aspx.cs page code-behind"
+        },
+        {
+          "id": "d",
+          "label": "Machine.config"
+        }
       ],
-      "answer": "a"
+      "answer": "a",
+      "explanation": "Session_Start lives in Global.asax so it can track sessions for the whole app."
     },
     {
       "id": "mod12-quiz-005",
@@ -893,10 +1915,22 @@
       "type": "multiple_choice",
       "prompt": "Where are the cookies typically stored?",
       "options": [
-        { "id": "a", "label": "On the top folder of the application domain on the server" },
-        { "id": "b", "label": "In the ASP.Net folder of your application domain on the server" },
-        { "id": "c", "label": "In the client’s hard drive, in a folder under the browser application" },
-        { "id": "d", "label": "In the client’s hard drive, with the machine config file" }
+        {
+          "id": "a",
+          "label": "On the top folder of the application domain on the server"
+        },
+        {
+          "id": "b",
+          "label": "In the ASP.Net folder of your application domain on the server"
+        },
+        {
+          "id": "c",
+          "label": "In the client\u2019s hard drive, in a folder under the browser application"
+        },
+        {
+          "id": "d",
+          "label": "In the client\u2019s hard drive, with the machine config file"
+        }
       ],
       "answer": "c"
     },
@@ -907,10 +1941,22 @@
       "type": "multiple_choice",
       "prompt": "Session state variables can be accessed by:",
       "options": [
-        { "id": "a", "label": "all sessions of an application" },
-        { "id": "b", "label": "all pages within one session" },
-        { "id": "c", "label": "the page only in which the session state is defined" },
-        { "id": "d", "label": "the method only in which the session state is initialized" }
+        {
+          "id": "a",
+          "label": "all sessions of an application"
+        },
+        {
+          "id": "b",
+          "label": "all pages within one session"
+        },
+        {
+          "id": "c",
+          "label": "the page only in which the session state is defined"
+        },
+        {
+          "id": "d",
+          "label": "the method only in which the session state is initialized"
+        }
       ],
       "answer": "b"
     },
@@ -921,10 +1967,22 @@
       "type": "multiple_choice",
       "prompt": "Why do you need to create your own machine key if your ASP .Net application is hosted in a server farm environment?",
       "options": [
-        { "id": "a", "label": "A server farm does not have a machine key" },
-        { "id": "b", "label": "A server farm does not have a unique machine key" },
-        { "id": "c", "label": "A server farm does not need a machine key to generate the hashing ID" },
-        { "id": "d", "label": "ASP .Net applications automatically generate a machine key when hosted in a server farm" }
+        {
+          "id": "a",
+          "label": "A server farm does not have a machine key"
+        },
+        {
+          "id": "b",
+          "label": "A server farm does not have a unique machine key"
+        },
+        {
+          "id": "c",
+          "label": "A server farm does not need a machine key to generate the hashing ID"
+        },
+        {
+          "id": "d",
+          "label": "ASP .Net applications automatically generate a machine key when hosted in a server farm"
+        }
       ],
       "answer": "b"
     },
@@ -935,10 +1993,22 @@
       "type": "multiple_choice",
       "prompt": "If one selects the cookieless attribute = UseUri to support Session State variables, the restrictions are:",
       "options": [
-        { "id": "a", "label": "Browser must support cookies" },
-        { "id": "b", "label": "Browser must remain open to retain session states" },
-        { "id": "c", "label": "Browser must enable cookies" },
-        { "id": "d", "label": "Developers must use relative paths" }
+        {
+          "id": "a",
+          "label": "Browser must support cookies"
+        },
+        {
+          "id": "b",
+          "label": "Browser must remain open to retain session states"
+        },
+        {
+          "id": "c",
+          "label": "Browser must enable cookies"
+        },
+        {
+          "id": "d",
+          "label": "Developers must use relative paths"
+        }
       ],
       "answer": "b"
     },
@@ -949,10 +2019,22 @@
       "type": "multiple_choice",
       "prompt": "The <appSettings> element in Web.config file are typically used for storing:",
       "options": [
-        { "id": "a", "label": "URLs of remote services" },
-        { "id": "b", "label": "security settings" },
-        { "id": "c", "label": "policies and application parameter values" },
-        { "id": "d", "label": "URLs to remote servers" }
+        {
+          "id": "a",
+          "label": "URLs of remote services"
+        },
+        {
+          "id": "b",
+          "label": "security settings"
+        },
+        {
+          "id": "c",
+          "label": "policies and application parameter values"
+        },
+        {
+          "id": "d",
+          "label": "URLs to remote servers"
+        }
       ],
       "answer": "c"
     },
@@ -963,10 +2045,22 @@
       "type": "multiple_choice",
       "prompt": "What are the challenges for defining a global variable in Global.asax file? Select all that apply:",
       "options": [
-        { "id": "a", "label": "Create global files that can coordinate with each other" },
-        { "id": "b", "label": "Allow class instances to read the global file" },
-        { "id": "c", "label": "Address the problem of simultaneous write on the variable" },
-        { "id": "d", "label": "Address the performance problem if lock mechanism is used" }
+        {
+          "id": "a",
+          "label": "Create global files that can coordinate with each other"
+        },
+        {
+          "id": "b",
+          "label": "Allow class instances to read the global file"
+        },
+        {
+          "id": "c",
+          "label": "Address the problem of simultaneous write on the variable"
+        },
+        {
+          "id": "d",
+          "label": "Address the performance problem if lock mechanism is used"
+        }
       ],
       "answer": "a"
     },
@@ -977,10 +2071,22 @@
       "type": "multiple_choice",
       "prompt": "When session states are used, a Web server identifies a revisiting browser through an ID:",
       "options": [
-        { "id": "a", "label": "issued by the client machine" },
-        { "id": "b", "label": "associated with the client browser" },
-        { "id": "c", "label": "issued by the server" },
-        { "id": "d", "label": "associated with the client TCP session" }
+        {
+          "id": "a",
+          "label": "issued by the client machine"
+        },
+        {
+          "id": "b",
+          "label": "associated with the client browser"
+        },
+        {
+          "id": "c",
+          "label": "issued by the server"
+        },
+        {
+          "id": "d",
+          "label": "associated with the client TCP session"
+        }
       ],
       "answer": "c"
     },
@@ -991,10 +2097,22 @@
       "type": "multiple_choice",
       "prompt": "Where do you store the secure machine key generated for your ASP .Net application?",
       "options": [
-        { "id": "a", "label": "In the Web.config file, in the element AppSettings" },
-        { "id": "b", "label": "In ApplicationStart()" },
-        { "id": "c", "label": "In the Web.config file, in the element system.web" },
-        { "id": "d", "label": "In SessionStart()" }
+        {
+          "id": "a",
+          "label": "In the Web.config file, in the element AppSettings"
+        },
+        {
+          "id": "b",
+          "label": "In ApplicationStart()"
+        },
+        {
+          "id": "c",
+          "label": "In the Web.config file, in the element system.web"
+        },
+        {
+          "id": "d",
+          "label": "In SessionStart()"
+        }
       ],
       "answer": "c"
     },
@@ -1005,10 +2123,22 @@
       "type": "multiple_choice",
       "prompt": "How can you prevent Web application deadlock in the case of copying data from one disk file to another disk file?",
       "options": [
-        { "id": "a", "label": "Open the two files in two different threads" },
-        { "id": "b", "label": "Close one file before opening the other" },
-        { "id": "c", "label": "Open the two files in random order" },
-        { "id": "d", "label": "Open one for read and the other for write" }
+        {
+          "id": "a",
+          "label": "Open the two files in two different threads"
+        },
+        {
+          "id": "b",
+          "label": "Close one file before opening the other"
+        },
+        {
+          "id": "c",
+          "label": "Open the two files in random order"
+        },
+        {
+          "id": "d",
+          "label": "Open one for read and the other for write"
+        }
       ],
       "answer": "b"
     },
@@ -1019,10 +2149,22 @@
       "type": "multiple_choice",
       "prompt": "What is the proper order of performing security operations?",
       "options": [
-        { "id": "a", "label": "authorization, authentication, and then access of resource" },
-        { "id": "b", "label": "access of resource, authentication, and then authorization" },
-        { "id": "c", "label": "access of resource, authorization, and then authentication" },
-        { "id": "d", "label": "authentication, authorization, and then access of resource" }
+        {
+          "id": "a",
+          "label": "authorization, authentication, and then access of resource"
+        },
+        {
+          "id": "b",
+          "label": "access of resource, authentication, and then authorization"
+        },
+        {
+          "id": "c",
+          "label": "access of resource, authorization, and then authentication"
+        },
+        {
+          "id": "d",
+          "label": "authentication, authorization, and then access of resource"
+        }
       ],
       "answer": "d"
     },
@@ -1033,10 +2175,22 @@
       "type": "multiple_choice",
       "prompt": "Availability (A(t)) is probably related to the:",
       "options": [
-        { "id": "a", "label": "readiness of service at time point t" },
-        { "id": "b", "label": "the validity and correctness of data and message" },
-        { "id": "c", "label": "continuity of service in time period [0, t]" },
-        { "id": "d", "label": "non-occurrence of catastrophic consequence" }
+        {
+          "id": "a",
+          "label": "readiness of service at time point t"
+        },
+        {
+          "id": "b",
+          "label": "the validity and correctness of data and message"
+        },
+        {
+          "id": "c",
+          "label": "continuity of service in time period [0, t]"
+        },
+        {
+          "id": "d",
+          "label": "non-occurrence of catastrophic consequence"
+        }
       ],
       "answer": "b"
     },
@@ -1047,10 +2201,22 @@
       "type": "multiple_choice",
       "prompt": "In what configuration setting will ASP .Net use the security token passed to it by IIS?",
       "options": [
-        { "id": "a", "label": "<identity impersonate = \"false\" />" },
-        { "id": "b", "label": "<identity impersonate = \"false\" /> (Correct from screenshot — although A & B look identical, B is marked correct)" },
-        { "id": "c", "label": "<identity impersonate = \"true\" />" },
-        { "id": "d", "label": "when impersonation element is not used" }
+        {
+          "id": "a",
+          "label": "<identity impersonate = \"false\" />"
+        },
+        {
+          "id": "b",
+          "label": "<identity impersonate = \"false\" /> (Correct from screenshot \u2014 although A & B look identical, B is marked correct)"
+        },
+        {
+          "id": "c",
+          "label": "<identity impersonate = \"true\" />"
+        },
+        {
+          "id": "d",
+          "label": "when impersonation element is not used"
+        }
       ],
       "answer": "b"
     },
@@ -1061,10 +2227,22 @@
       "type": "multiple_choice",
       "prompt": "How does the Windows security mechanism work in the Web application security control?",
       "options": [
-        { "id": "a", "label": "It blocks IP addresses and domains that are not permitted" },
-        { "id": "b", "label": "It compares the received credential with the credential saved in Windows’s user accounts" },
-        { "id": "c", "label": "It compares the received credential with the credential saved in a user-created XML file" },
-        { "id": "d", "label": "It compares the received credential with the credential saved in the Web.Config file" }
+        {
+          "id": "a",
+          "label": "It blocks IP addresses and domains that are not permitted"
+        },
+        {
+          "id": "b",
+          "label": "It compares the received credential with the credential saved in Windows\u2019s user accounts"
+        },
+        {
+          "id": "c",
+          "label": "It compares the received credential with the credential saved in a user-created XML file"
+        },
+        {
+          "id": "d",
+          "label": "It compares the received credential with the credential saved in the Web.Config file"
+        }
       ],
       "answer": "b"
     },
@@ -1073,12 +2251,24 @@
       "module": "Module 13",
       "topic": "Knowledge Check",
       "type": "multiple_choice",
-      "prompt": "The probability that a system has survived in the time interval [0, t] is the system’s:",
+      "prompt": "The probability that a system has survived in the time interval [0, t] is the system\u2019s:",
       "options": [
-        { "id": "a", "label": "availability" },
-        { "id": "b", "label": "reliability" },
-        { "id": "c", "label": "safety" },
-        { "id": "d", "label": "security" }
+        {
+          "id": "a",
+          "label": "availability"
+        },
+        {
+          "id": "b",
+          "label": "reliability"
+        },
+        {
+          "id": "c",
+          "label": "safety"
+        },
+        {
+          "id": "d",
+          "label": "security"
+        }
       ],
       "answer": "b"
     },
@@ -1089,10 +2279,22 @@
       "type": "multiple_choice",
       "prompt": "Data Encryption Standard (DES) is used for low-level security applications, because:",
       "options": [
-        { "id": "a", "label": "the encryption algorithm is slow." },
-        { "id": "b", "label": "it has been used for many years." },
-        { "id": "c", "label": "it is encryption key that is short." },
-        { "id": "d", "label": "it uses a secretive key system." }
+        {
+          "id": "a",
+          "label": "the encryption algorithm is slow."
+        },
+        {
+          "id": "b",
+          "label": "it has been used for many years."
+        },
+        {
+          "id": "c",
+          "label": "it is encryption key that is short."
+        },
+        {
+          "id": "d",
+          "label": "it uses a secretive key system."
+        }
       ],
       "answer": "b"
     },
@@ -1103,10 +2305,22 @@
       "type": "multiple_choice",
       "prompt": "What techniques are used in Data Encryption Standard (DES) to perform encryption and decryption? Select all that apply.",
       "options": [
-        { "id": "a", "label": "secret key system" },
-        { "id": "b", "label": "open key system" },
-        { "id": "c", "label": "a simple round of cipher encryption" },
-        { "id": "d", "label": "multiple rounds of cipher encryption" }
+        {
+          "id": "a",
+          "label": "secret key system"
+        },
+        {
+          "id": "b",
+          "label": "open key system"
+        },
+        {
+          "id": "c",
+          "label": "a simple round of cipher encryption"
+        },
+        {
+          "id": "d",
+          "label": "multiple rounds of cipher encryption"
+        }
       ],
       "answer": "a"
     },
@@ -1117,10 +2331,22 @@
       "type": "multiple_choice",
       "prompt": "Data hashing creates a value from a given data. The hash value:",
       "options": [
-        { "id": "a", "label": "can be used for recovering the data using a decryption algorithm." },
-        { "id": "b", "label": "can uniquely identify a data; cannot recover the data." },
-        { "id": "c", "label": "creates a digital signature that is mixed with the data." },
-        { "id": "d", "label": "is generated using the encryption algorithm in the Open Key cryptography system." }
+        {
+          "id": "a",
+          "label": "can be used for recovering the data using a decryption algorithm."
+        },
+        {
+          "id": "b",
+          "label": "can uniquely identify a data; cannot recover the data."
+        },
+        {
+          "id": "c",
+          "label": "creates a digital signature that is mixed with the data."
+        },
+        {
+          "id": "d",
+          "label": "is generated using the encryption algorithm in the Open Key cryptography system."
+        }
       ],
       "answer": "b"
     },
@@ -1131,11 +2357,26 @@
       "type": "multiple_choice",
       "prompt": "What reliability features does WS-Reliable Messaging specification guarantee? Select all that apply.",
       "options": [
-        { "id": "a", "label": "No-loss messages" },
-        { "id": "b", "label": "No-duplicated messages" },
-        { "id": "c", "label": "Messages received once and only once" },
-        { "id": "d", "label": "Secure Sockets Layer data confidentiality" },
-        { "id": "e", "label": "Secure Sockets Layer data integrity" }
+        {
+          "id": "a",
+          "label": "No-loss messages"
+        },
+        {
+          "id": "b",
+          "label": "No-duplicated messages"
+        },
+        {
+          "id": "c",
+          "label": "Messages received once and only once"
+        },
+        {
+          "id": "d",
+          "label": "Secure Sockets Layer data confidentiality"
+        },
+        {
+          "id": "e",
+          "label": "Secure Sockets Layer data integrity"
+        }
       ],
       "answer": "a"
     },
@@ -1146,10 +2387,22 @@
       "type": "multiple_choice",
       "prompt": "How is the lost message handled by WS-Reliable Messaging?",
       "options": [
-        { "id": "a", "label": "Double redundancy: Each message is sent twice." },
-        { "id": "b", "label": "Triple redundancy: Each message is sent three times." },
-        { "id": "c", "label": "A message is resent if no acknowledgment is received within the given amount of time." },
-        { "id": "d", "label": "The receiver creates the missing message based on the adjacent messages received." }
+        {
+          "id": "a",
+          "label": "Double redundancy: Each message is sent twice."
+        },
+        {
+          "id": "b",
+          "label": "Triple redundancy: Each message is sent three times."
+        },
+        {
+          "id": "c",
+          "label": "A message is resent if no acknowledgment is received within the given amount of time."
+        },
+        {
+          "id": "d",
+          "label": "The receiver creates the missing message based on the adjacent messages received."
+        }
       ],
       "answer": "c"
     },
@@ -1160,10 +2413,22 @@
       "type": "multiple_choice",
       "prompt": "What are true about the n-out-of-k codes? Select all that apply.",
       "options": [
-        { "id": "a", "label": "It may not be able to tolerate all bit single errors." },
-        { "id": "b", "label": "It has a high level of redundancy, and the cost is high." },
-        { "id": "c", "label": "It has zero overhead codes." },
-        { "id": "d", "label": "It is a non-separable code." }
+        {
+          "id": "a",
+          "label": "It may not be able to tolerate all bit single errors."
+        },
+        {
+          "id": "b",
+          "label": "It has a high level of redundancy, and the cost is high."
+        },
+        {
+          "id": "c",
+          "label": "It has zero overhead codes."
+        },
+        {
+          "id": "d",
+          "label": "It is a non-separable code."
+        }
       ],
       "answer": "a"
     },
@@ -1174,10 +2439,22 @@
       "type": "multiple_choice",
       "prompt": "What error control codes are separable codes? Select all that apply.",
       "options": [
-        { "id": "a", "label": "parity check" },
-        { "id": "b", "label": "checksum" },
-        { "id": "c", "label": "arithmetic code" },
-        { "id": "d", "label": "m-of-n code" }
+        {
+          "id": "a",
+          "label": "parity check"
+        },
+        {
+          "id": "b",
+          "label": "checksum"
+        },
+        {
+          "id": "c",
+          "label": "arithmetic code"
+        },
+        {
+          "id": "d",
+          "label": "m-of-n code"
+        }
       ],
       "answer": "a"
     },
@@ -1188,10 +2465,22 @@
       "type": "multiple_choice",
       "prompt": "What error control codes are used in the control channel code standard in 5G wireless network?",
       "options": [
-        { "id": "a", "label": "Turbo codes" },
-        { "id": "b", "label": "LDPC codes" },
-        { "id": "c", "label": "Polar codes" },
-        { "id": "d", "label": "m-of-n codes" }
+        {
+          "id": "a",
+          "label": "Turbo codes"
+        },
+        {
+          "id": "b",
+          "label": "LDPC codes"
+        },
+        {
+          "id": "c",
+          "label": "Polar codes"
+        },
+        {
+          "id": "d",
+          "label": "m-of-n codes"
+        }
       ],
       "answer": "b"
     },
@@ -1202,10 +2491,22 @@
       "type": "multiple_choice",
       "prompt": "Secure Sockets Layer (SSL) defines communication protocols that can provide:",
       "options": [
-        { "id": "a", "label": "reliable messaging" },
-        { "id": "b", "label": "data confidentiality" },
-        { "id": "c", "label": "data integrity" },
-        { "id": "d", "label": "lossless integrity" }
+        {
+          "id": "a",
+          "label": "reliable messaging"
+        },
+        {
+          "id": "b",
+          "label": "data confidentiality"
+        },
+        {
+          "id": "c",
+          "label": "data integrity"
+        },
+        {
+          "id": "d",
+          "label": "lossless integrity"
+        }
       ],
       "answer": "b"
     },
@@ -1216,10 +2517,22 @@
       "type": "multiple_choice",
       "prompt": "What is the purpose of the fragmentation step in SSL?",
       "options": [
-        { "id": "a", "label": "To make the data transmission more efficient" },
-        { "id": "b", "label": "To make the decryption harder" },
-        { "id": "c", "label": "To make the encryption more manageable" },
-        { "id": "d", "label": "To make the transmission more reliable" }
+        {
+          "id": "a",
+          "label": "To make the data transmission more efficient"
+        },
+        {
+          "id": "b",
+          "label": "To make the decryption harder"
+        },
+        {
+          "id": "c",
+          "label": "To make the encryption more manageable"
+        },
+        {
+          "id": "d",
+          "label": "To make the transmission more reliable"
+        }
       ],
       "answer": "c"
     },
@@ -1230,10 +2543,22 @@
       "type": "multiple_choice",
       "prompt": "SSL connection between a client and a server is based on a:",
       "options": [
-        { "id": "a", "label": "message queue protocol" },
-        { "id": "b", "label": "polar code protocol" },
-        { "id": "c", "label": "peer-to-peer protocol" },
-        { "id": "d", "label": "two-tier protocol" }
+        {
+          "id": "a",
+          "label": "message queue protocol"
+        },
+        {
+          "id": "b",
+          "label": "polar code protocol"
+        },
+        {
+          "id": "c",
+          "label": "peer-to-peer protocol"
+        },
+        {
+          "id": "d",
+          "label": "two-tier protocol"
+        }
       ],
       "answer": "c"
     },
@@ -1244,10 +2569,22 @@
       "type": "multiple_choice",
       "prompt": "How is the WS-ReliableMessaging implemented in WCF?",
       "options": [
-        { "id": "a", "label": "A message is resent if no acknowledgment received." },
-        { "id": "b", "label": "Each message is sent three times." },
-        { "id": "c", "label": "Natural direct resend missing message." },
-        { "id": "d", "label": "Each message is sent twice." }
+        {
+          "id": "a",
+          "label": "A message is resent if no acknowledgment received."
+        },
+        {
+          "id": "b",
+          "label": "Each message is sent three times."
+        },
+        {
+          "id": "c",
+          "label": "Natural direct resend missing message."
+        },
+        {
+          "id": "d",
+          "label": "Each message is sent twice."
+        }
       ],
       "answer": "a"
     },
@@ -1256,12 +2593,24 @@
       "module": "Module 14",
       "topic": "Knowledge Check",
       "type": "multiple_choice",
-      "prompt": "In order to detect all two-bit errors, the Hamming distance dₘᵢₙ(C) of code C must be at least:",
+      "prompt": "In order to detect all two-bit errors, the Hamming distance d\u2098\u1d62\u2099(C) of code C must be at least:",
       "options": [
-        { "id": "a", "label": "Two" },
-        { "id": "b", "label": "Three" },
-        { "id": "c", "label": "One" },
-        { "id": "d", "label": "Four" }
+        {
+          "id": "a",
+          "label": "Two"
+        },
+        {
+          "id": "b",
+          "label": "Three"
+        },
+        {
+          "id": "c",
+          "label": "One"
+        },
+        {
+          "id": "d",
+          "label": "Four"
+        }
       ],
       "answer": "b"
     },
@@ -1272,10 +2621,22 @@
       "type": "multiple_choice",
       "prompt": "Wireless communication heavily relies on error control codes. What are the primary error control codes used in 3G cell phone network?",
       "options": [
-        { "id": "a", "label": "LDPC codes" },
-        { "id": "b", "label": "m-of-n codes" },
-        { "id": "c", "label": "Polar Codes" },
-        { "id": "d", "label": "Turbo Codes" }
+        {
+          "id": "a",
+          "label": "LDPC codes"
+        },
+        {
+          "id": "b",
+          "label": "m-of-n codes"
+        },
+        {
+          "id": "c",
+          "label": "Polar Codes"
+        },
+        {
+          "id": "d",
+          "label": "Turbo Codes"
+        }
       ],
       "answer": "b"
     },
@@ -1284,12 +2645,24 @@
       "module": "Module 14",
       "topic": "Knowledge Check",
       "type": "multiple_choice",
-      "prompt": "In order to tolerate (or correct) one-bit error, the Hamming distance dₘᵢₙ(C) of code C must be at least:",
+      "prompt": "In order to tolerate (or correct) one-bit error, the Hamming distance d\u2098\u1d62\u2099(C) of code C must be at least:",
       "options": [
-        { "id": "a", "label": "3" },
-        { "id": "b", "label": "5" },
-        { "id": "c", "label": "3 (with margin 0)" },
-        { "id": "d", "label": "2" }
+        {
+          "id": "a",
+          "label": "3"
+        },
+        {
+          "id": "b",
+          "label": "5"
+        },
+        {
+          "id": "c",
+          "label": "3 (with margin 0)"
+        },
+        {
+          "id": "d",
+          "label": "2"
+        }
       ],
       "answer": "a"
     }

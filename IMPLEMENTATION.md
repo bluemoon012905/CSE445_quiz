@@ -13,7 +13,7 @@
 
 ## Question bank details
 - Stored in `data/questions.json` under a single `questions` array.
-- Required fields: `id`, `module`, `topic`, `type` (`multiple_choice` or `code_dropdown`), `prompt`, `options` (array of `{ id, label }`), and `answer` (option id string).
+- Required fields: `id`, `module`, `topic`, `type` (`multiple_choice`, `multi_select`, or `code_dropdown`), `prompt`, `options` (array of `{ id, label }`), and `answer` (option id string or array for multi-select).
 - Optional metadata: `difficulty`, `expectedDurationSec`, `tags`, `explanation`, `code` (for code dropdown questions), and `generated`.
 - The UI renders standard multiple-choice radio lists plus `code_dropdown` questions (dropdown selector paired with a code snippet). Convert any “select all” prompts into single-answer form before loading them.
 - The `generated` flag controls:
