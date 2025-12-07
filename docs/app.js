@@ -37,7 +37,8 @@ const state = {
   activeQuiz: null,
   questionStartTime: null,
   timerInterval: null,
-  summaryEntries: []
+  summaryEntries: [],
+  hideModuleInfo: false
 };
 
 init();
@@ -206,10 +207,11 @@ function startQuizFromForm() {
   const selectedTypes = formData.getAll('types');
   const shuffle = formData.get('shuffle') === 'on';
   const includeGenerated = formData.get('includeGenerated') === 'on';
-  startQuiz({ requestedCount, selectedModules, selectedTypes, shuffle, includeGenerated });
+  const hideModuleInfo = formData.get('hideModuleInfo') === 'on';
+  startQuiz({ requestedCount, selectedModules, selectedTypes, shuffle, includeGenerated, hideModuleInfo });
 }
 
-function startQuiz({ requestedCount, selectedModules, selectedTypes, shuffle, includeGenerated }) {
+function startQuiz({ requestedCount, selectedModules, selectedTypes, shuffle, includeGenerated, hideModuleInfo }) {
   const modulesSet = selectedModules.length ? new Set(selectedModules) : null;
   const typesSet = selectedTypes.length ? new Set(selectedTypes) : null;
   const filtered = state.questionBank.filter((question) => {
@@ -235,6 +237,7 @@ function startQuiz({ requestedCount, selectedModules, selectedTypes, shuffle, in
     startedAt: Date.now()
   };
   state.summaryEntries = [];
+  state.hideModuleInfo = hideModuleInfo;
   elements.setupPanel.hidden = true;
   elements.summaryPanel.hidden = true;
   elements.quizPanel.hidden = false;
@@ -263,7 +266,13 @@ function renderQuestion() {
   elements.questionTitle.textContent = `Question ${quiz.currentIndex + 1} of ${quiz.questions.length}`;
   const typeLabel = TYPE_LABELS[question.type] || question.type;
   const diff = question.difficulty ? ` • Difficulty: ${capitalize(question.difficulty)}` : '';
-  elements.questionMeta.textContent = `${question.module} • ${question.topic} • ${typeLabel}${diff}`;
+  const metaParts = [];
+  if (!state.hideModuleInfo) {
+    metaParts.push(question.module);
+  }
+  metaParts.push(question.topic);
+  metaParts.push(typeLabel);
+  elements.questionMeta.textContent = `${metaParts.join(' • ')}${diff}`;
   elements.questionBody.innerHTML = '';
 
   const prompt = document.createElement('p');

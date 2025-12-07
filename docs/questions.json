@@ -1149,7 +1149,7 @@
       "id": "mod10-quiz-001",
       "module": "Module 10",
       "topic": "Quiz",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "What are the key features of a native XML database? Select all that apply.",
       "options": [
         {
@@ -1169,7 +1169,10 @@
           "label": "Use the relational database query language"
         }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "c"
+      ]
     },
     {
       "id": "mod10-quiz-002",
@@ -1201,7 +1204,7 @@
       "id": "mod10-quiz-003",
       "module": "Module 10",
       "topic": "Quiz",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "What are the main problems of using relational databases for XML databases where the XML has an irregular structure? Select all that apply.",
       "options": [
         {
@@ -1221,7 +1224,10 @@
           "label": "It may create many tables for representing the data"
         }
       ],
-      "answer": "a"
+      "answer": [
+        "c",
+        "d"
+      ]
     },
     {
       "id": "mod10-quiz-004",
@@ -1279,7 +1285,7 @@
       "id": "mod10-quiz-006",
       "module": "Module 10",
       "topic": "Quiz",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "Which data structures do NOT conform with XML standards? Select all that apply.",
       "options": [
         {
@@ -1303,7 +1309,11 @@
           "label": "RSS 2.0"
         }
       ],
-      "answer": "b"
+      "answer": [
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "id": "mod10-quiz-007",
@@ -1361,7 +1371,7 @@
       "id": "mod10-quiz-009",
       "module": "Module 10",
       "topic": "Quiz",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "Which of the following are valid JSON values? Select all that apply.",
       "options": [
         {
@@ -1385,7 +1395,11 @@
           "label": "25%"
         }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
       "id": "mod10-quiz-010",
@@ -1443,7 +1457,7 @@
       "id": "mod11-quiz-002",
       "module": "Module 11",
       "topic": "Quiz",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "What computing model and architecture does Pure HTML Web implement? Select all that apply.",
       "options": [
         {
@@ -1463,7 +1477,11 @@
           "label": "Client-browser computing"
         }
       ],
-      "answer": "a"
+      "answer": [
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "id": "mod11-quiz-003",
@@ -1521,7 +1539,7 @@
       "id": "mod11-quiz-005",
       "module": "Module 11",
       "topic": "Quiz",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "What are the potential problems of using client-side scripting? Select all that apply.",
       "options": [
         {
@@ -1541,7 +1559,12 @@
           "label": "Security and proprietary issues"
         }
       ],
-      "answer": "b"
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "id": "mod11-quiz-006",
@@ -1677,7 +1700,7 @@
       "id": "mod11-kc-001",
       "module": "Module 11",
       "topic": "Knowledge Check",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "What web computing models support thin-client architecture? Select all that apply.",
       "options": [
         {
@@ -1697,7 +1720,10 @@
           "label": "Silverlight"
         }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "c"
+      ]
     },
     {
       "id": "mod11-kc-002",
@@ -1729,7 +1755,7 @@
       "id": "mod11-kc-003",
       "module": "Module 11",
       "topic": "Knowledge Check",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "A server control in ASP .Net application (Select all that apply):",
       "options": [
         {
@@ -1749,7 +1775,10 @@
           "label": "can take input and emit an event upon an input"
         }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "c"
+      ]
     },
     {
       "id": "mod11-kc-004",
@@ -1781,7 +1810,7 @@
       "id": "mod11-kc-005",
       "module": "Module 11",
       "topic": "Knowledge Check",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "Which of the following computing models can be considered to be in thick client architecture? Select all that apply.",
       "options": [
         {
@@ -1801,7 +1830,10 @@
           "label": "Silverlight"
         }
       ],
-      "answer": "b"
+      "answer": [
+        "b",
+        "d"
+      ]
     },
     {
       "id": "mod12-quiz-001",
@@ -2042,7 +2074,7 @@
       "id": "mod12-kc-002",
       "module": "Module 12",
       "topic": "Knowledge Check",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "What are the challenges for defining a global variable in Global.asax file? Select all that apply:",
       "options": [
         {
@@ -2062,7 +2094,12 @@
           "label": "Address the performance problem if lock mechanism is used"
         }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "id": "mod12-kc-003",
@@ -2302,7 +2339,7 @@
       "id": "mod14-quiz-002",
       "module": "Module 14",
       "topic": "Quiz",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "What techniques are used in Data Encryption Standard (DES) to perform encryption and decryption? Select all that apply.",
       "options": [
         {
@@ -2322,7 +2359,10 @@
           "label": "multiple rounds of cipher encryption"
         }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "mod14-quiz-003",
@@ -2354,7 +2394,7 @@
       "id": "mod14-quiz-004",
       "module": "Module 14",
       "topic": "Quiz",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "What reliability features does WS-Reliable Messaging specification guarantee? Select all that apply.",
       "options": [
         {
@@ -2378,7 +2418,10 @@
           "label": "Secure Sockets Layer data integrity"
         }
       ],
-      "answer": "a"
+      "answer": [
+        "b",
+        "c"
+      ]
     },
     {
       "id": "mod14-quiz-005",
@@ -2410,7 +2453,7 @@
       "id": "mod14-quiz-006",
       "module": "Module 14",
       "topic": "Quiz",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "What are true about the n-out-of-k codes? Select all that apply.",
       "options": [
         {
@@ -2430,13 +2473,16 @@
           "label": "It is a non-separable code."
         }
       ],
-      "answer": "a"
+      "answer": [
+        "a",
+        "c"
+      ]
     },
     {
       "id": "mod14-quiz-007",
       "module": "Module 14",
       "topic": "Quiz",
-      "type": "multiple_choice",
+      "type": "multi_select",
       "prompt": "What error control codes are separable codes? Select all that apply.",
       "options": [
         {
@@ -2456,7 +2502,10 @@
           "label": "m-of-n code"
         }
       ],
-      "answer": "a"
+      "answer": [
+        "b",
+        "c"
+      ]
     },
     {
       "id": "mod14-quiz-008",
