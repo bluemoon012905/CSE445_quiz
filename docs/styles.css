@@ -311,9 +311,17 @@ button:disabled {
   font-size: 0.9rem;
 }
 
+#module-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
 #module-summary-table th,
 #module-summary-table td {
   padding: 0.3rem 0.5rem;
+  text-align: left;
+  color: var(--text);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
 }
 
 #summary-table {
