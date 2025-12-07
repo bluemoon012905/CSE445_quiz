@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSE445 Quiz Builder</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1>CSE445 Quiz Builder</h1>
+        <p class="tagline">Generate targeted quizzes by module, track answers, and export results.</p>
+      </div>
+      <div class="status-pill" id="question-count-pill">Loading questions...</div>
+    </header>
+
+    <main>
+      <section class="panel" id="setup-panel">
+        <h2>1. Configure quiz</h2>
+        <form id="quiz-setup-form">
+          <div class="form-row">
+            <label for="question-count">Number of questions</label>
+            <input id="question-count" name="questionCount" type="number" min="1" max="50" value="5" required />
+          </div>
+          <div class="form-row">
+            <span>Modules</span>
+            <div id="module-options" class="pill-group"></div>
+          </div>
+          <div class="form-row">
+            <span>Question types</span>
+            <div class="pill-group" id="type-options"></div>
+          </div>
+          <div class="form-row two-col">
+            <label for="shuffle">Randomize order</label>
+            <input id="shuffle" type="checkbox" name="shuffle" checked />
+          </div>
+          <button type="submit" class="primary">Start quiz</button>
+        </form>
+      </section>
+
+      <section class="panel" id="quiz-panel" hidden>
+        <div class="quiz-header">
+          <div>
+            <h2 id="question-title">Question</h2>
+            <p id="question-meta" class="meta"></p>
+          </div>
+          <div class="timer" id="question-timer">00:00</div>
+        </div>
+        <div id="question-body"></div>
+        <div class="quiz-controls">
+          <button id="prev-question" class="secondary">Previous</button>
+          <button id="next-question" class="primary">Next</button>
+          <button id="finish-quiz" class="danger" hidden>Finish quiz</button>
+        </div>
+        <div class="progress" id="quiz-progress"></div>
+      </section>
+
+      <section class="panel" id="summary-panel" hidden>
+        <div class="summary-header">
+          <div>
+            <h2>2. Review & export</h2>
+            <p class="meta" id="summary-meta"></p>
+          </div>
+          <div class="button-row">
+            <button id="download-summary" class="primary">Download PDF</button>
+            <button id="retake-quiz" class="secondary">Build another quiz</button>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table id="summary-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Module</th>
+                <th>Topic</th>
+                <th>Prompt</th>
+                <th>Your answer</th>
+                <th>Correct answer</th>
+                <th>Result</th>
+                <th>Time (s)</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <template id="option-pill-template">
+      <label class="pill">
+        <input type="checkbox" />
+        <span></span>
+      </label>
+    </template>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

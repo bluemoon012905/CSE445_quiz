@@ -1,0 +1,98 @@
+Question 1
+
+Which of the following are valid for representing the expression <t> Alan and Mairi. dreamed.? Select all that apply.
+
+A. <t> Alan + Mairi . </t>
+✔ B. <t> Alan + Mairi + dreamed . </t>
+✔ C. <term> Alan + Mairi + dreamed . </term>
+D. <term> Alan + Mairi + to dream . </term>
+✔ E. <t> Alan + Mairi + to dream . </t>
+F. <term> Alan + Mairi + to dream . </term>
+G. <t> Alan </t>
+
+Question 2
+
+An XML document has a tree structure. It:
+
+A. can have multiple roots and multiple leaves
+B. can have multiple roots or records
+✔ C. must have a single root.
+D. must have a single leaf.
+
+Question 3
+
+What is the requirement of a well-formed XML document? Select all that apply.
+
+✔ A. There is a single root element.
+✔ B. Each element is properly nested between an opening and a closing tag.
+C. There are no unexpected tags
+D. The tags must come from the set pre-defined by W3C.
+E. White space is not allowed in Text Content parts.
+
+Question 4
+
+To create an XML document using XmlTextWriter class, you need to open a FileStream and then create an XmlTextWriter object:
+
+fs = new FileStream("c:\\book.xml", FileMode.CreateNew);
+XmlTextWriter xtw = new XmlTextWriter(fs);
+System.Text.Encoding enc = null;
+
+What operation must be performed in order to properly format the XML file?
+
+✔ A. xtw.WriteStartDocument()
+B. xtw.Close()
+C. xtw.WriteEndDocument()
+D. xtw.WriteAttributeString()
+
+Question 5
+
+You are given the piece of code below:
+
+(1) XmlTextReader reader = new XmlTextReader("a.xml");
+(2) while (reader.Read())
+(3) {
+(4)     if (reader.NodeType == XmlNodeType.Element &&
+(5)         reader.Name == "book")
+(6)     {
+(7)         Console.WriteLine(reader.GetAttribute("title"));
+(8)     }
+(9) }
+
+
+Answer the following questions:
+
+(1) Will this piece of code create an in-memory tree to store
+the entire content of the XML file? True or False?
+✔ Answer 1: No
+
+(2) What line of code in the file (number) is the only line that loads a node into memory?
+✔ Answer 2: Line 5
+
+(3) If this code has to call method reader.MoveToAttribute("author")
+after Read(), must the node have attributes? True or False?
+✔ Answer 3: False
+
+Question 6
+
+An XPath expression allows to have a function call at the end of the expression.
+
+A. True
+✔ B. False
+
+Question 7
+
+What is the XML processing model that reads one node into memory a time based on the given path expression?
+
+A. DOM (Document Object Model)
+✔ B. SAX (Simple API for XML)
+C. XmlDocument
+D. X-path
+
+Question 8 (Wrong answer shown in screenshot — correct answer determined based on context)
+
+Regarding JAXB package for processing XML documents, which statements are correct?
+
+A. Only Marshaller uses event-driven model when reading an XML document.
+B. Only DocumentBuilder uses event-driven model when reading an XML document.
+✔ C. Both SAXReader and DocumentBuilder use event-driven model when reading an XML document.
+✔ D. Neither SAXReader nor DocumentBuilder uses event-driven model when reading an XML document.

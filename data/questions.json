@@ -1,0 +1,642 @@
+{
+  "questions": [
+    {
+      "id": "mod8-001",
+      "module": "Module 8",
+      "topic": "Distributed Systems",
+      "type": "multiple_choice",
+      "prompt": "Which quality allows a distributed system to keep operating even if one node crashes?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Fault tolerance"
+        },
+        {
+          "id": "b",
+          "label": "Loose coupling"
+        },
+        {
+          "id": "c",
+          "label": "Increased latency"
+        },
+        {
+          "id": "d",
+          "label": "Central coordination"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "medium",
+      "expectedDurationSec": 45,
+      "tags": [
+        "resilience",
+        "availability"
+      ],
+      "explanation": "Fault tolerance is the system\u2019s ability to survive a node failure without downtime."
+    },
+    {
+      "id": "mod9-002",
+      "module": "Module 9",
+      "topic": "Security",
+      "type": "true_false",
+      "prompt": "In role-based access control, permissions are tied to positions rather than individual users.",
+      "answer": true,
+      "difficulty": "easy",
+      "expectedDurationSec": 20,
+      "tags": [
+        "rbac",
+        "authorization"
+      ],
+      "explanation": "RBAC groups permissions under roles, so people inherit access by joining a role."
+    },
+    {
+      "id": "mod10-003",
+      "module": "Module 10",
+      "topic": "Service Design",
+      "type": "short_answer",
+      "prompt": "List one advantage of designing services around bounded contexts.",
+      "answer": "It limits the blast radius of changes by encapsulating each domain.",
+      "difficulty": "medium",
+      "expectedDurationSec": 60,
+      "tags": [
+        "bounded context",
+        "domain-driven design"
+      ],
+      "explanation": "Bounded contexts map to cohesive models, so updates stay localized."
+    },
+    {
+      "id": "mod11-004",
+      "module": "Module 11",
+      "topic": "Observability",
+      "type": "multi_select",
+      "prompt": "Select all telemetry signals that, together, describe the RED method.",
+      "options": [
+        {
+          "id": "rate",
+          "label": "Rate"
+        },
+        {
+          "id": "errors",
+          "label": "Errors"
+        },
+        {
+          "id": "duration",
+          "label": "Duration"
+        },
+        {
+          "id": "saturation",
+          "label": "Saturation"
+        }
+      ],
+      "answer": [
+        "rate",
+        "errors",
+        "duration"
+      ],
+      "difficulty": "hard",
+      "expectedDurationSec": 75,
+      "tags": [
+        "metrics",
+        "SRE"
+      ],
+      "explanation": "RED focuses on rate, errors, and duration to mirror user impact."
+    },
+    {
+      "id": "mod12-005",
+      "module": "Module 12",
+      "topic": "Automation",
+      "type": "multiple_choice",
+      "prompt": "Which automation pattern pushes code changes to production progressively with guardrails?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Canary releases"
+        },
+        {
+          "id": "b",
+          "label": "Blue/green rebuild"
+        },
+        {
+          "id": "c",
+          "label": "Shadow traffic"
+        },
+        {
+          "id": "d",
+          "label": "Ring buffering"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "medium",
+      "expectedDurationSec": 40,
+      "tags": [
+        "deployments",
+        "progressive delivery"
+      ],
+      "explanation": "Canarying exposes a small percentage of traffic first to reduce risk."
+    },
+    {
+      "id": "mod13-006",
+      "module": "Module 13",
+      "topic": "Reliability",
+      "type": "multiple_choice",
+      "prompt": "Which numeric pair best captures service level objectives?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Mean time to recovery and budget"
+        },
+        {
+          "id": "b",
+          "label": "Target reliability percentage and measurement window"
+        },
+        {
+          "id": "c",
+          "label": "User adoption and churn"
+        },
+        {
+          "id": "d",
+          "label": "Cost of goods sold and margin"
+        }
+      ],
+      "answer": "b",
+      "difficulty": "easy",
+      "expectedDurationSec": 30,
+      "tags": [
+        "SLO",
+        "reliability"
+      ],
+      "explanation": "An SLO pairs a reliability target with the period the target is evaluated against."
+    },
+    {
+      "id": "mod7-quiz-001",
+      "module": "Module 7",
+      "topic": "XML representations",
+      "type": "multi_select",
+      "prompt": "Which representations correctly capture the expression <t> Alan and Mairi. dreamed.? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "label": "<t> Alan + Mairi . </t>"
+        },
+        {
+          "id": "b",
+          "label": "<t> Alan + Mairi + dreamed . </t>"
+        },
+        {
+          "id": "c",
+          "label": "<term> Alan + Mairi + dreamed . </term>"
+        },
+        {
+          "id": "d",
+          "label": "<term> Alan + Mairi + to dream . </term>"
+        },
+        {
+          "id": "e",
+          "label": "<t> Alan + Mairi + to dream . </t>"
+        },
+        {
+          "id": "f",
+          "label": "<term> Alan + Mairi + to dream . </term>"
+        },
+        {
+          "id": "g",
+          "label": "<t> Alan </t>"
+        }
+      ],
+      "answer": [
+        "b",
+        "c",
+        "e"
+      ],
+      "difficulty": "medium",
+      "expectedDurationSec": 75,
+      "tags": [
+        "xml",
+        "tagging"
+      ],
+      "explanation": "Valid XML representations must wrap the entire expression in <t> or <term> tags and contain the dreamed verb."
+    },
+    {
+      "id": "mod7-quiz-002",
+      "module": "Module 7",
+      "topic": "XML basics",
+      "type": "multiple_choice",
+      "prompt": "An XML document has a tree structure. It:",
+      "options": [
+        {
+          "id": "a",
+          "label": "can have multiple roots and multiple leaves"
+        },
+        {
+          "id": "b",
+          "label": "can have multiple roots or records"
+        },
+        {
+          "id": "c",
+          "label": "must have a single root"
+        },
+        {
+          "id": "d",
+          "label": "must have a single leaf"
+        }
+      ],
+      "answer": "c",
+      "difficulty": "easy",
+      "expectedDurationSec": 30,
+      "tags": [
+        "xml",
+        "structure"
+      ],
+      "explanation": "Every well-formed XML document has exactly one root element, while leaves are unconstrained."
+    },
+    {
+      "id": "mod7-quiz-003",
+      "module": "Module 7",
+      "topic": "Well-formed XML",
+      "type": "multi_select",
+      "prompt": "Which requirements must a well-formed XML document meet? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "label": "There is a single root element."
+        },
+        {
+          "id": "b",
+          "label": "Each element is properly nested between an opening and a closing tag."
+        },
+        {
+          "id": "c",
+          "label": "There are no unexpected tags."
+        },
+        {
+          "id": "d",
+          "label": "The tags must come from the set pre-defined by W3C."
+        },
+        {
+          "id": "e",
+          "label": "White space is not allowed in text content."
+        }
+      ],
+      "answer": [
+        "a",
+        "b"
+      ],
+      "difficulty": "medium",
+      "expectedDurationSec": 45,
+      "tags": [
+        "xml",
+        "well-formedness"
+      ],
+      "explanation": "Well-formed XML demands exactly one root element and proper nesting/closing of every tag."
+    },
+    {
+      "id": "mod7-quiz-004",
+      "module": "Module 7",
+      "topic": "XmlTextWriter",
+      "type": "multiple_choice",
+      "prompt": "Before writing nodes with XmlTextWriter, which method call is required to properly format the output file?",
+      "options": [
+        {
+          "id": "a",
+          "label": "xtw.WriteStartDocument()"
+        },
+        {
+          "id": "b",
+          "label": "xtw.Close()"
+        },
+        {
+          "id": "c",
+          "label": "xtw.WriteEndDocument()"
+        },
+        {
+          "id": "d",
+          "label": "xtw.WriteAttributeString()"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "medium",
+      "expectedDurationSec": 40,
+      "tags": [
+        "c#",
+        "xml"
+      ],
+      "explanation": "WriteStartDocument writes the XML declaration and prepares the writer for subsequent nodes."
+    },
+    {
+      "id": "mod7-quiz-005a",
+      "module": "Module 7",
+      "topic": "XmlTextReader",
+      "type": "true_false",
+      "prompt": "Consider the following code:\n(1) XmlTextReader reader = new XmlTextReader(\"a.xml\");\n(2) while (reader.Read())\n(3) {\n(4)     if (reader.NodeType == XmlNodeType.Element &&\n(5)         reader.Name == \"book\")\n(6)     {\n(7)         Console.WriteLine(reader.GetAttribute(\"title\"));\n(8)     }\n(9) }\n\nWill this code create an in-memory tree with the entire XML file?",
+      "answer": false,
+      "difficulty": "medium",
+      "expectedDurationSec": 35,
+      "tags": [
+        "c#",
+        "xml",
+        "streaming"
+      ],
+      "explanation": "XmlTextReader streams nodes one at a time; it does not build a DOM tree in memory."
+    },
+    {
+      "id": "mod7-quiz-005b",
+      "module": "Module 7",
+      "topic": "XmlTextReader",
+      "type": "multiple_choice",
+      "prompt": "In the same XmlTextReader snippet, which line is the only one that loads a node into memory?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Line (2): while (reader.Read())"
+        },
+        {
+          "id": "b",
+          "label": "Line (4): reader.NodeType == XmlNodeType.Element"
+        },
+        {
+          "id": "c",
+          "label": "Line (5): reader.Name == \"book\""
+        },
+        {
+          "id": "d",
+          "label": "Line (7): Console.WriteLine(reader.GetAttribute(\"title\"))"
+        }
+      ],
+      "answer": "c",
+      "difficulty": "hard",
+      "expectedDurationSec": 45,
+      "tags": [
+        "c#",
+        "xml"
+      ],
+      "explanation": "According to the quiz key, the equality check at line (5) is where the desired element is realized for processing."
+    },
+    {
+      "id": "mod7-quiz-005c",
+      "module": "Module 7",
+      "topic": "XmlTextReader",
+      "type": "true_false",
+      "prompt": "If the XmlTextReader code calls reader.MoveToAttribute(\"author\") after Read(), must the node have attributes?",
+      "answer": false,
+      "difficulty": "medium",
+      "expectedDurationSec": 30,
+      "tags": [
+        "c#",
+        "xml"
+      ],
+      "explanation": "MoveToAttribute returns false if the attribute is missing; the call itself does not require attributes to exist."
+    },
+    {
+      "id": "mod7-quiz-006",
+      "module": "Module 7",
+      "topic": "XPath",
+      "type": "true_false",
+      "prompt": "An XPath expression can end with a function call.",
+      "answer": false,
+      "difficulty": "easy",
+      "expectedDurationSec": 20,
+      "tags": [
+        "xpath"
+      ],
+      "explanation": "Functions in XPath are invoked within the expression, not appended as trailing calls."
+    },
+    {
+      "id": "mod7-quiz-007",
+      "module": "Module 7",
+      "topic": "XML processing models",
+      "type": "multiple_choice",
+      "prompt": "Which XML processing model reads one node into memory at a time based on a path expression?",
+      "options": [
+        {
+          "id": "a",
+          "label": "DOM (Document Object Model)"
+        },
+        {
+          "id": "b",
+          "label": "SAX (Simple API for XML)"
+        },
+        {
+          "id": "c",
+          "label": "XmlDocument"
+        },
+        {
+          "id": "d",
+          "label": "XPath"
+        }
+      ],
+      "answer": "b",
+      "difficulty": "easy",
+      "expectedDurationSec": 30,
+      "tags": [
+        "xml",
+        "processing"
+      ],
+      "explanation": "SAX is an event-driven, streaming API that pulls in a single node at a time."
+    },
+    {
+      "id": "mod7-kc-001",
+      "module": "Module 7",
+      "topic": "XML display",
+      "type": "multiple_choice",
+      "prompt": "What is an advantage of a server-side solution for displaying an XML file in a required format?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Reduces server computing need"
+        },
+        {
+          "id": "b",
+          "label": "No need to write an XSL style sheet"
+        },
+        {
+          "id": "c",
+          "label": "Reduces client computing load"
+        },
+        {
+          "id": "d",
+          "label": "No special requirement on the Web browser"
+        }
+      ],
+      "answer": "d",
+      "difficulty": "easy",
+      "expectedDurationSec": 25,
+      "tags": [
+        "xml",
+        "asp.net"
+      ],
+      "explanation": "Rendering on the server removes browser requirements, so any client can consume the result."
+    },
+    {
+      "id": "mod7-kc-002",
+      "module": "Module 7",
+      "topic": "ASP.NET storage",
+      "type": "multiple_choice",
+      "prompt": "If your ASP.NET app creates an XML file, where should it be stored within the application domain?",
+      "options": [
+        {
+          "id": "a",
+          "label": "App_Data folder"
+        },
+        {
+          "id": "b",
+          "label": "App_Code folder"
+        },
+        {
+          "id": "c",
+          "label": "App_WebReferences folder"
+        },
+        {
+          "id": "d",
+          "label": "Bin folder"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "easy",
+      "expectedDurationSec": 20,
+      "tags": [
+        "asp.net",
+        "storage"
+      ],
+      "explanation": "App_Data is the designated location for data files such as XML generated by the app."
+    },
+    {
+      "id": "mod7-kc-003",
+      "module": "Module 7",
+      "topic": "XML Schema",
+      "type": "multiple_choice",
+      "prompt": "Which of the following terms is NOT defined in the W3C namespace http://www.w3.org/2001/XMLSchema?",
+      "options": [
+        {
+          "id": "a",
+          "label": "cc:core"
+        },
+        {
+          "id": "b",
+          "label": "all"
+        },
+        {
+          "id": "c",
+          "label": "complexType"
+        },
+        {
+          "id": "d",
+          "label": "schema"
+        },
+        {
+          "id": "e",
+          "label": "choice"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "medium",
+      "expectedDurationSec": 35,
+      "tags": [
+        "xml",
+        "schema"
+      ],
+      "explanation": "Elements such as all, complexType, schema, and choice live in the XML Schema namespace; cc:core does not."
+    },
+    {
+      "id": "mod7-kc-004",
+      "module": "Module 7",
+      "topic": "DTD",
+      "type": "multiple_choice",
+      "prompt": "A Document Type Definition (DTD) file:",
+      "options": [
+        {
+          "id": "a",
+          "label": "defines the syntax of an XML file"
+        },
+        {
+          "id": "b",
+          "label": "defines the structure of an XML schema file"
+        },
+        {
+          "id": "c",
+          "label": "extends the XML schema with more data types"
+        },
+        {
+          "id": "d",
+          "label": "follows XML syntax"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "easy",
+      "expectedDurationSec": 25,
+      "tags": [
+        "xml",
+        "dtd"
+      ],
+      "explanation": "A DTD declares the legal structure and elements for an XML document."
+    },
+    {
+      "id": "mod7-kc-005",
+      "module": "Module 7",
+      "topic": "XML elements",
+      "type": "multi_select",
+      "prompt": "What is an empty element in XML? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "label": "An element without text content between the tags"
+        },
+        {
+          "id": "b",
+          "label": "An element that does not need to have an opening tag"
+        },
+        {
+          "id": "c",
+          "label": "An element without a child element"
+        },
+        {
+          "id": "d",
+          "label": "An element without an attribute"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "difficulty": "medium",
+      "expectedDurationSec": 45,
+      "tags": [
+        "xml",
+        "elements"
+      ],
+      "explanation": "Empty elements have no textual content or children and can use the self-closing syntax that merges start/end tags."
+    },
+    {
+      "id": "mod7-kc-006",
+      "module": "Module 7",
+      "topic": "XML processing models",
+      "type": "multiple_choice",
+      "prompt": "What XML processing model reads one node into memory at a time?",
+      "options": [
+        {
+          "id": "a",
+          "label": "SAX (Simple API for XML)"
+        },
+        {
+          "id": "b",
+          "label": "XMLDocument"
+        },
+        {
+          "id": "c",
+          "label": "DOM (Document Object Model)"
+        },
+        {
+          "id": "d",
+          "label": "XPath"
+        }
+      ],
+      "answer": "a",
+      "difficulty": "easy",
+      "expectedDurationSec": 25,
+      "tags": [
+        "xml",
+        "processing"
+      ],
+      "explanation": "SAX parsers stream XML, delivering one node at a time through events."
+    }
+  ]
+}
