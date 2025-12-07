@@ -588,19 +588,19 @@
       "options": [
         {
           "id": "a",
-          "label": "The element <name> is optional."
+          "label": "The element name is optional."
         },
         {
           "id": "b",
-          "label": "The element <course> is optional."
+          "label": "The element officeHours is optional."
         },
         {
           "id": "c",
-          "label": "The element <course> is required."
+          "label": "The element email is required."
         },
         {
           "id": "d",
-          "label": "The element <phone> is required."
+          "label": "The element phone is required."
         }
       ],
       "answer": "b",
