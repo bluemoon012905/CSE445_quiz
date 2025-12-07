@@ -1,0 +1,13 @@
+Module 10 – XML Databases and XQuery
+1. XML can sit in relational tables, but complex hierarchies make joins slow and force many NULL columns. Native XML databases store documents as trees so you can query nodes directly. Vendors like IBM DB2 PureXML, Oracle XML DB, Microsoft SQLXML, and open-source systems such as eXist focus on keeping the structure intact, indexing nodes, and allowing partial updates.
+2. XQuery is a functional language for XML data. Bind documents with `let $d := doc("Courses.xml")`, then use XPath paths like `$d/Courses/Course`, `//Course[Level = "400"]`, or `//Room[@image = "layout210.jpeg"]`. Wrap query results inside constructors, for example `<result>{$d/Course}</result>`. Curly braces insert expression results inside literal tags.
+3. FLWOR expressions mirror SQL: `for` iterates nodes, `let` stores values, `where` filters, `order by` sorts, and `return` builds the output. Example:
+```
+for $c in doc("Courses.xml")/Courses/Course
+where $c/Level > 200
+order by $c/Code
+return <Course>{$c/Name}{$c/Level}{$c/Cap}</Course>
+```
+Every clause evaluates to a sequence, so think in terms of pipeline transformations.
+4. XQuery update facilities let you insert, delete, or replace nodes inside the database without round-tripping entire files. Oracle’s XML DB and IBM DB2 implement these server-side so that only the target node changes. When updates must be done client-side, the common steps are: read XML, parse via DOM, edit nodes, serialize, and send an `UPDATE` back—costly for large documents, hence the push for native updates.
+5. XML databases often blend SQL and XQuery. Oracle lets you store XMLType columns, register schemas, and query them with either `XMLQuery` or `XMLTable`. IBM’s PureXML uses SQL with embedded XPath. Knowing both syntaxes is key: use SQL to filter rows and XQuery fragments to reach nested tags.

@@ -1,0 +1,19 @@
+Module 14 – Encryption Algorithms and .NET Support
+1. Encrypt data whenever it leaves SSL-protected channels or needs to rest in config files, XML, or databases. Cleartext secrets in `Web.config` or logs are unacceptable.
+2. DES is a symmetric block cipher invented by IBM. It operates on 64-bit blocks but only 56 bits are keying material, so it is now considered low strength. The algorithm applies 16 Feistel rounds: expand 32 bits to 48, XOR with a subkey, shuffle through S-boxes, swap halves, and repeat. Use it only for legacy interop or local obfuscation.
+3. RSA is the classic public-key system. Choose two large primes `p` and `q`, compute `n = p*q`, and publish `(n, e)` as the public key. Keep `(n, d)` private. Encrypt with `c = m^e mod n`, decrypt with `m = c^d mod n`. Key sizes of 2048 or 4096 bits are now common. It’s slow for big payloads, so encrypt a random session key with RSA and use a symmetric cipher on the data.
+4. PGP chains hashing, compression, symmetric encryption, and public-key wrapping. The sender hashes the message, signs the hash, compresses the bundle, encrypts with a one-time session key, and finally encrypts that session key with the recipient’s public key. The receiver reverses the steps.
+5. The .NET `System.Security.Cryptography` namespace wraps these ideas. To encrypt with DES:
+```
+var seed = Encoding.ASCII.GetBytes("cse44598");
+using var provider = DES.Create();
+using var m = new MemoryStream();
+using var c = new CryptoStream(m, provider.CreateEncryptor(seed, seed), CryptoStreamMode.Write);
+using var writer = new StreamWriter(c);
+writer.Write(plainText);
+writer.Flush();
+c.FlushFinalBlock();
+string cipherText = Convert.ToBase64String(m.GetBuffer(), 0, (int)m.Length);
+```
+Reverse the process with `CreateDecryptor` to get back the original string.
+6. Always validate inputs before encrypting, flush buffered streams before changing modes, and dispose cryptography objects with `using` to release unmanaged resources.

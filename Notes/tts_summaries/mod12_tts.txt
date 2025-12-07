@@ -1,0 +1,21 @@
+Module 12 – Web.config Files and App Settings
+1. ASP.NET apps travel as folders that include `.aspx` pages, `.ascx` controls, compiled `.dll` assemblies, a `Global.asax`, and at least one `Web.config`. Because the config is XML, you can edit it at runtime without touching the registry.
+2. `Web.config` starts with `<configuration>` and contains sections like `<appSettings>`, `<connectionStrings>`, `<system.web>`, `<system.webServer>`, and more. Example skeleton:
+```
+<?xml version="1.0"?>
+<configuration>
+  <appSettings>
+    <add key="ApiBase" value="https://api.example.com" />
+  </appSettings>
+  <connectionStrings>
+    <add name="MainDb" connectionString="..." />
+  </connectionStrings>
+  <system.web>
+    <!-- authentication, compilation, session settings -->
+  </system.web>
+</configuration>
+```
+3. To write new settings in code-behind, open the config with `WebConfigurationManager.OpenWebConfiguration("~/")`, append to `config.AppSettings.Settings`, and call `config.Save(ConfigurationSaveMode.Modified)`. Build keys from user input (e.g., `string newKey = txtKey.Text + index;`) and values from text boxes. Always validate inputs before saving.
+4. To read settings, request the collection via `NameValueCollection myKeys = WebConfigurationManager.AppSettings;` then loop from `0` to `myKeys.Count - 1` and format each key/value pair for display. This gives you the same values that live on disk and anywhere else the site is deployed.
+5. When deleting entries, load the file into an `XmlDocument`, locate the `<appSettings>` element, call `RemoveChild` on the `<add>` node that matches the target key, and save. Because Web.config supports inheritance, child folders can override parent settings—keep track of which file you open.
+6. Policy-based computing builds on config files: you can store throttle settings, feature flags, or authorization rules in XML so administrators can change behavior without redeploying binaries.

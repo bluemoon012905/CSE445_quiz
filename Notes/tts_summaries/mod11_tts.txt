@@ -1,0 +1,17 @@
+Module 11 – Web Computing Models and Syntax Clues
+1. Pure HTML plus server processing: the browser just submits forms. A basic adder page is simply:
+```
+<html><body>
+<form action="/Add" method="post">
+  <input type="text" name="op1" /> +
+  <input type="text" name="op2" />
+  <input type="submit" value=" = " />
+</form>
+</body></html>
+```
+The server script, not the browser, parses the posted key-value pairs and returns a full new page.
+2. Client-side scripting (Model 2) keeps the HTML but embeds JavaScript or VBScript using `<script>` blocks so code runs in the browser. You can manipulate the DOM, validate inputs, or update parts of the page without contacting the server.
+3. Server-side frameworks like ASP.NET Web Forms (Model 3) pair markup with code-behind. The `.aspx` file defines controls such as `<asp:TextBox>` and `<asp:Button>`, while the `.aspx.cs` file handles events like `Button_Click`. Every postback sends the entire form collection back to the server, which re-renders the page.
+4. Partial-page updates use AJAX. In ASP.NET, `UpdatePanel` or custom JavaScript calls `XMLHttpRequest`/`fetch` to send small payloads and update only specific DOM nodes, preventing full-page flicker.
+5. Out-of-browser models (Model 5) package client executables like Silverlight `.xap` files or HTML5 apps. The page hosts a canvas or plugin, while heavy logic runs locally and only synchronizes with the server as needed. Modern equivalents include Progressive Web Apps that cache assets, access local storage, and work offline.
+6. Full-stack development mixes these layers. Know which code runs in the browser (HTML, CSS, JavaScript) versus on the server (C#, Java, Python, etc.), and understand how data flows via form posts, AJAX calls, or WebSocket messages.

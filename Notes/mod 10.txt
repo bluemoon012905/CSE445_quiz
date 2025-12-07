@@ -1,0 +1,1445 @@
+M10 L1
+XML Database and
+XQuery Language
+
+Lecture Outline
+| Why XML Database and XML Query
+Language?
+
+| XQuery Language
+| IBM DB2 XML Database Example
+
+| Oracle XML Database Example
+
+2
+
+Why XML Database and XML Query Language?
+http://www.w3.org/TR/xquery/
+
+Most of the world's business data is stored in relational databases.
+◼ The relational query language, e.g. SQL, is mature and wellestablished.
+◼ Can SQL be adapted to query an XML database?
+◼ Leverage existing software
+◼ Leverage existing user skills
+◼ Can a relational BD be used to store XML data efficiently?
+◼ How is an XML database different from a relational database?
+◼ Can we have an XML database, that selects data inside the
+database’s computer?
+◼
+
+3
+
+Converting XML Doc to Table
+if the data are regular
+<?xml version="1.0"?>
+<Courses>
+<Course>
+<Name>Introduction to Programming
+Languages</Name>
+<Code>CSE240</Code>
+<Level>Sophomore</Level>
+<Room>BYAC110</Room>
+<Cap>82</Cap>
+</Course>
+<Course>
+<Name>Distributed Software
+Development</Name>
+<Code>CSE445</Code>
+<Level>Senior</Level>
+<Room>BYAC210</Room>
+<Cap>40</Cap>
+</Course>
+</Courses>
+
+XSLT, DataSet, etc.
+
+4
+
+Problems of Using Relational DB for XML
+The mapping strategy is hard to define when an XML
+document has a complex structure;
+◼ When an XML document is an irregular tree, it may end
+up with using many tables or a table with many null
+column values;
+◼ When retrieving XML documents, many multi-table
+join queries need to be performed, which make the
+queries slow. Province Count
+City
+Count
+◼
+
+Country
+Count
+Canada
+200
+Mexico
+300
+France
+250
+USA
+750
+Zambia
+100
+Customer Relation
+
+Ontario
+Alberta
+Quebec
+
+State
+Arizona
+Utah
+Texas
+Oregon
+
+50
+100
+50
+
+Count
+250
+100
+300
+100
+
+Phoenix
+Kingman
+Flagstaff
+Tucson
+Yuma
+
+100
+20
+40
+60
+30
+5
+
+What is the Native XML Database
+Store XML document as is.
+File Stored
+XML document
+<?xml version="1.0"?>
+<Courses>
+<Course>
+<Name>Introduction to Programming
+Languages</Name>
+<Code>CSE240</Code>
+<Level>Sophomore</Level>
+<Room>BYAC110</Room>
+<Cap>82</Cap>
+</Course>
+<Course>
+<Name>Distributed Software
+Development</Name>
+<Code>CSE445</Code>
+<Level>Senior</Level>
+<Room>BYAC210</Room>
+<Cap>40</Cap>
+</Course>
+</Courses>
+
+6
+
+XQuery is based on Other XML Technologies
+XML Schema
+Working Group
+
+XQuery
+Working Group
+
+XML
+Schema
+
+XQuery
+
+XSLT
+
+XPath 2.0
+
+XML
+XML
+Coordination
+Group
+
+XSLT
+Working Group
+
+XML Core
+WG
+
+jointly by
+XQuery and
+XSLT WG
+
+Efficient XML
+Interchange WG
+
+7
+
+Getting Started with XQuery
+XQuery is a functional programming language
+◼ Example: LISP, Scheme (CSE240 and CSE340, AI courses)
+◼ Every statement evaluates to a result and returns a value
+let $x := 3 let $y := 7 return 8*$x+4*$y
+which returns 52
+◼ Can we rewrite the code as follows?
+let $x := 3 let $y := 7 $x = 8*$x+4*$y return $x
+◼ No variables can be used ($x and $y are not variables)
+◼ Primitive types in XQuery
+◼ dates,
+◼ number,
+◼ times,
+◼ boolean,
+◼ durations, and
+◼ strings,
+8
+◼ XML types
+◼
+
+Creating Nodes in XQuery
+◼
+
+Various XQuery functions can create or return nodes
+◼
+
+Document function reads an XML file
+doc("http://venus.sod.asu.edu/WSRepository/XML/Courses.xml")
+
+or
+doc(“Courses.xml”)
+◼
+
+Element constructor: a pair of tags, forms an element
+constructor and creates a node:
+<foo><bar>Courses</bar></foo>
+9
+
+XQuery and Path Expressions
+Use curly braces to embed XQuery expressions inside an element constructor
+Let $g := doc("Courses.xml")
+return <result>{$g/Courses/Course}</result>
+◼
+/Course selects the child elements named Courses
+◼
+/Courses/Course selects the Course elements
+◼
+//Course
+returns all Course elements that appear anywhere in the document
+◼
+//Course[Level = “400”]
+returns all Course elements with Level = “400”
+◼
+//Room[@image = “layout210.JPEG”]
+returns all Room elements with attribute image = “layout210.jpeg”
+◼
+//Course/(Level | Code)
+returns all Level or Code elements from current node
+Even though XQuery shares the syntax with XPath, it intends to perform the
+query in XML database, instead of in client program.
+◼
+
+10
+
+Programming the Queries in XQuery
+<html>
+{
+let $d := doc("Courses.xml")/Courses
+Similar to
+SQL
+for $b in $d/Course
+syntax
+where $b/Level > 200
+from
+order by $b/Code
+where
+return <Course>
+orderby
+{$b/Name, $b/Level, $b/Cap}
+select
+</Course>
+}
+</html>
+11
+
+Native XML Database Products:
+Current Status
+◼
+
+IBM DB2 9.5 PureXML DB (Commercial)
+http://www.ibm.com/developerworks/data/library/techarticle/d
+m-0710nicola/
+
+◼
+
+Oracle XML DB (Commercial), 9i, 10i, 11g, and later
+https://www.oracle.com/database/technologies/appdev/xmldb.html
+
+◼
+
+Microsoft SQLXML 4.0 (Commercial)
+https://learn.microsoft.com/en-us/sql/relational-databases/sqlxml/sqlxml-4-0-programming-concepts?view=sql-server-ver16
+
+◼
+
+dbXML (Open Source)
+http://www.dbxml.com/
+
+◼
+
+eXist (Open Source)
+http://exist.sourceforge.net/
+
+◼
+
+Apache Xindice (Discontinued)
+http://xml.apache.org/xindice/
+
+12
+
+Example: Oracle XQuery: Retrieve Info
+
+13
+
+Oracle: Deleting a node using XQuery update
+
+14
+
+Example: IBM DB2 XML Update
+
+345
+
+15
+
+Steps of IBM DB2 XML Update
+1. The application submits an SQL or XQuery statement to read an
+XML document.
+2. The document is retrieved from the database and serialized to text
+format.
+3. The document is transmitted to the client.
+4. The application parses the XML document, typically using the
+document object model (DOM).
+5. The application modifies part of the document using DOM APIs.
+6. The document is re-serialized in the client application.
+7. The application submits an SQL UPDATE statement and
+transmits the updated document to the database server.
+8. The database server parses the updated XML document and
+replaces the entire old document.
+16
+
+Microsoft SQLXML 4.0 (2023)
+|
+
+It primarily performs Client-side XML Formatting
+
+Case Study:
+Oracle DB Managing Many Types of Information
+A new
+type
+supported
+
+Unstructured data:
+Already move to
+Big Data System!
+18
+
+Oracle DB: Enhanced XML Type
+https://docs.oracle.com/en/database/oracle/oracle-database/21/adxdb/intro-to-XML-DB.html#GUID-43B25825-FE37-4782-B627-8B2EFB44068D
+
+◼
+
+XML Schema Support
+
+◼
+
+Object-Relational Storage Maintaining DOM fidelity
+
+◼
+
+XML-specific memory management for better scalability and
+performance
+
+◼
+
+Built-in XML operators for SQL/XML interchangeability
+
+◼
+
+XPath Search in the server, and piecewise update of XML via
+XPath
+
+◼
+
+XSL Transforms in the server
+
+◼
+
+Enhanced XML Views for creating your own efficient
+representations of XML
+19
+
+Oracle XML DB Organization and Flow
+
+➢ The XML Database is
+not a simple XML File
+➢ It contains schema for
+transforming each
+XML file into a binary
+file, and store different
+elements in different
+places to enable partial
+updating
+➢ Different indices are
+generated and stored,
+which speed up
+search: Not use
+sequential search.
+
+Google
+uses B+
+tree
+
+20
+
+Google
+Protocol Buffer and
+Big Table
+
+Lecture Outline
+| Google Protocol Buffers
+| Big Table
+
+2
+
+Googol
+
+Google Data Description and Management
+
+Protocol buffers and Big Table
+
+3
+
+How can Google be so fast?
+◼
+
+Distributed and Parallel Computing: Buildings of
+machines
+
+◼
+
+Crawling and Indexing
+Working 24/7
+
+◼
+
+Caching
+Buffering the frequently and recently used links and pages
+
+Specifically designed service-oriented computing
+model: Removing SOAP, using HTTP directly:
+RESTful service, instead of WSDL/SOAP services
+◼ Specifically designed data structures and data
+management
+◼
+
+4
+
+Google Data Description Language?
+◼
+
+What are the data description languages used by
+Google? XML and XML Schema?
+XML is universal and standard for representing data
+on Web;
+❑ XML may be slow for Google’s amount of Data;
+❑ Think about the amount of information stored in
+Google directories – Any efficiency improvement will
+be significant;
+❑ A good design needs compromise / tradeoff between
+flexibility and efficiency
+❑
+
+5
+
+Google Protocol Buffers
+http://code.google.com/apis/protocolbuffers/docs/overview.html
+
+Compared to XML and XML Schema, Protocol buffers:
+◼ are simpler
+◼ are 3 to 10 times smaller in presenting the same
+information
+◼ are 20 to 100 times faster in processing
+◼ are less ambiguous
+◼ generate data structures that are similar to objectoriented classes and thus are easier to use
+programmatically
+◼ are less flexible/adaptable
+6
+
+Google Protocol Buffers Example
+message Person {
+required string name = 1;
+required int32 id = 2;
+optional string email = 3;
+enum PhoneType {
+WORK = 0;
+HOME = 1;
+MOBILE = 2;
+}
+message PhoneNumber {
+required string number = 1;
+optional PhoneType type = 2 [default = WORK];
+}
+repeated PhoneNumber phone = 4;
+}
+7
+
+A Similar Description in XML Schema
+<element name = Person>
+<complexType>
+<sequence>
+<element name = "Id" type="integer" minOccurs="1" maxOccurs="1"/>
+<element name = "Name" type="string" minOccurs="1" maxOccurs="1"/>
+<element name = "Email" type="string" minOccurs="0" maxOccurs="1"/>
+<element name = "Phone" type="string" minOccurs="1" maxOccurs="1"/>
+</sequence>
+</complexType>
+</element>
+<element name = "Phone" >
+<simpleType>
+<restriction base = "string" >
+<enumeration value = "Work" type=minOccurs="1" maxOccurs="1"/>
+<enumeration value = "Home" minOccurs="0" maxOccurs="1"/>
+<enumeration value = "Mobile" minOccurs="0" maxOccurs="1"/>
+</restriction>
+</element >
+
+8
+
+Using Protocol Buffer for Service Development: gRPC
+• https://cloud.google.com/endpoints/docs/grpc/about-grpc
+• https://www.grpc.io/docs/
+
+gRPC is a high performance, open-source universal RPC
+framework, developed by Google.
+◼ In gRPC, a client application can directly call methods on a
+server application on a different machine as if it was a local
+object.
+◼ By default, gRPC uses protocol buffers as the Interface
+Definition Language (IDL).
+◼ gRPC exposes endpoints (APIs) to the outside to enable
+different types of clients.
+◼ gRPC client
+◼ HTTP / JSON clients
+◼ Visual Studio supports the development of gRPC services
+and clients.
+◼
+
+9
+
+Google BigTable
+http://en.wikipedia.org/wiki/BigTable
+
+BigTable is a fast and extremely large-scale database
+management system;
+◼ It is a compressed, high performance, and proprietary
+database system built on Google File System (GFS);
+◼ It departs from the convention of relational database,
+with a fixed number of columns;
+◼ The database is “a sparse, distributed multidimensional sorted map”.
+◼ What is it?
+◼ The idea is similar to B Tree and B+ Tree that allow
+for efficient insertion, retrieval and removal of nodes.
+◼
+
+10
+
+Image:Btree.svg
+
+B Tree and B+ Tree
+http://en.wikipedia.org/wiki/B%2B_tree
+
+It extends the binary search tree.
+◼ It is a tree representing sorted data
+in a way that allows for efficient insertion, retrieval
+and removal of records, each of which is identified by
+a key: key-value database.
+◼ It is a dynamic, multilevel index, with maximum and
+minimum bounds on the number of keys in each
+index node.
+◼ In a B+ tree, in contrast to a B Tree, all records
+(values) are stored at the lowest level of the tree
+(leaves). Only keys are stored in interior blocks
+◼
+
+11
+
++ Tree-Based BigTable (Key-Value Store)
+Keys are sorted
+in certain
+traversing order
+
+Root Index keys
+
+• 12 • 31 • 38 • 47 •
+
+Level Two Index
+
+•
+
+d1
+
+2
+
+• 5
+
+• 9
+
+d2
+
+d3
+
+•
+
+•
+
+• 20 • 21 • 26 • 30 •
+
+• 32 • 36 •
+
+d4
+
+d8
+
+d5
+
+d6
+
+d7
+
+d9
+
+•
+
+•
+
+•
+
+dn
+
+GFS
+(Store Values)
+12
+
+M10 L3
+Feed
+
+Lecture Outline
+| Web Data Representations
+| Feed
+| RSS
+| Atom
+
+2
+
+Distributed Software Development
+through Data Standards
+
+Example: A University Enterprise System
+Enrollment
+applications
+
+HTML
+
+Applications
+evaluation
+
+Student
+ranks / admission
+
+Text standards
+JSON
+Data
+and transformation
+XML
+
+Grade book in
+Canvas
+
+Grades in
+university
+student DB
+
+Excel
+
+Grade transfer to
+other schools
+3
+
+How Do You Implement Conversion?
+HTML
+
+Text
+
+XML
+
+JSON
+
+Excel
+20 data
+converters
+
+HTML
+
+Text
+
+Why not use
+HTML as the
+main language?
+
+HTML
+
+XML is a meta
+language, while
+HTML is a
+concrete language
+
+XML
+
+JSON
+
+JSON
+
+8 data
+converters
+
+XML
+
+Text
+
+Excel
+
+Excel
+4
+
+XML and Development
+GML (1969)
+SGML is too
+complex to process
+
+SGML (1985)
+
+HTML (1991)
+XML (1998)
+XHTML
+XAML
+
+SOAP
+WSDL
+RDF
+RDFS
+OWL
+Atom
+RSS
+…
+
+5
+
+Web Data Representations
+Web
+formats
+XML
+HTML
+XHTML
+RSS
+Atom
+
+POX
+JSON
+
+Protocol
+buffers
+BigTable
+
+Description
+The premier format for defining data, protocol, and languages
+The traditional format for representing Web data and format
+Extended HTML 4.01 to conform with the XML format
+RSS (Really Simple Syndication) for feed readers and Web blogs
+Atom extends RSS, and it is also used for representing feeds for
+feed readers and blog publishing. It has been used in wider
+context, including the REST architecture.
+Plain-Old-XML is used for representing SOAP data, which does
+not need the header information for complex processing.
+JavaScript Object Notation is efficient for representing data
+processed or to be processed by a program, such as JavaScript.
+Google’s Web data structure for search engine.
+Google’s data structure for large database management.
+6
+
+XML Related Technologies (Review)
+HTML
+XHTML
+XAML
+Document
+Type
+Definition
+
+DTD
+Schema
+
+SOAP
+WSDL
+XML-based
+UDDI/ebXML
+Protocols and
+RDF, OWL
+Languages
+BPEL
+
+Data Feed
+
+XPath
+XQL
+
+XML
+
+Atom
+POX
+RSS
+
+XML Parser
+XML Query
+Language
+
+XSL
+XSLT
+
+DOM
+SAX
+
+XML Style and
+Transformation
+
+XML Parsers
+7
+
+Why Other Data Formats?
+XML is flexible and can be used to define any data
+structure in a rooted tree.
+◼ For any specific data structure, an XML schema or
+DTD is needed to define the structure.
+◼ For convenience, a few predefined XML data
+structures are used, which do not need a schema file:
+◼
+
+POX
+◼ RSS
+◼ ATOM
+◼
+
+◼
+
+They are widely used in Web page feed: Another Web
+page can conveniently read your Web data with
+structure, instead of as a string.
+8
+
+RSS: An XML-based Feed Data Structure
+A feed is a data structure that contains a list of items
+◼ Each items is described by a few attributes, including
+the hyperlink and other information of the item, such as
+title, author, etc.
+◼ RSS is a language used to describe syndicated feed data.
+◼ A number of RSS versions exist.
+◼ RSS 1.0 stands for RDF Site Summary, where RDF
+(Resource Description Framework) is an ontology
+language widely used in semantic Web authoring.
+◼ RSS 2.0 stands for Really Simple Syndication. It is an
+XML document with a specific schema definition.
+◼
+
+9
+
+RSS Schema, with a four-layer structure
+root
+
+channel
+
+rss
+
+...
+channel
+
+title
+description
+link
+copyright
+webmaster
+
+pubDate
+image
+
+Four-level structure
+
+...
+item
+
+...
+
+title
+description
+link
+author
+category
+pubDate
+
+sources
+
+...
+
+item
+10
+
+Example of RSS Document
+<?xml version="1.0"?>
+<rss version="2.0">
+title
+Channel
+<channel>
+…
+description
+<title>Computer Science Books</title>
+<link>http://cslibrary.asu.edu/</link>
+link
+<description>
+copyright
+This example will be further discussed in RESTful service in Chapter 7.
+</description>
+webmaster
+<item>
+pubDate
+<title>Operating Systems</title>
+<link>http://mylibrary.asu.edu/authors/{author=Aaron}</link>
+image
+<description>Operating system design and analysis</description>
+<author>aaronauthor@asu.edu</author>
+item
+</item>
+…
+<channel>
+item
+Channel
+<title>Biology Science Books</title>
+…
+
+...
+...
+
+11
+
+Example of RSS Document (contd.)
+<item>
+Channel
+<title>Compilers</title>
+<link> http://cslibrary.asu.edu/years/{year=1999}</link>
+</item>
+<item>
+<title>Algorithm Analysis and Design</title>
+<author>zetaauthor@asu.edu</author>
+</item>
+</channel>
+<channel>
+<title>Biology Science Books</title>
+<link>http://biolibrary.asu.edu/</link>
+...
+
+title
+description
+link
+copyright
+webmaster
+
+pubDate
+image
+
+...
+item
+
+...
+item
+12
+
+Example of RSS Document (contd.)
+<channel>
+<title>My Books</title>
+<link>http://mylibrary.asu.edu/</link>
+<item>
+<title>Programming Languages</title>
+<link>http://www.kendallhunt.com/index.cfm</link>
+<description>
+Introduce different programming paradigms and program techniques
+</description>
+<author>yinong.chen@asu.edu</author>
+</item>
+</channel>
+</rss>
+13
+
+Find RSS URLs
+https://about.fb.com/wp-content/uploads/2016/05/rss-urls-1.pdf
+
+CNN Top Stories RSS URL
+http://rss.cnn.com/rss/cnn_topstories.rss
+
+Processing RSS Feed
+https://learn.microsoft.com/en-us/dotnet/api/system.servicemodel.syndication.syndicationfeed?view=net-8.0
+
+string url = " https://justinpot.com/feed/ ";
+XmlReader reader = XmlReader.Create(url);
+SyndicationFeed feed = SyndicationFeed.Load(reader);
+reader.Close();
+foreach (SyndicationItem item in feed.Items)
+{
+String title = item.Title.Text;
+Console.WriteLine(title);
+String summary = item.Summary.Text;
+Console.WriteLine(summary);
+String summary = item.Summary.Text;
+...
+}
+
+Atom
+RSS 2.0 widely used for representing feed data for its
+simplicity.
+◼ It is a really simple syndication, which does not have
+many features that today’s feed data desired to have.
+◼ There are frequent reports with the interoperability
+problems with different feed readers and protocols.
+◼ Atom is a more recent language designed for
+describing feed data with more features and with
+improved structure.
+◼
+
+17
+
+author
+
+Atom Schema,
+with a threelayer structure
+
+category
+
+author
+
+contributor
+
+category
+
+generator
+icon
+root
+feed
+
+id
+link
+logo
+rights
+subtitle
+
+Three-level
+structure, but with
+more elements
+
+title
+updated
+entry
+
+content
+contributor
+id
+link
+published
+rights
+source
+summary
+title
+updated
+
+...
+entry
+
+18
+
+Feeds Applications: ASU Feed
+
+19
+
+Feeds Applications: New York Times
+RSS feeds offer another way to get NYTimes.com content.
+◼ You can get the latest headlines, summaries and links back to
+full articles - formatted for your favorite feed reader and updated
+throughout the day.
+◼
+
+20
+
+M10 L4
+JSON
+
+Lecture Outline
+| JSON Data Definition
+| JSON vs. XML
+| JSON vs. Dictionary
+| JSON Applications
+
+2
+
+JSON (JavaScript Object Notation)
+JSON is a light-weight alternative to XML for
+simple data-interchange
+◼ JSON is simpler than XML and more compact
+◼ JSON uses no tags, and it uses braces instead,
+like programming language
+◼ XML parsing is harder because of its complexity
+◼ JSON has fixed schema (structure definition), and
+it is not as extensible as XML
+◼ Preferred for simple data exchange by many
+◼ Transforms to other formats? Find library or write
+your own.
+◼
+
+3
+
+JSON (JavaScript Object Notation) Data Definition
+
+value
+
+<number>
+<string>
+<object>
+<array>
+true
+false
+null
+
+4
+
+JSON Number and Object Format
+number
+
+.
+
+0
+
+-
+
+<digit>
+
+<digit1-9>
+<digit>
+
+object
+
+{
+
+<string>
+
+:
+
+e
+
++
+
+E
+
+-
+
+<value>
+
+<digit>
+
+}
+
+,
+Object
+Example
+
+A list of
+string-value
+pairs
+
+{"name":"John Doe", "age":25,
+"married":true, "University":"ASU",
+"Graduated":false,
+"Courses":{"CSE240":200,"CSE310":300,
+"CSE445":400, "GPA":3.75}}
+
+5
+
+JSON Array
+[
+
+array
+
+Different types of values
+are allowed in one array.
+
+<value>
+
+]
+
+,
+
+Array of string
+
+["John Doe", "Marry", "Smith"]
+
+Array of
+mixed values
+
+[{"John Doe":25}, {"Marry":30}, "Smith", 20, true]
+
+Array of arrays [
+[1, 2, 3, 4],
+[2, 3, 4, 5],
+
+[5, 2, 3, 5]
+]
+
+for(var i=0;i<myArray.length;i++)
+{
+console.log(myArray[i].name,
+myArray[i].value);
+}
+6
+
+XML vs. JSON
+{ “studentInfo” :
+<studentInfo>
+{ “students” :
+object
+<students>
+[
+array
+<student>
+{
+<name>John Doe</name>
+“name” : “John Doe”,
+object
+<phone>4801234567</phone>
+“phone” : 4801234567
+<student>
+},
+<student>
+{
+<name>Mary Smith</name>
+“name” : “Mary Smith”,
+<phone>6022345678</phone>
+“phone” : 6022345678
+},
+<student>
+{
+<student>
+“name” : “April Lee”,
+<name>April Lee</name>
+“phone” : 6233456789
+<phone>6233456789</phone>
+},
+<student>
+]
+</students>
+}
+</studentInfo>
+7
+}
+object
+
+JSON and Dictionary
+|
+
+A dictionary is similar to an array. In an array, we
+use an integer as the index to its element.
+• In a dictionary, an element is accessed using an index as well.
+However, it is not a number index, but a string (name) index.
+• It represents a JSON object/
+
+|
+
+A Python dictionary is dynamic. It offers the
+following dynamic operations:
+•
+•
+•
+•
+
+Create(): Creates an empty dictionary.
+Insert(e): Adds element e into the dictionary
+Delete(e): Removes element e from the dictionary, if e exists.
+Lookup(e): Checks if the element e is in the dictionary. If it
+does, it returns the information associated with the element
+8
+
+Python Dictionary Example (Short)
+zip = dict() # Create a dictionary structure
+zip = {"Tempe": 85281, "Chandler": 85224, "Phoenix": 85003, "Mesa":
+85201, "Scottsdale": 85250}
+print("zip is", zip)
+print("Tempe zipcode is ", zip["Tempe"])
+print("Mesa zipcode is ", zip["Mesa"])
+print("Mesa zipcode is ", zip.get("Mesa"))
+print("mesa zipcode is ", zip.get("mesa")) # will not cause an error
+print("tempe zipcode is ", zip.get("tempe")) # will not cause an error
+print("Gilbert zipcode is ", zip.get("Gilbert")) # will not cause an
+error
+print("tempe zipcode is ", zip["tempe"]) # will cause an error
+
+9
+
+Python Dictionary Example (Extended)
+zipcode = dict() # Create a dictionary structure
+zipcode["Tempe"] = [85281, 85282, 85283, 85284, 85287] # insert
+zipcode["Chandler"] = [85224, 85225, 85226, 85226] # insert
+zipcode["Phoenix"] = [85003, 85004, 85006, 85007, 85008, 85009] # insert
+zipcode["Mesa"] = [85201, 85202, 85203, 85204, 85205, 85206, 85207]
+# insert
+zipcode["Scottsdale"] = [85250, 85251, 85253, 85254, 85255] # insert
+cities = ["Tempe", "Mesa", "Gilbert", "Phoenix", "Scottsdale",
+"Chandler"]
+# Continue on next page
+
+10
+
+Python Dictionary Example (Cont’d.)
+# Continued from previous page
+for city in cities:
+if city in zipcode:
+print("The zip code of", city, "is", zipcode[city]) # lookup
+else:
+print("The city", city, "is not in my list")
+city = input("Please enter a city name:")
+found = False
+for c in cities:
+c1 = c
+city1 = city
+if c1.lower() == city1.lower():
+print("The zip code of", c, "is", zipcode[c]) # lookup
+found = True
+if found == False:
+print("The city", city, "is not in my list")
+
+11
+
+Structures of Dictionary / JSON Object
+A dictionary/JSON object consists of key-value pairs.
+key
+
+value
+
+key
+
+value
+
+Tempe
+
+85281
+
+Tempe
+
+[85281, 85282, 85283, 85284, 85287]
+
+Key2
+
+Value2
+
+Key2
+
+Value2
+
+Key3
+
+Value3
+
+Key3
+
+Value3
+
+Key4
+
+Value4
+
+Key4
+
+Value4
+
+Key5
+
+Value5
+
+Key5
+
+Value5
+
+12
+
+Processing JSON Data Example in C#
+https://msdn.microsoft.com/en-us/library/cc197957(v=vs.95).aspx
+
+JsonArray users =
+(JsonArray)JsonArray.Load(responseStream);
+var members = from member in users
+where member["IsMember"]
+select member;
+foreach (JsonObject member in members)
+{
+string name = member["Name"];
+int age = member["Age"];
+// Do something...
+}
+13
+
+JSON Object Defined for IoT Communication
+Text Chapter 9 Example
+
+ASU VIPLE
+Visual IoT
+Programming
+
+IoT / Robot
+
+Object
+
+Array
+
+Object
+
+An object pair, with
+the second element
+an array of objects
+
+Object
+14
+
+Where are RSS, Atom, and JSON used?
+They are widely used in
+◼ Web data integration – Web page feed: Another Web
+page can conveniently read your Web data with a
+structure, instead of in a string.
+◼ They are widely used as the RESTful service outputs.
+Why do we need RSS, Atom, JSON, instead of using general XML? Choose
+one!
+
+A.
+B.
+C.
+D.
+
+General XML is too simple to represent feed data.
+General XML cannot represent a collection of data.
+General XML is a meta language, and it can be used to define languages
+only.
+General XML file requires a schema definition, while RSS, Atom, and
+JSON have fixed schemas and do not need to attach a schema file. A
+simpler and fixed structure is good enough for most feed applications.
+15
+
+
