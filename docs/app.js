@@ -501,7 +501,7 @@ function renderSummary() {
     userCell.innerHTML = userAnswerText;
     row.appendChild(userCell);
     const correctCell = document.createElement('td');
-    correctCell.textContent = correctText;
+    correctCell.innerHTML = correctText;
     row.appendChild(correctCell);
     const resultCell = document.createElement('td');
     resultCell.className = entry.correct ? 'result-pass' : 'result-fail';
