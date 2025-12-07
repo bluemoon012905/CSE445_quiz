@@ -525,7 +525,7 @@ function formatUserAnswer(question, answer) {
     if (!answer.length) {
       return '<span class="meta">Unanswered</span>';
     }
-    return answer.map((value) => optionLabel(question, value)).join(', ');
+    return answer.map((value) => optionLabel(question, value)).join('<br />');
   }
   if (typeof answer === 'boolean') {
     return answer ? 'True' : 'False';
@@ -536,7 +536,7 @@ function formatUserAnswer(question, answer) {
 function formatCorrectAnswer(question) {
   const { answer } = question;
   if (Array.isArray(answer)) {
-    return answer.map((id) => optionLabel(question, id)).join(', ');
+    return answer.map((id) => optionLabel(question, id)).join('<br />');
   }
   if (typeof answer === 'boolean') {
     return answer ? 'True' : 'False';
