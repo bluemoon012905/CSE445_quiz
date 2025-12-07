@@ -1191,6 +1191,40 @@
         "dtd"
       ],
       "explanation": "XHTML documents are governed by a DTD so they remain valid XML."
+    },
+    {
+      "id": "mod14-generated-001",
+      "module": "Module 14",
+      "topic": "Service Governance",
+      "type": "multiple_choice",
+      "prompt": "Which practice best ensures that cross-team service contracts stay reliable as systems evolve?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Let each team change APIs without notifying consumers."
+        },
+        {
+          "id": "b",
+          "label": "Adopt versioned contracts with automated contract tests shared across producers and consumers."
+        },
+        {
+          "id": "c",
+          "label": "Freeze API designs forever once released."
+        },
+        {
+          "id": "d",
+          "label": "Rely on manual email approvals before every deployment."
+        }
+      ],
+      "answer": "b",
+      "difficulty": "medium",
+      "expectedDurationSec": 35,
+      "tags": [
+        "contracts",
+        "governance"
+      ],
+      "explanation": "Versioned contracts plus automated contract testing keep teams aligned while still allowing services to evolve safely.",
+      "generated": true
     }
   ]
 }

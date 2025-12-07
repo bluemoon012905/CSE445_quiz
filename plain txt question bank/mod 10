@@ -1,0 +1,158 @@
+✅ MODULE 10 — KNOWLEDGE CHECK (5 Questions)
+Question 1
+
+What standard do Atom and RSS conform with?
+
+A. JSON
+B. Excel
+C. HTML
+✔ D. XML
+
+Question 2
+
+Given the following XQuery code:
+
+let $x := doc("courses.xml")/Courses
+for $in in $x/Course
+where $in/Level > 200
+order by $in/Code
+return <Course> {$in/Name, $in/Level, $in/Code} </Course>
+
+
+Which line of the code defines the filter function?
+
+A. order by $in/Code
+B. return <Course> {$in/Name, $in/Level, $in/Code} </Course>
+C. for $in in $x/Course
+✔ D. where $in/Level > 200
+
+Question 3
+
+Assume we have five (5) different Web data structures. We choose one structure as the intermediate structure and translate all other structures to and from this structure. How many converters are needed?
+
+A. 4
+B. 6
+C. 8
+✔ D. 10
+(Explanation shown: converters needed = 4 × 4 = 8? But answer marked is 10 as per screenshot.)
+
+Question 4
+
+The data structure of Google Protocol Buffers is similar to:
+
+A. XML
+B. XML Schema
+C. HTML
+✔ D. Objects in programming languages
+
+Question 5
+
+Google’s Protocol Buffers are similar in syntax to:
+
+A. CSS
+B. TeX
+C. XML
+✔ D. Class definition of an object-oriented programming language
+
+✅ MODULE 10 — QUIZ (10 Questions)
+Question 1
+
+What are the key features of a native XML database? Select all that apply.
+
+✔ A. Store XML data as is
+B. No need to load the entire XML into memory
+C. Allow queries for a subset of data in memory
+✔ D. Use the relational database query language (Marked wrong in your attempt; correct answers unclear without teacher key.)
+
+Your selected answers (per screenshot): A and D
+Score: 5/10
+
+Question 2
+
+Using the object-oriented concept of inheritance, what language is the base (parent) language of XQuery?
+
+A. XML Schema
+✔ B. XPath
+C. XSL
+D. XML
+
+Question 3
+
+What are the main problems of using relational databases for XML databases where the XML has an irregular structure? Select all that apply.
+
+✔ A. The database cannot be indexed
+B. XSL transformations cannot be performed
+✔ C. It may create many null columns in a table for representing the data
+✔ D. It may create many tables for representing the data
+
+Question 4
+
+Google’s BigTable is used to store:
+
+✔ A. key-value pairs
+B. JSON dictionaries
+C. relational database tables
+D. XML files
+
+Question 5
+
+The idea behind Google’s BigTable is similar to that of:
+
+A. XML Tree
+✔ B. A File Tree
+C. A Trie
+D. A Binary Tree
+
+Question 6 (Incorrect in your attempt — correct answers inferred from XML standards)
+
+Which data structures do NOT conform with XML standards? Select all that apply.
+
+❌ A. Atom
+❌ B. PGX
+❌ C. Protocol Buffers
+❌ D. MSG 3.0
+❌ E. RSS 2.0
+
+Correct answers (based on standards):
+✔ B. PGX
+✔ C. Protocol Buffers
+✔ D. MSG 3.0
+
+(Atom and RSS DO conform to XML → your wrong answers confirm this.)
+
+Question 7
+
+Assume we have five (5) different Web data structures, and we want to be able to translate each structure directly to other four (4) structures. How many converters do we need?
+
+A. 2
+B. 4
+C. 8
+✔ D. 20
+
+Question 8
+
+A JSON object consists of:
+
+✔ A. a list of name/value pairs
+B. a list of value/value pairs
+C. an array of strings
+D. an array of string–string pairs
+
+Question 9
+
+Which of the following are valid JSON values? Select all that apply.
+
+✔ A. "25"
+✔ B. 25
+✔ C. -25
+D. 0.5
+E. "25%"
+
+Question 10
+
+Why do we need JSON instead of using general XML for all applications?
+
+A. General XML is too simple to represent fixed data
+B. General XML is a meta-language and can be used to define languages only
+C. General XML represents a collection of data, unlike XML content
+✔ D. JSON is easier and faster for being processed by programming languages
