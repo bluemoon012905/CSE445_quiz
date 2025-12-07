@@ -2,10 +2,11 @@ const TYPE_LABELS = {
   multiple_choice: 'Multiple choice',
   true_false: 'True / False',
   short_answer: 'Short answer',
-  multi_select: 'Select many'
+  multi_select: 'Select many',
+  code_dropdown: 'Code practice'
 };
 
-const MODULE_PLACEHOLDERS = Array.from({ length: 8 }, (_, idx) => `Module ${idx + 7}`);
+const MODULE_PLACEHOLDERS = Array.from({ length: 7 }, (_, idx) => `Module ${idx + 8}`);
 const API_BASE_KEY = 'cse445QuizApiBase';
 const API_BASE = initializeApiBase();
 if (API_BASE) {
@@ -180,16 +181,18 @@ function startQuizFromForm() {
   const selectedModules = formData.getAll('modules');
   const selectedTypes = formData.getAll('types');
   const shuffle = formData.get('shuffle') === 'on';
-  startQuiz({ requestedCount, selectedModules, selectedTypes, shuffle });
+  const includeGenerated = formData.get('includeGenerated') === 'on';
+  startQuiz({ requestedCount, selectedModules, selectedTypes, shuffle, includeGenerated });
 }
 
-function startQuiz({ requestedCount, selectedModules, selectedTypes, shuffle }) {
+function startQuiz({ requestedCount, selectedModules, selectedTypes, shuffle, includeGenerated }) {
   const modulesSet = selectedModules.length ? new Set(selectedModules) : null;
   const typesSet = selectedTypes.length ? new Set(selectedTypes) : null;
   const filtered = state.questionBank.filter((question) => {
     const moduleMatch = modulesSet ? modulesSet.has(question.module) : true;
     const typeMatch = typesSet ? typesSet.has(question.type) : true;
-    return moduleMatch && typeMatch;
+    const generatedMatch = includeGenerated ? true : !question.generated;
+    return moduleMatch && typeMatch && generatedMatch;
   });
 
   if (!filtered.length) {
@@ -242,6 +245,12 @@ function renderQuestion() {
   const prompt = document.createElement('p');
   prompt.textContent = question.prompt;
   elements.questionBody.appendChild(prompt);
+  if (question.type === 'code_dropdown' && question.code) {
+    const pre = document.createElement('pre');
+    pre.className = 'code-snippet';
+    pre.textContent = question.code;
+    elements.questionBody.appendChild(pre);
+  }
 
   const answerBlock = document.createElement('div');
   answerBlock.className = 'answer-block';
@@ -258,6 +267,8 @@ function renderQuestion() {
     renderBooleanOptions(answerBlock, response.answer, question);
   } else if (question.type === 'multi_select') {
     renderMultiSelectOptions(answerBlock, response.answer, question);
+  } else if (question.type === 'code_dropdown') {
+    renderCodeDropdown(answerBlock, response.answer, question);
   } else {
     renderSingleChoiceOptions(answerBlock, response.answer, question);
   }
@@ -328,6 +339,23 @@ function renderMultiSelectOptions(container, storedAnswer, question) {
   });
 }
 
+function renderCodeDropdown(container, storedAnswer, question) {
+  const select = document.createElement('select');
+  select.className = 'dropdown-answer';
+  const placeholder = document.createElement('option');
+  placeholder.value = '';
+  placeholder.textContent = 'Select an option';
+  select.appendChild(placeholder);
+  (question.options || []).forEach((option) => {
+    const opt = document.createElement('option');
+    opt.value = option.id;
+    opt.textContent = option.label;
+    select.appendChild(opt);
+  });
+  select.value = storedAnswer || '';
+  container.appendChild(select);
+}
+
 function persistCurrentResponse() {
   if (!state.activeQuiz) {
     return;
@@ -356,6 +384,9 @@ function persistCurrentResponse() {
     if (!answer.length) {
       answer = null;
     }
+  } else if (question.type === 'code_dropdown') {
+    const select = elements.questionBody.querySelector('select.dropdown-answer');
+    answer = select ? select.value || null : null;
   } else {
     const selected = elements.questionBody.querySelector('input[name="single-answer"]:checked');
     answer = selected ? selected.value : null;
@@ -430,6 +461,7 @@ function renderSummary() {
     const correctText = formatCorrectAnswer(entry.question);
     appendTextCell(row, entry.index);
     appendTextCell(row, entry.question.module);
+    appendSourceCell(row, entry.question);
     appendTextCell(row, entry.question.topic);
     appendTextCell(row, entry.question.prompt);
     const userCell = document.createElement('td');
@@ -452,6 +484,12 @@ function renderSummary() {
 function appendTextCell(row, value) {
   const cell = document.createElement('td');
   cell.textContent = value;
+  row.appendChild(cell);
+}
+
+function appendSourceCell(row, question) {
+  const cell = document.createElement('td');
+  cell.textContent = question.generated ? 'Generated' : 'Course';
   row.appendChild(cell);
 }
 
@@ -616,9 +654,10 @@ function buildSummaryPdf(entries) {
     const userAnswer = stripHtml(formatUserAnswer(entry.question, entry.userAnswer));
     const correctAnswer = stripHtml(formatCorrectAnswer(entry.question));
     const time = `${(entry.timeSpentMs / 1000).toFixed(1)}s`;
+    const sourceLabel = entry.question.generated ? 'Generated' : 'Official';
     return [
       `Q${entry.index}: ${entry.question.prompt}`,
-      `Module: ${entry.question.module} | Topic: ${entry.question.topic}`,
+      `Module: ${entry.question.module} | Topic: ${entry.question.topic} | Source: ${sourceLabel}`,
       `Answer: ${userAnswer} | Correct: ${correctAnswer} | Time: ${time}`,
       `Result: ${entry.correct ? 'Correct' : 'Incorrect'}`,
       ''

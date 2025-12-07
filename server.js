@@ -82,18 +82,18 @@ function validateQuestionPayload(candidate) {
     }
   });
 
-  const supportedTypes = ['multiple_choice', 'true_false', 'short_answer', 'multi_select'];
+  const supportedTypes = ['multiple_choice', 'true_false', 'short_answer', 'multi_select', 'code_dropdown'];
   if (!supportedTypes.includes(candidate.type)) {
     errors.push(`Unsupported type: ${candidate.type}`);
   }
 
-  if (['multiple_choice', 'multi_select'].includes(candidate.type)) {
+  if (['multiple_choice', 'multi_select', 'code_dropdown'].includes(candidate.type)) {
     if (!Array.isArray(candidate.options) || candidate.options.length < 2) {
       errors.push('Options array with at least two entries is required');
     }
   }
 
-  if (candidate.type === 'multiple_choice') {
+  if (['multiple_choice', 'code_dropdown'].includes(candidate.type)) {
     if (typeof candidate.answer !== 'string') {
       errors.push('Multiple choice questions expect a string answer matching an option id');
     }

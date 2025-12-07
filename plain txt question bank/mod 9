@@ -1,0 +1,143 @@
+✅ MODULE 9 — QUIZ (10 Questions)
+Question 1
+
+A Document Type Definition (DTD) file:
+
+A. defines the syntax of a DTD file.
+✔ B. is used for defining the structure and syntax of an XML file.
+C. extends the XML syntax model so more XML schema files can be created.
+D. extends the C# environment classes.
+
+Question 2
+
+The following line of code in a DTD file defines that the XML structure file must have an element:
+
+<!ELEMENT instructor (name?, officeHours?, officeHour?, phone?, email?)>
+
+A. name
+B. officeHours
+C. officeHour
+✔ D. email
+
+Question 3
+
+What does the following line of code in a DTD file imply?
+
+<!ELEMENT instructor (name?, email?, officeHours?, phone?, email?)>
+
+A. The element "name" is optional.
+B. The element "officeHours" is optional.
+✔ C. The element "email" is required.
+D. The element "phone" is required.
+
+Question 4
+
+Why do we need to invent XML Schema after DTD has been invented? Select all that apply.
+
+✔ A. DTD is limited in storing few data.
+B. DTD files are not recommended in new XML file user scenarios.
+✔ C. DTD cannot validate datatypes.
+D. DTD is too slow.
+✔ E. XML Schema follows XML syntax.
+
+Question 5
+
+Which language supports integer type?
+
+✔ A. XSD only
+B. DTD only
+C. both XSD Schema only
+D. both JSON and XML Schema
+E. neither XSD nor XML Schema
+
+Question 6
+
+Which of the following options are allowed when using XmlSchemaSet class for validation? Select all that apply.
+
+✔ A. One or more XML files
+✔ B. One or more Schema files
+C. Use both XML and Schema files simultaneously
+D. Use one or more XSL files
+
+Question 7
+
+What is the capacity (expressivity) of XSL as a programming language? Select all that apply.
+
+✔ A. It has conditional capabilities as that of an ordinary object-oriented programming language.
+✔ B. It is able to express conditions using if-then-else constructs.
+✔ C. It is able to express loops.
+✔ D. It is Turing complete and thus is able to express general computing.
+
+Question 8
+
+The Extensible Stylesheet Language XSL is used for defining the transformations of an XML file. Select all that apply.
+
+✔ A. It is an XML file.
+✔ B. It defines style rules.
+✔ C. In another XML file, with the same or a different structure.
+D. It is used for massive data storage.
+
+Question 9
+
+Cascading Style Sheets (CSS) is a can be applied for defining the format of (Select all that apply):
+
+A. JSON
+✔ B. XML
+C. PowerPoint files
+✔ D. HTML
+
+Question 10
+
+What is XHTML?
+
+✔ A. It is extensible HTML that allows using a DTD file to extend the features of HTML.
+B. It is a deprecated version of HTML.
+C. It is a new version of XML that supports XSL transformation.
+D. It is a new kind of DTD that can be processed by an XML parser.
+
+✅ MODULE 9 — KNOWLEDGE CHECK (5 Questions)
+Question 1
+
+HTML 5.0 is based on:
+
+✔ A. Common Gateway Interface
+B. JavaScript and pre-compiled library functions
+C. proprietary APIs
+D. Extensible DDL files
+E. Pure HTML
+
+Question 2
+
+What are the main components of ASPX GUI design? Select all that apply.
+
+A. Configuration control
+✔ B. HTML control
+C. DDL
+✔ D. Server control
+
+Question 3
+
+What are the problems with the client-side transformation from XML to HTML? Select all that apply.
+
+A. Need to install .Net framework on client side
+✔ B. Rely on browser to have an XSLT processor
+✔ C. Need to write an XSL style sheet
+D. Need to modify the XML file
+
+Question 4
+
+What language is used for extending new elements in HTML5?
+
+A. Combination of DTD and XML schema
+B. XML schema
+C. Neither DTD nor XML schema
+✔ D. DTD
+
+Question 5
+
+XHTML (Extensible HTML) is defined by:
+
+✔ A. DTD
+B. XML schema
+C. HTML 5
+D. JSON

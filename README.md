@@ -33,6 +33,9 @@ The `dev` script spins up the lightweight Node server in `server.js`. It serves 
 - Per-question timers with cumulative tracking, navigation controls, and a running completion indicator.
 - Summary table that highlights correctness, user response vs. answer key, and time spent per question.
 - PDF export built without external libraries so summaries can be downloaded immediately after each quiz.
+- Builder toggle to include/exclude generated placeholder questions so you can focus on officially uploaded material.
+- Module selectors default to Modules 8–14 (the tested range) and show disabled placeholders until each module’s bank is populated.
+- Code-practice questions render inline snippets with dropdown answers so you can rehearse code-reading prompts without losing context.
 
 ## Question bank format
 
@@ -63,12 +66,17 @@ Required fields are:
 
 - `module`: Module label shown in the filters.
 - `topic`: Topic name shown below each prompt.
-- `type`: One of `multiple_choice`, `true_false`, `short_answer`, or `multi_select`.
+- `type`: Use `multiple_choice` for standard prompts or `code_dropdown` when the question references a code snippet and should be answered via a dropdown.
 - `prompt`: The actual question text.
-- `answer`: Shape depends on `type` (string option id for multiple-choice, boolean for true/false, string for short answer, array of option ids for multi-select).
-- `options`: Required for `multiple_choice` and `multi_select` questions. True/false questions can omit options; defaults will be rendered.
+- `answer`: The option id (string) that represents the correct choice.
+- `options`: Array of option objects—each needs a stable `id` and human-readable `label`.
 
 You can keep adding derived metadata such as `difficulty`, `tags`, or `expectedDurationSec`—the frontend renders them when present.
+
+Optional fields:
+
+- `code`: String containing the code snippet for `code_dropdown` questions (displayed in a formatted block above the dropdown).
+- `generated`: Set to `true` on any prompt that was synthesized (instead of sourced directly from the provided question bank). Generated items display in the summary/PDF via the “Source” column, and the builder’s “Include generated questions” toggle uses this flag to filter them out.
 
 ## API overview
 
@@ -94,6 +102,10 @@ If you want the frontend hosted on GitHub Pages while the API runs elsewhere:
 3. **Tell the UI where the API lives** – open your Pages URL with `?apiBase=https://your-api-host.example.com` appended. The app stores that base URL in `localStorage` and uses it for every `/api/...` request. To revert to same-origin requests, visit the site with `?apiBase=.` once.
 
 With this setup you can update questions on the remote Node host while the static UI stays cached on GitHub Pages.
+
+## Implementation guide
+
+See [`IMPLEMENTATION.md`](IMPLEMENTATION.md) for a deeper look at the architecture, data flow, milestones, and step-by-step instructions for adding future module banks.
 
 ## Next steps
 

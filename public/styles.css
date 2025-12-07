@@ -68,6 +68,12 @@ h3 {
 
 #summary-panel .button-row button.primary {
   background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #0f172a;
+}
+
+#summary-panel .button-row button.primary:hover {
+  background: #1e293b;
 }
 
 form {
@@ -126,11 +132,28 @@ input[type='number'] {
 }
 
 .pill input:checked + span {
-  color: #0f172a;
+  color: var(--text);
 }
 
 .pill span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   color: var(--text);
+}
+
+.pill span::before {
+  content: '';
+  display: inline-flex;
+  width: 1rem;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.pill input:checked + span::before {
+  content: '✔';
+  opacity: 1;
+  color: var(--accent);
 }
 
 .pill-disabled span {
@@ -160,8 +183,13 @@ button.primary:hover {
 }
 
 button.secondary {
-  background: rgba(148, 163, 184, 0.2);
+  background: rgba(148, 163, 184, 0.35);
   color: var(--text);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+button.secondary:hover {
+  background: rgba(148, 163, 184, 0.5);
 }
 
 button.danger {
@@ -239,6 +267,29 @@ button:disabled {
   font-size: 1rem;
   background: rgba(15, 23, 42, 0.5);
   color: var(--text);
+}
+
+.code-snippet {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.dropdown-answer {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.5);
+  color: var(--text);
+  font-size: 1rem;
 }
 
 .status-pill {

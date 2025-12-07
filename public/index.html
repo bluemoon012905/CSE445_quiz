@@ -35,6 +35,10 @@
             <label for="shuffle">Randomize order</label>
             <input id="shuffle" type="checkbox" name="shuffle" checked />
           </div>
+          <div class="form-row two-col">
+            <label for="include-generated">Include generated questions</label>
+            <input id="include-generated" type="checkbox" name="includeGenerated" checked />
+          </div>
           <button type="submit" class="primary">Start quiz</button>
         </form>
       </section>
@@ -73,6 +77,7 @@
               <tr>
                 <th>#</th>
                 <th>Module</th>
+                <th>Source</th>
                 <th>Topic</th>
                 <th>Prompt</th>
                 <th>Your answer</th>
