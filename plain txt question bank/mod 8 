@@ -1,0 +1,168 @@
+Question 1
+
+Which of the following are valid for representing the expression <t> Alan and Mairi. dreamed.? Select all that apply.
+
+A. <t> Alan + Mairi . </t>
+✔ B. <t> Alan + Mairi + dreamed . </t>
+✔ C. <term> Alan + Mairi + dreamed . </term>
+D. <term> Alan + Mairi + to dream . </term>
+✔ E. <t> Alan + Mairi + to dream . </t>
+F. <term> Alan + Mairi + to dream . </term>
+G. <t> Alan </t>
+
+Question 2
+
+An XML document has a tree structure. It:
+
+A. can have multiple roots and multiple leaves
+B. can have multiple roots or records
+✔ C. must have a single root.
+D. must have a single leaf.
+
+Question 3
+
+What is the requirement of a well-formed XML document? Select all that apply.
+
+✔ A. There is a single root element.
+✔ B. Each element is properly nested between an opening and a closing tag.
+C. There are no unexpected tags
+D. The tags must come from the set pre-defined by W3C.
+E. White space is not allowed in Text Content parts.
+
+Question 4
+
+To create an XML document using XmlTextWriter class, you need to open a FileStream and then create an XmlTextWriter object:
+
+fs = new FileStream("c:\\book.xml", FileMode.CreateNew);
+XmlTextWriter xtw = new XmlTextWriter(fs);
+System.Text.Encoding enc = null;
+
+What operation must be performed in order to properly format the XML file?
+
+✔ A. xtw.WriteStartDocument()
+B. xtw.Close()
+C. xtw.WriteEndDocument()
+D. xtw.WriteAttributeString()
+
+Correct answer
+
+Question 5  30 / 30 pts
+
+You are give the piece of code below:
+
+```csharp
+try {                                                             //1
+    XmlTextReader reader = new XmlTextReader("Courses.xml");      //2
+    while (reader.Read()) {                                       //3
+        Console.WriteLine("Type={0} Name={1} Value={2}",
+            reader.NodeType, reader.Name, reader.Value);          //5
+        if (reader.AttributeCount > 0) {                          //6
+            while (reader.MoveToNextAttribute()) {                //7
+                Console.WriteLine("Type={0} Name={1} Value={2}",
+                    reader.NodeType, reader.Name, reader.Value);  //9
+            }
+        }
+    }
+}
+finally { if (reader != null) reader.Close(); }
+```
+
+Answer the following questions.
+
+(1) Will this piece of code create an in-memory tree to store the entire contents of the XML file “Course.xml”? **No**
+
+(2) What line of code (see the numbers right to the code) reads a new node into the memory? **Line 3**
+
+(3) What does the method “reader.MoveToNextAttribute()” at line 7 return, if the node has no more attribute? **false**
+
+Answer 1:
+✓ No
+
+Answer 2:
+✓ Line 3
+
+Answer 3:
+✓ false
+
+
+Question 6
+
+An XPath expression allows to have a function call at the end of the expression.
+
+A. True
+✔ B. False
+
+Question 7
+
+What is the XML processing model that reads one node into memory a time based on the given path expression?
+
+A. DOM (Document Object Model)
+✔ B. SAX (Simple API for XML)
+C. XmlDocument
+D. X-path
+
+Question 8 (Wrong answer shown in screenshot — correct answer determined based on context)
+
+Regarding JAXB package for processing XML documents, which statements are correct?
+
+A. Only Marshaller uses event-driven model when reading an XML document.
+B. Only DocumentBuilder uses event-driven model when reading an XML document.
+✔ C. Both SAXReader and DocumentBuilder use event-driven model when reading an XML document.
+✔ D. Neither SAXReader nor DocumentBuilder uses event-driven model when reading an XML document.
+
+
+Question 1
+
+What is the advantage of a server-side solution for displaying an XML file in required format?
+
+A. Reduces server computing need
+B. No need to write an XSL style sheet
+C. Reduces client computing load
+✔ D. No special requirement on Web browser
+
+Question 2
+
+If an XML file is created in your application, where should the file be stored in the ASP.NET application domain?
+
+✔ A. In App_Data folder
+B. In App_Code folder
+C. In App_WebReferences folder
+D. In Bin folder
+
+Question 3
+
+Which of the following terms is NOT defined in the W3C namespace http://www.w3.org/2001/XMLSchema
+?
+
+✔ A. cc:core
+B. all
+C. complexType
+D. schema
+E. choice
+
+Question 4
+
+A Document Type Definition (DTD) file:
+
+✔ A. defines the syntax of an XML file.
+B. defines the structure of an XML schema file.
+C. extends the XML schema with more data types.
+D. follows XML syntax.
+
+Question 5
+
+What is an empty element in XML? Select all that apply.
+
+✔ A. An element without text content between the element tags
+✔ B. An element that does not need to have an opening tag
+✔ C. An element without a child element
+D. An element without an attribute
+
+Question 3
+
+What XML processing model reads one node into memory at a time?
+
+✔ A. SAX (Simple API for XML)
+B. XMLDocument
+C. DOM (Document Object Model)
+D. XPath
