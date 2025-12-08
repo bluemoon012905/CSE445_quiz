@@ -1,0 +1,124 @@
+=== TOPIC: Knowledge Check ===
+Prompt: What web computing models support thin-client architecture? Select all that apply.
+Options:
+  a. Client-browser computing
+  b. Pure HTML Web with CGI
+  c. Server-side Computing
+  d. Silverlight
+Answer: Client-browser computing, Server-side Computing (a, c)
+---
+Prompt: AJAX control is implemented in the ASP .Net environment as:
+Options:
+  a. an HTML control
+  b. a user control
+  c. a DLL library function
+  d. a Web control
+Answer: a Web control (d)
+---
+Prompt: A server control in ASP .Net application (Select all that apply):
+Options:
+  a. is an object that forms a component in an ASPX page
+  b. must have an extension name .aspx
+  c. is executed at the client side
+  d. can take input and emit an event upon an input
+Answer: is an object that forms a component in an ASPX page, is executed at the client side (a, c)
+---
+Prompt: A user control:
+Options:
+  a. is faster in execution than a DLL function
+  b. is re-usable in an ASPX page
+  c. is a patch on an ASPX page
+  d. keeps user-related settings together
+Answer: is re-usable in an ASPX page (b)
+---
+Prompt: Which of the following computing models can be considered to be in thick client architecture? Select all that apply.
+Options:
+  a. Pure HTML
+  b. HTML 5
+  c. Adobe Flash
+  d. Silverlight
+Answer: HTML 5, Silverlight (b, d)
+---
+
+=== TOPIC: Quiz ===
+Prompt: What technology best supports the thick client architecture?
+Options:
+  a. Common Gateway Interface
+  b. SOAP
+  c. Client-browser computing
+  d. OLE DB file
+Answer: Client-browser computing (c)
+---
+Prompt: What computing model and architecture does Pure HTML Web implement? Select all that apply.
+Options:
+  a. Thick client architecture
+  b. Thin client architecture
+  c. Server-side computing
+  d. Client-browser computing
+Answer: Thin client architecture, Server-side computing, Client-browser computing (b, c, d)
+---
+Prompt: What does the Out-of-browser computing model mean?
+Options:
+  a. Computing is done on server-side
+  b. Computing is done on client’s machine
+  c. Program written as JavaScript script
+  d. Program is embedded in HTML file
+Answer: Computing is done on client’s machine (b)
+---
+Prompt: How are AJAX features implemented in ASP .Net applications?
+Options:
+  a. Using Web control
+  b. Using user control
+  c. Writing JavaScript code
+  d. Writing HTML code
+Answer: Writing JavaScript code (c)
+---
+Prompt: What are the potential problems of using client-side scripting? Select all that apply.
+Options:
+  a. Overhead of sending code back and forth
+  b. Interpretation is slower than executing compiled code
+  c. Source code is not invisible
+  d. Security and proprietary issues
+Answer: Overhead of sending code back and forth, Interpretation is slower than executing compiled code, Source code is not invisible, Security and proprietary issues (a, b, c, d)
+---
+Prompt: AJAX control is implemented in the ASP .Net environment as:
+Options:
+  a. an HTML control
+  b. a user control
+  c. a DLL library function
+  d. a Web control
+Answer: a Web control (d)
+---
+Prompt: What programming model best supports the thick client in the client-server architecture?
+Options:
+  a. Pure HTML-based Web Application
+  b. Client-Side Scripting
+  c. Out-of-browser Computing
+  d. Server-Side Scripting
+Answer: Out-of-browser Computing (c)
+---
+Prompt: When an ASPX page is accessed from a browser, what is sent to the browser?
+Options:
+  a. The source code of the ASPX page
+  b. An HTML page generated from the ASPX page
+  c. The HTML portion of the ASPX page
+  d. An XML page generated from the ASPX page
+Answer: An HTML page generated from the ASPX page (b)
+---
+Prompt: A user control:
+Options:
+  a. is always more powerful than a server control
+  b. is a component sharable among multiple pages
+  c. keeps all application settings together
+  d. creates a separate page that can run upon each call
+Answer: is a component sharable among multiple pages (b)
+---
+Prompt: How do we create an AJAX component in ASP .Net Web applications?
+Options:
+  a. Create a user control and use parameters to implement the user controls
+  b. Use Web controls
+  c. Use HTML controls
+  d. Use Global.asax
+Answer: Use Web controls (b)
+---
+

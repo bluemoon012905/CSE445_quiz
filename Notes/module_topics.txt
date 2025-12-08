@@ -1,0 +1,47 @@
+Module 8 – XML Foundations and Processing
+- XML role in service-oriented computing, syntax (elements, attributes, namespaces), well-formed rules, and representation as trees.
+- DOM, SAX, and XML parser support in .NET (XmlDocument, XmlNode, XmlReader/Writer) with traversal algorithms.
+- XmlTextReader/Writer usage, streaming vs tree processing, and serialization patterns for building XML documents.
+- XPath concepts, expressions, data types, XPathDocument/XPathNavigator/XPathNodeIterator, and links to XQuery.
+- Java XML processing stack (JAXP, SAXParserFactory, DocumentBuilder), handlers, and design patterns.
+
+Module 9 – XML Typing, Validation, and Presentation
+- XML validation needs, Document Type Definition syntax, inline/external DTDs, attribute declarations, and HTML5 as a structured case study.
+- XML Schema Definition (XSD) basics, simple/complex types, sequences/choices, namespaces, target/default namespaces, and DWML case study.
+- Validation workflow in .NET using XmlSchemaSet, XmlReaderSettings, XmlReader, plus schema-for-schemas.
+- XSL/XSLT motivations, client/server transformations, XslCompiledTransform, Hands-on examples (Courses, Fallacies).
+- CSS with XML/HTML, XHTML doctypes, and evolution of web presentation languages.
+
+Module 10 – XML Databases and Compact Data Formats
+- Motivation for XML-native databases, relational mapping challenges, XQuery fundamentals, and vendor examples (Oracle, IBM, Microsoft SQLXML).
+- Google data stack: Protocol Buffers, gRPC, BigTable architecture (B/B+ trees) for large-scale structured data.
+- Feed standards (RSS, Atom), syndication structure, consuming feeds with SyndicationFeed, and practical sources (CNN, NYT).
+- JSON syntax (objects, arrays, number/string types), comparisons with XML/dictionaries, and examples in C#/Python IoT messaging.
+
+Module 11 – Web Computing Models and Components
+- Survey of web computing models (pure HTML CGI, client-side scripting/DHTML, server-side ASP.NET, AJAX, Silverlight) and their trade-offs.
+- Server-side implementation patterns with HTML/Web controls, code-behind, exception handling, partial page updates, and reverse-engineering concerns.
+- Web application architecture (thin vs thick clients), ASP.NET application domains, directories (bin/App_Data), and three-tier/MVC comparisons.
+- Server controls (HTML vs Web), databound controls (GridView, TreeView) for XML rendering, and databinding techniques.
+- Web user controls (ASCX) creation, registration, reuse across pages, deployment to IIS, and advanced login/image examples.
+
+Module 12 – Configuration, Global Logic, and State
+- Web.config structure (appSettings, system.web), runtime editing, policy-based computing, and inheritance across directories.
+- Global.asax directives/events (Application_Start, Session events), global variables, and extending via DLL class libraries.
+- Client state via cookies (creation, retrieval, persistence), privacy considerations, and session state management (HttpSessionState, cookieless modes).
+- Application state persisted in files: file system access (Path/FileStream), XML read/write with XmlDocument/XmlTextWriter, locking/deadlock concerns.
+
+Module 13 – Security, Authentication, and Forms-Based Access
+- Dependability metrics (reliability, availability), security attributes (confidentiality, integrity, safety), and measuring MTBF/MTTF.
+- Web attack surface (XSS, SQL injection, DoS, session hijacking), security means (authentication, authorization, cryptography) with secret/public key examples.
+- IIS and Windows authentication: tokens, IIS config, anonymous/basic/digest modes, and programmatic authorization inside ASP.NET pages.
+- Forms authentication lifecycle: login redirects, protected directories, credentials storage, custom authentication methods (XML/DB), sign-out, and deployment (IIS, WebStrar).
+- Self-registration workflows, hashing passwords via services, image verification controls, and cookies’ role in forms security.
+
+Module 14 – Encryption, Hashing, Reliability, and SSL
+- Symmetric/asymmetric encryption algorithms (DES, RSA, PGP), .NET cryptography APIs, and WCF encryption services.
+- Encryption clients, service bindings, guidance on when not to use remote encryption, and hashing basics (SHA, password storage, digital signatures).
+- WS-ReliableMessaging semantics (at-least/at-most/exactly once, ordering), protocols, and configuration via custom bindings plus transactions overview.
+- Error detection/coding techniques: parity, checksums, hashing, arithmetic codes, m-of-n codes, and modern wireless codes (Turbo, LDPC, Polar) for 5G.
+- SSL/TLS stack, sessions vs connections, record protocol steps, obtaining/installing certificates, and HTTPS testing with custom certs.
+- Course wrap-up: linkage to CSE446 topics (workflow, SOA suites, ESB, LINQ, IoT, big data, AI, cloud computing).

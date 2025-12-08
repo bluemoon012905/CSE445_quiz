@@ -1,0 +1,146 @@
+=== TOPIC: Authentication options ===
+Prompt: Windows security is best suited for which user group when controlling access to a Web site?
+Options:
+  a. Corporate intranet applications
+  b. Online shopping sites
+  c. Online banking
+  d. Web-based email
+Answer: Corporate intranet applications (a)
+Explanation: Windows authentication integrates with domain credentials—ideal for intranet scenarios.
+---
+
+=== TOPIC: Authorization ===
+Prompt: How should <allow>/<deny> elements be ordered within the authorization section?
+Options:
+  a. Order is unimportant
+  b. <deny> must precede all <allow>
+  c. All <allow> entries precede <deny> entries
+  d. The <deny> elements must be ordered to match authorization requirements
+Answer: The <deny> elements must be ordered to match authorization requirements (d)
+Explanation: Authorization rules are evaluated in sequence, so the <deny> entries must be intentionally ordered.
+---
+
+=== TOPIC: Cookies ===
+Prompt: Cookies can be used for… Select all that apply.
+Options:
+  a. Communication between different sessions
+  b. Saving client-side information
+  c. Supporting Session State in heavy-traffic clients
+  d. Backing up the user data layer independently of the server
+Answer: Saving client-side information, Supporting Session State in heavy-traffic clients (b, c)
+Explanation: Cookies store lightweight data on clients and can carry session identifiers that back Session State.
+---
+
+=== TOPIC: Dependability ===
+Prompt: Reliability R(t) is a probability related to the…
+Options:
+  a. continuity of service in time period (0, t]
+  b. non-occurrence of catastrophic consequences
+  c. readiness of service at time points
+  d. validity and consistency of data and message
+Answer: continuity of service in time period (0, t] (a)
+Explanation: Reliability R(t) models the probability that service continues without failure across (0, t].
+---
+Prompt: Which dependability attribute ensures the readiness of service at time point t?
+Options:
+  a. availability
+  b. safety
+  c. reliability
+  d. security
+Answer: availability (a)
+Explanation: Availability measures readiness for usage at a specific instant.
+---
+
+=== TOPIC: Forms cookies ===
+Prompt: By default, Forms-auth cookies are protected by… Select all that apply.
+Options:
+  a. Plain text storage
+  b. Encryption to prevent reading
+  c. Digital signatures to prevent tampering
+  d. Server-side storage only
+Answer: Encryption to prevent reading, Digital signatures to prevent tampering (b, c)
+Explanation: ASP.NET encrypts and signs its auth cookies so they cannot be read or modified by clients.
+---
+
+=== TOPIC: Forms security ===
+Prompt: Where can credentials be stored when Forms authentication is used? Select all that apply.
+Options:
+  a. In Web.config
+  b. In the OS access control list
+  c. In a user administration file
+  d. Inside a user control namespace
+Answer: In the OS access control list, In a user administration file (b, c)
+Explanation: Credentials may be persisted in system ACLs or in a dedicated user store; Web.config typically references them rather than storing secrets.
+---
+Prompt: What is the most secure configuration for Forms-based Web security?
+Options:
+  a. identity impersonation = "false"
+  b. identity impersonation = "true"
+  c. identity impersonation = "username/asp.net"
+  d. No impersonation setting in Web.config
+Answer: No impersonation setting in Web.config (d)
+Explanation: Leaving impersonation disabled (no override) ensures ASP.NET runs under its least-privilege account.
+---
+
+=== TOPIC: Knowledge Check ===
+Prompt: What is the proper order of performing security operations?
+Options:
+  a. authorization, authentication, and then access of resource
+  b. access of resource, authentication, and then authorization
+  c. access of resource, authorization, and then authentication
+  d. authentication, authorization, and then access of resource
+Answer: authentication, authorization, and then access of resource (d)
+---
+Prompt: Availability (A(t)) is probably related to the:
+Options:
+  a. readiness of service at time point t
+  b. the validity and correctness of data and message
+  c. continuity of service in time period [0, t]
+  d. non-occurrence of catastrophic consequence
+Answer: the validity and correctness of data and message (b)
+---
+Prompt: In what configuration setting will ASP .Net use the security token passed to it by IIS?
+Options:
+  a. <identity impersonate = "false" />
+  b. <identity impersonate = "false" /> (Correct from screenshot — although A & B look identical, B is marked correct)
+  c. <identity impersonate = "true" />
+  d. when impersonation element is not used
+Answer: <identity impersonate = "false" /> (Correct from screenshot — although A & B look identical, B is marked correct) (b)
+---
+Prompt: How does the Windows security mechanism work in the Web application security control?
+Options:
+  a. It blocks IP addresses and domains that are not permitted
+  b. It compares the received credential with the credential saved in Windows’s user accounts
+  c. It compares the received credential with the credential saved in a user-created XML file
+  d. It compares the received credential with the credential saved in the Web.Config file
+Answer: It compares the received credential with the credential saved in Windows’s user accounts (b)
+---
+Prompt: The probability that a system has survived in the time interval [0, t] is the system’s:
+Options:
+  a. availability
+  b. reliability
+  c. safety
+  d. security
+Answer: reliability (b)
+---
+
+=== TOPIC: Public key cryptography ===
+Prompt: In a public key cryptography system aimed at confidentiality, which key should be public?
+Options:
+  a. The encryption key
+  b. The decryption key
+  c. Both keys
+  d. Neither key
+Answer: The encryption key (a)
+Explanation: Senders encrypt with the recipient's public key; only the private key can decrypt.
+---
+Prompt: In an open-key cryptography system, which key must be public to preserve confidentiality?
+Options:
+  a. Encryption key
+  b. Decryption key
+  c. Both keys
+  d. Neither key
+Answer: Encryption key (a)
+Explanation: The sender needs the publicly available encryption key; the private key stays secret.
+---
+

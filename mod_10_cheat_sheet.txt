@@ -1,0 +1,134 @@
+=== TOPIC: Knowledge Check ===
+Prompt: What standard do Atom and RSS conform with?
+Options:
+  a. JSON
+  b. Excel
+  c. HTML
+  d. XML
+Answer: XML (d)
+---
+Prompt: Given the following XQuery code:
+
+let $x := doc("courses.xml")/Courses
+for $in in $x/Course
+where $in/Level > 200
+order by $in/Code
+return <Course> {$in/Name, $in/Level, $in/Code} </Course>
+
+Which line of the code defines the filter function?
+Options:
+  a. order by $in/Code
+  b. return <Course> {$in/Name, $in/Level, $in/Code} </Course>
+  c. for $in in $x/Course
+  d. where $in/Level > 200
+Answer: where $in/Level > 200 (d)
+---
+Prompt: Assume we have five (5) different Web data structures. We choose one structure as the intermediate structure and translate all other structures to and from this structure. How many converters are needed?
+Options:
+  a. 4
+  b. 6
+  c. 8
+  d. 10
+Answer: 10 (d)
+---
+Prompt: The data structure of Google Protocol Buffers is similar to:
+Options:
+  a. XML
+  b. XML Schema
+  c. HTML
+  d. Objects in programming languages
+Answer: Objects in programming languages (d)
+---
+Prompt: Google’s Protocol Buffers are similar in syntax to:
+Options:
+  a. CSS
+  b. TeX
+  c. XML
+  d. Class definition of an object-oriented programming language
+Answer: Class definition of an object-oriented programming language (d)
+---
+
+=== TOPIC: Quiz ===
+Prompt: What are the key features of a native XML database? Select all that apply.
+Options:
+  a. Store XML data as is
+  b. No need to load the entire XML into memory
+  c. Allow queries for a subset of data in memory
+  d. Use the relational database query language
+Answer: Store XML data as is, Allow queries for a subset of data in memory (a, c)
+---
+Prompt: Using the object-oriented concept of inheritance, what language is the base (parent) language of XQuery?
+Options:
+  a. XML Schema
+  b. XPath
+  c. XSL
+  d. XML
+Answer: XPath (b)
+---
+Prompt: What are the main problems of using relational databases for XML databases where the XML has an irregular structure? Select all that apply.
+Options:
+  a. The database cannot be indexed
+  b. XSL transformations cannot be performed
+  c. It may create many null columns in a table for representing the data
+  d. It may create many tables for representing the data
+Answer: It may create many null columns in a table for representing the data, It may create many tables for representing the data (c, d)
+---
+Prompt: Google’s BigTable is used to store:
+Options:
+  a. key-value pairs
+  b. JSON dictionaries
+  c. relational database tables
+  d. XML files
+Answer: key-value pairs (a)
+---
+Prompt: The idea behind Google’s BigTable is similar to that of:
+Options:
+  a. XML Tree
+  b. A File Tree
+  c. A Trie
+  d. A Binary Tree
+Answer: A File Tree (b)
+---
+Prompt: Which data structures do NOT conform with XML standards? Select all that apply.
+Options:
+  a. Atom
+  b. PGX
+  c. Protocol Buffers
+  d. MSG 3.0
+  e. RSS 2.0
+Answer: PGX, Protocol Buffers, MSG 3.0 (b, c, d)
+---
+Prompt: Assume we have five (5) different Web data structures, and we want to be able to translate each structure directly to other four (4) structures. How many converters do we need?
+Options:
+  a. 2
+  b. 4
+  c. 8
+  d. 20
+Answer: 20 (d)
+---
+Prompt: A JSON object consists of:
+Options:
+  a. a list of name/value pairs
+  b. a list of value/value pairs
+  c. an array of strings
+  d. an array of string–string pairs
+Answer: a list of name/value pairs (a)
+---
+Prompt: Which of the following are valid JSON values? Select all that apply.
+Options:
+  a. 25
+  b. 25
+  c. -25
+  d. 0.5
+  e. 25%
+Answer: 25, 25, -25 (a, b, c)
+---
+Prompt: Why do we need JSON instead of using general XML for all applications?
+Options:
+  a. General XML is too simple to represent fixed data
+  b. General XML is a meta-language and can be used to define languages only
+  c. General XML represents a collection of data, unlike XML content
+  d. JSON is easier and faster for being processed by programming languages
+Answer: JSON is easier and faster for being processed by programming languages (d)
+---
+

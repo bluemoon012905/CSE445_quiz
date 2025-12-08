@@ -1,0 +1,124 @@
+=== TOPIC: Knowledge Check ===
+Prompt: SSL connection between a client and a server is based on a:
+Options:
+  a. message queue protocol
+  b. polar code protocol
+  c. peer-to-peer protocol
+  d. two-tier protocol
+Answer: peer-to-peer protocol (c)
+---
+Prompt: How is the WS-ReliableMessaging implemented in WCF?
+Options:
+  a. A message is resent if no acknowledgment received.
+  b. Each message is sent three times.
+  c. Natural direct resend missing message.
+  d. Each message is sent twice.
+Answer: A message is resent if no acknowledgment received. (a)
+---
+Prompt: In order to detect all two-bit errors, the Hamming distance dₘᵢₙ(C) of code C must be at least:
+Options:
+  a. Two
+  b. Three
+  c. One
+  d. Four
+Answer: Three (b)
+---
+Prompt: Wireless communication heavily relies on error control codes. What are the primary error control codes used in 3G cell phone network?
+Options:
+  a. LDPC codes
+  b. m-of-n codes
+  c. Polar Codes
+  d. Turbo Codes
+Answer: m-of-n codes (b)
+---
+Prompt: In order to tolerate (or correct) one-bit error, the Hamming distance dₘᵢₙ(C) of code C must be at least:
+Options:
+  a. 3
+  b. 5
+  d. 2
+Answer: 3 (a)
+---
+
+=== TOPIC: Quiz ===
+Prompt: Data Encryption Standard (DES) is used for low-level security applications, because:
+Options:
+  a. the encryption algorithm is slow.
+  b. it has been used for many years.
+  c. it is encryption key that is short.
+  d. it uses a secretive key system.
+Answer: it has been used for many years. (b)
+---
+Prompt: What techniques are used in Data Encryption Standard (DES) to perform encryption and decryption? Select all that apply.
+Options:
+  a. secret key system
+  b. open key system
+  c. a simple round of cipher encryption
+  d. multiple rounds of cipher encryption
+Answer: secret key system, open key system (a, b)
+---
+Prompt: Data hashing creates a value from a given data. The hash value:
+Options:
+  a. can be used for recovering the data using a decryption algorithm.
+  b. can uniquely identify a data; cannot recover the data.
+  c. creates a digital signature that is mixed with the data.
+  d. is generated using the encryption algorithm in the Open Key cryptography system.
+Answer: can uniquely identify a data; cannot recover the data. (b)
+---
+Prompt: What reliability features does WS-Reliable Messaging specification guarantee? Select all that apply.
+Options:
+  a. No-loss messages
+  b. No-duplicated messages
+  c. Messages received once and only once
+  d. Secure Sockets Layer data confidentiality
+  e. Secure Sockets Layer data integrity
+Answer: No-duplicated messages, Messages received once and only once (b, c)
+---
+Prompt: How is the lost message handled by WS-Reliable Messaging?
+Options:
+  a. Double redundancy: Each message is sent twice.
+  b. Triple redundancy: Each message is sent three times.
+  c. A message is resent if no acknowledgment is received within the given amount of time.
+  d. The receiver creates the missing message based on the adjacent messages received.
+Answer: A message is resent if no acknowledgment is received within the given amount of time. (c)
+---
+Prompt: What are true about the n-out-of-k codes? Select all that apply.
+Options:
+  a. It may not be able to tolerate all bit single errors.
+  b. It has a high level of redundancy, and the cost is high.
+  c. It has zero overhead codes.
+  d. It is a non-separable code.
+Answer: It may not be able to tolerate all bit single errors., It has zero overhead codes. (a, c)
+---
+Prompt: What error control codes are separable codes? Select all that apply.
+Options:
+  a. parity check
+  b. checksum
+  c. arithmetic code
+  d. m-of-n code
+Answer: checksum, arithmetic code (b, c)
+---
+Prompt: What error control codes are used in the control channel code standard in 5G wireless network?
+Options:
+  a. Turbo codes
+  b. LDPC codes
+  c. Polar codes
+  d. m-of-n codes
+Answer: LDPC codes (b)
+---
+Prompt: Secure Sockets Layer (SSL) defines communication protocols that can provide:
+Options:
+  a. reliable messaging
+  b. data confidentiality
+  c. data integrity
+  d. lossless integrity
+Answer: data confidentiality (b)
+---
+Prompt: What is the purpose of the fragmentation step in SSL?
+Options:
+  a. To make the data transmission more efficient
+  b. To make the decryption harder
+  c. To make the encryption more manageable
+  d. To make the transmission more reliable
+Answer: To make the encryption more manageable (c)
+---
+

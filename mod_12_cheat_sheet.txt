@@ -1,0 +1,117 @@
+=== TOPIC: Knowledge Check ===
+Prompt: The <appSettings> element in Web.config file are typically used for storing:
+Options:
+  a. URLs of remote services
+  b. security settings
+  c. policies and application parameter values
+  d. URLs to remote servers
+Answer: policies and application parameter values (c)
+---
+Prompt: What are the challenges for defining a global variable in Global.asax file? Select all that apply:
+Options:
+  a. Create global files that can coordinate with each other
+  b. Allow class instances to read the global file
+  c. Address the problem of simultaneous write on the variable
+  d. Address the performance problem if lock mechanism is used
+Answer: Create global files that can coordinate with each other, Allow class instances to read the global file, Address the problem of simultaneous write on the variable, Address the performance problem if lock mechanism is used (a, b, c, d)
+---
+Prompt: When session states are used, a Web server identifies a revisiting browser through an ID:
+Options:
+  a. issued by the client machine
+  b. associated with the client browser
+  c. issued by the server
+  d. associated with the client TCP session
+Answer: issued by the server (c)
+---
+Prompt: Where do you store the secure machine key generated for your ASP .Net application?
+Options:
+  a. In the Web.config file, in the element AppSettings
+  b. In ApplicationStart()
+  c. In the Web.config file, in the element system.web
+  d. In SessionStart()
+Answer: In the Web.config file, in the element system.web (c)
+---
+Prompt: How can you prevent Web application deadlock in the case of copying data from one disk file to another disk file?
+Options:
+  a. Open the two files in two different threads
+  b. Close one file before opening the other
+  c. Open the two files in random order
+  d. Open one for read and the other for write
+Answer: Close one file before opening the other (b)
+---
+
+=== TOPIC: Quiz ===
+Prompt: Where are the compilation and debugging options of a Web application typically stored in the Web.config file?
+Options:
+  a. <appSettings>
+  b. <system.web>
+  c. <httpHandlers>
+  d. <processModel>
+Answer: <system.web> (b)
+---
+Prompt: Policy-based computing suggests to decouple:
+Options:
+  a. data from program
+  b. data from server
+  c. data from local drive
+  d. conditions (context) from policy constraints
+Answer: data from program (a)
+---
+Prompt: A DLL component that you create:
+Options:
+  a. must be under the same namespace and you are not required to include it explicitly
+  b. forms a namespace and you are required to explicitly include it in the application
+  c. forms a service server and you need to use "Add Service Reference" to include it
+  d. forms a service server and you need to use "Add Web Reference" to include it
+Answer: forms a namespace and you are required to explicitly include it in the application (b)
+---
+Prompt: Consider the following code:
+
+void Session_Start(object sender, EventArgs e) {
+    Application["counter"] = Convert.ToInt32(Application["counter"]) + 1;
+}
+
+Answer the following:
+
+What type of file in an ASPX application does this piece of code most likely belong to?
+Options:
+  a. Global.asax (application-level file)
+  b. Web.config configuration file
+  c. Default.aspx.cs page code-behind
+  d. Machine.config
+Answer: Global.asax (application-level file) (a)
+Explanation: Session_Start lives in Global.asax so it can track sessions for the whole app.
+---
+Prompt: Where are the cookies typically stored?
+Options:
+  a. On the top folder of the application domain on the server
+  b. In the ASP.Net folder of your application domain on the server
+  c. In the client’s hard drive, in a folder under the browser application
+  d. In the client’s hard drive, with the machine config file
+Answer: In the client’s hard drive, in a folder under the browser application (c)
+---
+Prompt: Session state variables can be accessed by:
+Options:
+  a. all sessions of an application
+  b. all pages within one session
+  c. the page only in which the session state is defined
+  d. the method only in which the session state is initialized
+Answer: all pages within one session (b)
+---
+Prompt: Why do you need to create your own machine key if your ASP .Net application is hosted in a server farm environment?
+Options:
+  a. A server farm does not have a machine key
+  b. A server farm does not have a unique machine key
+  c. A server farm does not need a machine key to generate the hashing ID
+  d. ASP .Net applications automatically generate a machine key when hosted in a server farm
+Answer: A server farm does not have a unique machine key (b)
+---
+Prompt: If one selects the cookieless attribute = UseUri to support Session State variables, the restrictions are:
+Options:
+  a. Browser must support cookies
+  b. Browser must remain open to retain session states
+  c. Browser must enable cookies
+  d. Developers must use relative paths
+Answer: Browser must remain open to retain session states (b)
+---
+

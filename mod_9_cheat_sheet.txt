@@ -1,0 +1,159 @@
+=== TOPIC: ASPX GUI ===
+Prompt: What are the main components of ASPX GUI design? Select all that apply.
+Options:
+  a. Configuration control
+  b. HTML control
+  c. DDL
+  d. Server control
+Answer: HTML control, Server control (b, d)
+Explanation: ASPX pages combine HTML controls with server-side controls.
+---
+
+=== TOPIC: CSS ===
+Prompt: CSS can be applied to define the format of which document types? Select all that apply.
+Options:
+  a. JSON
+  b. XML
+  c. PowerPoint files
+  d. HTML
+Answer: XML, HTML (b, d)
+Explanation: CSS targets markup languages such as HTML and XML.
+---
+
+=== TOPIC: Client-side transforms ===
+Prompt: What are the problems with client-side transformation from XML to HTML? Select all that apply.
+Options:
+  a. Need to install .NET Framework on the client
+  b. Rely on the browser having an XSLT processor
+  c. Need to write an XSL style sheet
+  d. Need to modify the XML file
+Answer: Rely on the browser having an XSLT processor, Need to write an XSL style sheet (b, c)
+Explanation: Client transforms require browsers with XSLT support and custom stylesheets.
+---
+
+=== TOPIC: DTD ===
+Prompt: A Document Type Definition (DTD) file:
+Options:
+  a. Defines the syntax of another DTD file
+  b. Is used for defining the structure and syntax of an XML file
+  c. Extends the XML syntax model to create more XML schema files
+  d. Extends the C# environment classes
+Answer: Is used for defining the structure and syntax of an XML file (b)
+Explanation: DTDs constrain the structure of XML documents.
+---
+Prompt: Given `<!ELEMENT instructor (name, course+, officeHours*, phone | email)>`, which element must appear at least once?
+Options:
+  a. <course>
+  b. <officeHours>
+  c. <phone>
+  d. <!ELEMENT>
+Answer: <course> (a)
+Explanation: The + quantifier makes <course> mandatory at least once.
+---
+Prompt: What does `<!ELEMENT instructor (name+, course?, officeHours*, phone | email)>` imply?
+Options:
+  a. The element name is optional.
+  b. The element officeHours is optional.
+  c. The element email is required.
+  d. The element phone is required.
+Answer: The element officeHours is optional. (b)
+Explanation: The ? quantifier marks <course> as optional, whereas name+ requires at least one <name>.
+---
+
+=== TOPIC: HTML5 ===
+Prompt: HTML 5.0 is based on:
+Options:
+  a. Common Gateway Interface
+  b. JavaScript and pre-compiled libraries
+  c. Proprietary APIs
+  d. Extensible DDL files
+  e. Pure HTML
+Answer: Common Gateway Interface (a)
+Explanation: Per the lecture notes, HTML5 builds on the CGI-driven model.
+---
+
+=== TOPIC: HTML5 extensions ===
+Prompt: What language is used for extending new elements in HTML5?
+Options:
+  a. Combination of DTD and XML Schema
+  b. XML Schema
+  c. Neither DTD nor XML Schema
+  d. DTD
+Answer: DTD (d)
+Explanation: Lecture materials specify DTD for extending HTML5 elements.
+---
+
+=== TOPIC: Validation ===
+Prompt: Which inputs can you validate with XmlSchemaSet? Select all that apply.
+Options:
+  a. One or more XML files
+  b. One or more schema files
+  c. Simultaneous XML and schema files
+  d. XSL files
+Answer: One or more XML files, One or more schema files (a, b)
+Explanation: XmlSchemaSet aggregates schemas and the XML documents to check.
+---
+
+=== TOPIC: XHTML ===
+Prompt: What is XHTML?
+Options:
+  a. Extensible HTML that uses a DTD to extend HTML
+  b. A deprecated version of HTML
+  c. A new version of XML supporting XSL
+  d. A kind of JSON schema
+Answer: Extensible HTML that uses a DTD to extend HTML (a)
+Explanation: XHTML marries HTML semantics with XML constraints via DTDs.
+---
+Prompt: XHTML (Extensible HTML) is defined by:
+Options:
+  a. DTD
+  b. XML Schema
+  c. HTML5
+  d. JSON
+Answer: DTD (a)
+Explanation: XHTML is governed by a DTD to enforce XML rules.
+---
+
+=== TOPIC: XML Schema ===
+Prompt: Why was XML Schema introduced after DTD? Select all that apply.
+Options:
+  a. DTDs are limited in the amount/type of data they can describe
+  b. DTDs are not recommended in new XML scenarios
+  c. DTDs cannot validate datatypes
+  d. DTDs are too slow
+  e. XML Schema follows XML syntax
+Answer: DTDs are limited in the amount/type of data they can describe, DTDs cannot validate datatypes, XML Schema follows XML syntax (a, c, e)
+Explanation: XML Schema adds strong typing and uses XML syntax itself, overcoming DTD limits.
+---
+Prompt: Which language supports an integer data type?
+Options:
+  a. XSD only
+  b. DTD
+  c. Both XSD and DTD
+  d. Neither XSD nor DTD
+Answer: XSD only (a)
+Explanation: XSD provides typed elements such as integer; DTD does not.
+---
+
+=== TOPIC: XSL ===
+Prompt: The Extensible Stylesheet Language (XSL) is used for defining transformations of an XML file. Select all that apply.
+Options:
+  a. It is an XML file
+  b. It defines style rules
+  c. It can transform into another XML file with the same or different structure
+  d. It is used for massive data storage
+Answer: It is an XML file, It defines style rules, It can transform into another XML file with the same or different structure (a, b, c)
+Explanation: XSL stylesheets are XML documents that describe transformation/styling rules.
+---
+
+=== TOPIC: XSLT expressivity ===
+Prompt: What is the capacity of XSL as a programming language? Select all that apply.
+Options:
+  a. It has conditional capabilities comparable to OO languages
+  b. It can express conditions using if-then-else
+  c. It can express loops
+  d. It is Turing complete and supports general computing
+Answer: It has conditional capabilities comparable to OO languages, It can express conditions using if-then-else, It can express loops, It is Turing complete and supports general computing (a, b, c, d)
+Explanation: XSLT can branch and iterate, making it computationally complete.
+---
+

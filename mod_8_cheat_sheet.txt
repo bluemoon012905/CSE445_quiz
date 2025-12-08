@@ -1,0 +1,205 @@
+=== TOPIC: ASP.NET storage ===
+Prompt: If an XML file is created in your application, where should it be stored in the ASP.NET application domain?
+Options:
+  a. App_Data folder
+  b. App_Code folder
+  c. App_WebReferences folder
+  d. Bin folder
+Answer: App_Data folder (a)
+Explanation: App_Data is the designated location for application-generated data files.
+---
+
+=== TOPIC: DTD ===
+Prompt: A Document Type Definition (DTD) file:
+Options:
+  a. Defines the syntax/structure of an XML file
+  b. Defines the structure of an XML schema file
+  c. Extends XML schema with more data types
+  d. Follows JSON syntax
+Answer: Defines the syntax/structure of an XML file (a)
+Explanation: DTDs describe which elements/attributes are legal within an XML document.
+---
+
+=== TOPIC: JAXB ===
+Prompt: Regarding JAXB processing, which statement is correct?
+Options:
+  a. Only Marshaller uses an event-driven model
+  b. Only DocumentBuilder uses an event-driven model
+  c. Both SAXReader and DocumentBuilder use an event-driven model
+  d. Neither SAXReader nor DocumentBuilder use an event-driven model
+Answer: Both SAXReader and DocumentBuilder use an event-driven model, Neither SAXReader nor DocumentBuilder use an event-driven model (c, d)
+Explanation: Both SAXReader and DocumentBuilder rely on event-driven parsing.
+---
+
+=== TOPIC: Processing models ===
+Prompt: What XML processing model reads one node into memory at a time?
+Options:
+  a. SAX (Simple API for XML)
+  b. XmlDocument
+  c. DOM
+  d. XPath
+Answer: SAX (Simple API for XML) (a)
+Explanation: SAX streams nodes sequentially rather than loading the whole tree.
+---
+Prompt: Which XML processing model reads one node into memory based on a path expression?
+Options:
+  a. DOM (Document Object Model)
+  b. SAX (Simple API for XML)
+  c. XmlDocument
+  d. XPath
+Answer: SAX (Simple API for XML) (b)
+Explanation: SAX streams nodes one at a time.
+---
+
+=== TOPIC: Tree structure ===
+Prompt: An XML document has a tree structure. It:
+Options:
+  a. Can have multiple roots and multiple leaves
+  b. Can have multiple roots or records
+  c. Must have a single root
+  d. Must have a single leaf
+Answer: Must have a single root (c)
+Explanation: Well-formed XML documents always have exactly one root element.
+---
+
+=== TOPIC: Well-formedness ===
+Prompt: What are the requirements of a well-formed XML document? Select all that apply.
+Options:
+  a. There is a single root element
+  b. Each element is properly nested between an opening and closing tag
+  c. There are no unexpected tags
+  d. Tags must come from a W3C predefined set
+  e. Whitespace is not allowed in text content
+Answer: There is a single root element, Each element is properly nested between an opening and closing tag (a, b)
+Explanation: Well-formed XML demands one root and correct nesting.
+---
+
+=== TOPIC: XML elements ===
+Prompt: What is an empty element in XML? Select all that apply.
+Options:
+  a. An element without text content between the tags
+  b. An element that does not need a separate closing tag (self-closing)
+  c. An element without child elements
+  d. An element without attributes
+Answer: An element without text content between the tags, An element that does not need a separate closing tag (self-closing), An element without child elements (a, b, c)
+Explanation: Empty elements have no textual content or children and can be written using self-closing syntax.
+---
+
+=== TOPIC: XML presentation ===
+Prompt: What is the advantage of a server-side solution for displaying an XML file in the required format?
+Options:
+  a. Reduces server computing need
+  b. No need to write an XSL style sheet
+  c. Reduces client computing load
+  d. No special requirement on the web browser
+Answer: No special requirement on the web browser (d)
+Explanation: Rendering on the server frees clients from requiring specific XML/XSL capabilities.
+---
+
+=== TOPIC: XML representations ===
+Prompt: Which representations correctly capture the expression <t> Alan and Mairi. dreamed.? Select all that apply.
+Options:
+  a. <t> Alan + Mairi . </t>
+  b. <t> Alan + Mairi + dreamed . </t>
+  c. <term> Alan + Mairi + dreamed . </term>
+  d. <term> Alan + Mairi + to dream . </term>
+  e. <t> Alan + Mairi + to dream . </t>
+  f. <term> Alan + Mairi + to dream . </term>
+  g. <t> Alan </t>
+Answer: <t> Alan + Mairi + dreamed . </t>, <term> Alan + Mairi + dreamed . </term>, <t> Alan + Mairi + to dream . </t> (b, c, e)
+Explanation: Valid representations wrap the expression in the correct tag and include the verb.
+---
+
+=== TOPIC: XML schema vocabulary ===
+Prompt: Which of the following terms is NOT defined in the W3C namespace http://www.w3.org/2001/XMLSchema?
+Options:
+  a. cc:core
+  b. all
+  c. complexType
+  d. schema
+  e. choice
+Answer: cc:core (a)
+Explanation: cc:core is not part of the XML Schema namespace.
+---
+
+=== TOPIC: XPath ===
+Prompt: An XPath expression allows a function call at the end of the expression.
+Options:
+  true. True
+  false. False
+Answer: False (false)
+Explanation: XPath functions are invoked within the expression rather than appended after it.
+---
+
+=== TOPIC: XmlTextReader ===
+Prompt: Considering the XmlTextReader loop, does the code build an in-memory tree containing the entire XML file?
+Options:
+  true. True
+  false. False
+Answer: False (false)
+Explanation: XmlTextReader streams nodes one at a time rather than building a DOM tree.
+Code:
+```
+(1) XmlTextReader reader = new XmlTextReader("a.xml");
+(2) while (reader.Read())
+(3) {
+(4)     if (reader.NodeType == XmlNodeType.Element &&
+(5)         reader.Name == "book")
+(6)     {
+(7)         Console.WriteLine(reader.GetAttribute("title"));
+(8)     }
+(9) }
+```
+---
+Prompt: Which line in the snippet is the only one that loads a node into memory?
+Options:
+  2. Line (2): while (reader.Read())
+  4. Line (4): reader.NodeType == XmlNodeType.Element
+  5. Line (5): reader.Name == "book"
+  7. Line (7): Console.WriteLine(reader.GetAttribute("title"))
+Answer: Line (5): reader.Name == "book" (5)
+Explanation: The equality check on line 5 identifies the target element when it is read.
+Code:
+```
+(1) XmlTextReader reader = new XmlTextReader("a.xml");
+(2) while (reader.Read())
+(3) {
+(4)     if (reader.NodeType == XmlNodeType.Element &&
+(5)         reader.Name == "book")
+(6)     {
+(7)         Console.WriteLine(reader.GetAttribute("title"));
+(8)     }
+(9) }
+```
+---
+Prompt: If the code calls reader.MoveToAttribute("author") after Read(), must the node already have attributes?
+Options:
+  true. True
+  false. False
+Answer: False (false)
+Explanation: MoveToAttribute simply returns false if the attribute is missing; it does not require attributes to exist.
+Code:
+```
+(1) XmlTextReader reader = new XmlTextReader("a.xml");
+(2) while (reader.Read())
+(3) {
+(4)     if (reader.NodeType == XmlNodeType.Element &&
+(5)         reader.Name == "book")
+(6)     {
+(7)         Console.WriteLine(reader.GetAttribute("title"));
+(8)     }
+(9) }
+```
+---
+
+=== TOPIC: XmlTextWriter ===
+Prompt: Before writing nodes with XmlTextWriter, which operation must be called to properly format the output?
+Options:
+  a. xtw.WriteStartDocument()
+  b. xtw.Close()
+  c. xtw.WriteEndDocument()
+  d. xtw.WriteAttributeString()
+Answer: xtw.WriteStartDocument() (a)
+Explanation: WriteStartDocument writes the XML declaration and primes the writer.
+---
+
